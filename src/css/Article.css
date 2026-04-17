@@ -1,19 +1,15 @@
-#logo {
-    content: url('../../public/img/logo.png');
-}
-
 .article {
-    margin-top: 100px;
-    margin-bottom: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .article p {
-    font-size: 20px;
-    line-height: 30px;
-    color: #666666;
+  font-size: 1.25rem;
+  line-height: 30px;
+  color: #666666;
 }
 
 .details {
-    font-size: 15px !important;
-    margin-bottom: 35px !important;
+  font-size: 0.9375rem !important;
+  margin-bottom: 35px !important;
 }

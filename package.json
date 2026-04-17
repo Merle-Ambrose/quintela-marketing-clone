@@ -18,6 +18,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "format": "prettier --write \"src/**/*.js\" \"src/css/*.css\"",
+    "format:check": "prettier --check \"src/**/*.js\" \"src/css/*.css\"",
+    "prestart": "npm run format:check",
+    "prebuild": "npm run format:check",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^3.8.3"
   }
 }

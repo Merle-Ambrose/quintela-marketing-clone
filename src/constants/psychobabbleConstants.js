@@ -1,0 +1,43 @@
+export const FEATURED_ARTICLES = [
+  {
+    heading: "Part 1: How Diverse Are HR Vendor Executive Teams?",
+    desc: "There are 1000s of blogs/articles/white papers on diversity, equity, and inclusion (DEI), and the takeaway is always the same.  DEI is the right thing to do and even impacts the bottom line.  As a person of color (POC), I suppose I should be grateful that DEI is at...",
+    img: "./img/articles/cookie.png",
+    alt: "Article thumbnail about HR vendor executive team diversity",
+    author: "Joel Quintela",
+    date: "Jun 21, 2022",
+    category: "Diversity, Equity, and Inclusion",
+    url: "/articles/how-diverse-are-hr-vendor-executive-teams",
+  },
+  {
+    heading: "Reducing Discrimination with Digital Interview Guides",
+    desc: "Despite changing times, hiring discrimination is still as prevalent today as it was 20 years ago. Over the years, more and more organizations have tried to mandate hiring practices that reduce bias and discrimination based on race, ethnicity, gender, sexual...",
+    img: "./img/articles/handshake.jpg",
+    alt: "Article thumbnail about reducing discrimination",
+    author: "Joel Quintela",
+    date: "Mar 23, 2022",
+    category: "Diversity, Equity, and Inclusion",
+    url: "/articles/reducing-discrimination-with-digital-interview-guides",
+  },
+  {
+    heading: "The Two Ways Digital Interview Guides Keep You Legally Compliant",
+    desc: "Studies show that about 30 percent of interviewers know whether or not they want to hire you within the first 90 seconds of an interview. Despite the ease of making such quick judgments of candidates, it’s not necessarily legal to “go with your gut.” While your...",
+    img: "./img/articles/videoInterview.jpg",
+    alt: "Article thumbnail about interview legal compliance",
+    author: "Joel Quintela",
+    date: "Mar 20, 2022",
+    category: "Legal Compliance",
+    url: "/articles/the-two-ways-digital-interview-guides-keep-you-legally-compliant",
+  },
+  {
+    heading:
+      "Interview like a Pro: How to Interview Candidates with Confidence",
+    desc: "In today’s standardized, digitized world, the interview is not what it used to be. Once upon a time, an interviewer had the confidence to walk into a room and spit out question after question, rating the candidate in their mind and walking away with an opinion already...",
+    img: "./img/articles/personInterview.jpg",
+    alt: "Article thumbnail about interview confidence",
+    author: "Joel Quintela",
+    date: "Mar 2, 2022",
+    category: "Legal Compliance",
+    url: "/articles/interview-like-a-pro-how-to-interview-candidates-with-confidence",
+  },
+];
