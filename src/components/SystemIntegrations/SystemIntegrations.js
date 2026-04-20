@@ -5,12 +5,12 @@ import { SYSTEM_LOGOS } from "../../constants/systemIntegrationsConstants";
 
 function SystemIntegrations() {
   return (
-    <div className="systemIntegrations">
+    <section className="systemIntegrations pt-5">
       <div className="container">
-        <h1 className="text-center" id="integrationCompanies">
+        <h2 className="text-center fw-bold mb-4 text-secondary" id="integrationCompanies">
           Systems Integrations
-        </h1>
-        <div className="row row-cols-auto justify-content-evenly align-items-center g-4">
+        </h2>
+        <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-4 justify-content-center align-items-center">
           {SYSTEM_LOGOS.map(({ src, alt }) => (
             <div key={src} className="col d-flex justify-content-center">
               <img src={src} alt={alt} className="integrationCompaniesImg" />
@@ -18,7 +18,7 @@ function SystemIntegrations() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

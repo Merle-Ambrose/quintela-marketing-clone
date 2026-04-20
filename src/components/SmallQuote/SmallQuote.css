@@ -1,26 +1,7 @@
-#digitalInterviewQuote {
+.digitalInterviewQuote {
   width: 100%;
-  color: #535b7c;
-  font-weight: bold;
-  font-size: 1.1875rem;
   background-image: url("../../../public/img/bkgs/quote.png");
-  background-size: initial;
-  background-position: 50%;
   background-repeat: no-repeat;
-}
-
-#digitalInterviewQuoteDesc {
-  margin-bottom: 30px;
-}
-
-#digitalInterviewQuoteTitle {
-  margin-bottom: 0;
-  font-size: 0.9375rem;
-  color: #959baf;
-}
-
-#digitalInterviewQuoteCompany {
-  font-weight: normal;
-  font-size: 0.9375rem;
-  color: #959baf;
+  background-position: center;
+  background-size: initial;
 }

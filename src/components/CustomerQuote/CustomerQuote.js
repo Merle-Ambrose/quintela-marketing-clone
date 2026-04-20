@@ -4,13 +4,20 @@ import React from "react";
 
 function CustomerQuote({ className }) {
   return (
-    <div className={`quoteFromCustomer${className ? ` ${className}` : ""}`}>
+    <div
+      className={`quoteFromCustomer py-5 px-4 ${className ? `${className}` : ""}`}
+    >
       <div className="container">
-        <div className="row align-items-start">
-          <div className="col-sm-3 quoteLogo">
-            <img src="./img/companies/SRHM.png" alt="SHRM Logo" id="srhmLogo" />
+        <div className="row align-items-start justify-content-center g-4">
+          <div className="col-12 col-md-2 text-center text-md-end quoteLogo align-self-start">
+            <img
+              src="./img/companies/SRHM.png"
+              alt="SHRM Logo"
+              className="img-fluid pt-1"
+              id="srhmLogo"
+            />
           </div>
-          <div className="col-sm-8 quoteText">
+          <div className="col-12 col-md-10 quoteText">
             <p className="quote">
               Quintela is unique because they are selection science experts who
               build simple, easy-to-use HR technology. Using the Interview Guide

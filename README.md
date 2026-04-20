@@ -8,3 +8,11 @@ This website is a recreation of Quintela’s marketing site, designed with a str
 
 ### View finished product here:
 https://taupe-torte-b3213b.netlify.app
+
+### TODO
+[ ] Have consistent bootstrap use!
+[ ] On tab click, users should be taken to the top of the screen, same for refreshes
+[ ] Make sure there are no duplicates of files
+[ ] Get rid of Section.css file
+[ ] Get rid of unnecessary css files
+[ ] Convert images to .webp

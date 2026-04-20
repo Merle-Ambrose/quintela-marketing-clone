@@ -4,13 +4,13 @@ import React from "react";
 
 function SmallQuote({ desc, title, company }) {
   return (
-    <div className="text-center py-5" id="digitalInterviewQuote">
-      <div className="container">
-        <p id="digitalInterviewQuoteDesc">{desc}</p>
-        <p id="digitalInterviewQuoteTitle">{title}</p>
-        <p id="digitalInterviewQuoteCompany">{company}</p>
+    <section className="digitalInterviewQuote bg-white py-5 d-flex align-items-center">
+      <div className="container text-center">
+        <p className="fs-5 fw-bold text-secondary mb-4">{desc}</p>
+        <p className="mb-0 text-muted fw-semibold">{title}</p>
+        <p className="text-muted small fst-italic">{company}</p>
       </div>
-    </div>
+    </section>
   );
 }
 

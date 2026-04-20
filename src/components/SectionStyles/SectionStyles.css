@@ -4,7 +4,6 @@
   background-position: 50%;
   width: 100%;
   color: white;
-  padding: 60px 20px 0;
 }
 
 .bkg-blue {
@@ -34,7 +33,6 @@
   font-size: 1.125rem;
   line-height: 35px;
   width: 100%;
-  padding: 60px 0;
 }
 
 .exerpt-blue {
@@ -56,44 +54,12 @@
 .exerpt .container {
   width: min(100%, 1000px);
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .introHeaderHeading {
   margin-bottom: 40px;
   font-size: 2.1875rem;
   font-weight: bold;
-}
-
-.introHeaderBtn {
-  border-radius: 61px;
-  font-size: 1.125rem;
-  background-color: transparent;
-  color: white;
-  border: 2px solid white;
-  padding: 0.3em 1em;
-  margin-top: 10px;
-  transition: all 300ms ease 0ms;
-}
-
-.introHeaderBtn:hover {
-  border-color: transparent;
-  margin-right: 20px;
-}
-
-.introHeaderBtn:hover .introHeaderBtnArrow {
-  visibility: visible;
-  left: 20px;
-  transition: all 300ms ease 0ms;
-}
-
-.introHeaderBtnArrow {
-  display: inline;
-  position: relative;
-  margin-left: -15px;
-  left: -25px;
-  top: 1px;
-  visibility: hidden;
 }
 
 #exerptDigitalInterview h1 {

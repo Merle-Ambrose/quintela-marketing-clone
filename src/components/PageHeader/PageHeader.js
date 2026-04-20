@@ -2,6 +2,7 @@ import "./PageHeader.css";
 import "../SectionStyles/SectionStyles.css";
 
 import React from "react";
+import IntroHeaderButton from "../IntroHeaderButton/IntroHeaderButton";
 
 function PageHeader({
   id,
@@ -24,14 +25,7 @@ function PageHeader({
           </div>
           <div className="col-7 pageHeaderContent">
             <p>{description}</p>
-            <a href="/contact-us">
-              <button type="button" className="introHeaderBtn">
-                Schedule a Demo
-                <div className="introHeaderBtnArrow">
-                  <i className="bi bi-caret-right"></i>
-                </div>
-              </button>
-            </a>
+            <IntroHeaderButton href="/contact-us" label="Schedule a Demo" />
           </div>
         </div>
       </div>

@@ -24,6 +24,8 @@
 .listPointBtn {
   appearance: none;
   -webkit-appearance: none;
+  display: inline-block;
+  justify-self: start;
   color: white;
   background-image: linear-gradient(243deg, #3d72e7 0%, #53a0fe 100%);
   border: none;
@@ -34,6 +36,15 @@
   padding: 13px 25px;
   font-size: 0.9375rem;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.listPointBtn:hover,
+.listPointBtn:focus,
+.listPointBtn:active,
+.listPointBtn:visited {
+  color: white;
+  text-decoration: none;
 }
 
 .listPointImg {

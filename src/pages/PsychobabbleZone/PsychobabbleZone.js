@@ -3,14 +3,15 @@ import "./PsychobabbleZone.css";
 
 import React from "react";
 import FeaturedArticleCard from "../../components/FeaturedArticleCard/FeaturedArticleCard";
+import IntroHeaderButton from "../../components/IntroHeaderButton/IntroHeaderButton";
 import { FEATURED_ARTICLES } from "../../constants/psychobabbleConstants";
 
 function PsychobabbleZone() {
   return (
     <>
       {/* Hero Section */}
-      <div className="heroSection bkg-cmp" id="psychModelHeader">
-        <div className="container text-center">
+      <div className="heroSection bkg-cmp py-5" id="psychModelHeader">
+        <div className="container px-3 text-center">
           <h1 className="introHeaderHeading">Psychobabble-Free Zone</h1>
           <p className="w-75 mx-auto">
             The word "science" has been so overused in Talent Management that
@@ -20,14 +21,7 @@ function PsychobabbleZone() {
             psychobabble-free zone where we discuss the &quot;science&quot;
             without the better-than-you attitude. We hope you enjoy!
           </p>
-          <a href="/contact-us">
-            <button type="button" className="introHeaderBtn">
-              Contact Us
-              <div className="introHeaderBtnArrow">
-                <i className="bi bi-caret-right"></i>
-              </div>
-            </button>
-          </a>
+          <IntroHeaderButton href="/contact-us" label="Contact Us" />
         </div>
       </div>
 

@@ -160,8 +160,8 @@ function CompetencyModel() {
         </div>
       </div>
 
-      <div className="exerpt exerpt-blue" id="exerptDigitalInterview">
-        <div className="container">
+      <div className="exerpt exerpt-blue py-5" id="exerptDigitalInterview">
+        <div className="container px-4">
           <h1>A competency model library supports your business goals</h1>
           <p>
             A competency library platform can be used for both individuals and
