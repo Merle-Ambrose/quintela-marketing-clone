@@ -5,6 +5,7 @@ import ListPoint from "../components/ListPoint/ListPoint";
 import ListPointDivider from "../components/ListPointDivider/ListPointDivider";
 import SmallQuote from "../components/SmallQuote/SmallQuote";
 import DigitalInterviewBuilderSection from "../components/DigitalInterviewBuilderSection/DigitalInterviewBuilderSection";
+import DigitalInterviewSection from "../components/DigitalInterviewBuilderSection/sections/DigitalInterviewSection";
 import SystemIntegrations from "../components/SystemIntegrations/SystemIntegrations";
 import PageHeader from "../components/PageHeader/PageHeader";
 
@@ -70,7 +71,11 @@ function InterviewGuide() {
         company="Fortune 500 Telecommunications Organization"
       />
 
-      <DigitalInterviewBuilderSection variant="digital-interview" />
+      <DigitalInterviewBuilderSection
+        header="Digital Interview Online Builder"
+        body={<DigitalInterviewSection />}
+        bkg="blue"
+      />
     </>
   );
 }

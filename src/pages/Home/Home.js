@@ -4,6 +4,7 @@ import "./Home.css";
 import React from "react";
 import CustomerQuote from "../../components/CustomerQuote/CustomerQuote";
 import DigitalInterviewBuilderSection from "../../components/DigitalInterviewBuilderSection/DigitalInterviewBuilderSection";
+import HomeGeometricInterviewSection from "../../components/DigitalInterviewBuilderSection/sections/HomeGeometricInterviewSection";
 import IntroHeaderButton from "../../components/IntroHeaderButton/IntroHeaderButton";
 import ListPoint from "../../components/ListPoint/ListPoint";
 
@@ -57,7 +58,11 @@ function Home() {
         />
       </div>
 
-      <DigitalInterviewBuilderSection />
+      <DigitalInterviewBuilderSection
+        header="Digital Interview Builder"
+        body={<HomeGeometricInterviewSection />}
+        bkg="geometric"
+      />
     </>
   );
 }

@@ -3,10 +3,13 @@ import "./CompetencyModel.css";
 
 import React, { useState } from "react";
 import ListPoint from "../../components/ListPoint/ListPoint";
+import ListPointDivider from "../../components/ListPointDivider/ListPointDivider";
 import SmallQuote from "../../components/SmallQuote/SmallQuote";
 import CompetencyBox from "../../components/CompetencyBox/CompetencyBox";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import { HOVER_IMAGES } from "../../constants/competencyModelConstants";
+import DigitalInterviewBuilderSection from "../../components/DigitalInterviewBuilderSection/DigitalInterviewBuilderSection";
+import CompetencyModelLibrarySection from "../../components/DigitalInterviewBuilderSection/sections/CompetencyModelLibrarySection";
 
 function CompetencyModel() {
   const [hoverImgSrc, setHoverImgSrc] = useState(HOVER_IMAGES.default);
@@ -23,21 +26,11 @@ function CompetencyModel() {
       />
 
       {/* List points: intro paragraph + first ListPoint */}
-      <div className="listPointsAssessmentWrapper">
+      <div className="listPointsAssessmentWrapper py-5">
         <div className="listPoints container py-5" id="listPointsAssessment">
-          <div className="listPoint">
-            <hr />
-            <div className="listPointParagraph">
-              What can a competency model library do for your organization?
-              Competency models are frameworks that provide a "recipe" for the
-              capabilities needed for good job performance. From marketing to
-              manufacturing, from administrative work to accounting and beyond,
-              Quintela's competency library platform can be leveraged to help
-              you assess candidates and evaluate employees based on the most
-              desirable skills for their job.
-            </div>
-            <hr />
-          </div>
+          <ListPointDivider>
+            What can a competency model library do for your organization? Competency models are frameworks that provide a "recipe" for the capabilities needed for good job performance. From marketing to manufacturing, from administrative work to accounting and beyond, Quintela's competency library platform can be leveraged to help you assess candidates and evaluate employees based on the most desirable skills for their job.
+          </ListPointDivider>
           <ListPoint
             url="/contact-us"
             img="./img/listpoint/airplane.png"
@@ -46,8 +39,9 @@ function CompetencyModel() {
             desc="Take advantage of Quintela's extensive framework and/or upload all of your competency content.  Configure the system around your specific hierarchy and structure.  Manage and segment multiple competency models for those departments and business units that have their own models."
             isImgOnLeft={true}
           />
-
-          {/* Assessment Building Blocks hover section */}
+          <ListPointDivider>
+            Assign entities to each competency that will allow you to build any talent management assessment. For example, assign interview questions to competencies or psychometric items and scoring to each competency in your profile.
+          </ListPointDivider>
           <div
             className="listPoint row g-4 align-items-center justify-content-center"
             id="competencyAssessmentDiv"
@@ -79,9 +73,9 @@ function CompetencyModel() {
         </div>
       </div>
 
-      {/* Assessment Builder section */}
-      <div className="container py-5">
-        <div id="assessmentBuilderDiv" className="mb-4">
+      {/* Assessment Builder section and analytics in one container with my-4 */}
+        <div className="container py-5 my-5 d-grid gap-4">
+        <div id="assessmentBuilderDiv">
           <h1>
             Only Competency-Based Assessment Builder That You Will Ever Need
           </h1>
@@ -148,7 +142,7 @@ function CompetencyModel() {
         </div>
       </div>
 
-      <div className="listPointsAssessmentWrapper">
+      <div className="listPointsAssessmentWrapper py-5">
         <div className="listPoints container py-5" id="listPointsAssessment">
           <ListPoint
             url="/contact-us"
@@ -160,44 +154,17 @@ function CompetencyModel() {
         </div>
       </div>
 
-      <div className="exerpt exerpt-blue py-5" id="exerptDigitalInterview">
-        <div className="container px-4">
-          <h1>A competency model library supports your business goals</h1>
-          <p>
-            A competency library platform can be used for both individuals and
-            business units, setting expectations and defining roles.
-            Competencies provide a common language for discussing capabilities
-            and behaviors that are critical for your company.
-          </p>
-          <p>
-            Competency models have become increasingly popular because they
-            reveal opportunities and methods for training, especially in highly
-            specialized and leadership roles. Furthermore, a competency model
-            library can be useful in the hiring process, as it offers clear
-            communication to hiring managers, and even candidates, about the
-            expectations of the job. This consistency allows your hiring team to
-            make better decisions, finding the right fit for your position,
-            thanks to defined roles and functions.
-          </p>
-          <p>
-            The Quintela competency management system has been extensively
-            researched and includes competency definitions and specifications
-            for multiple types and levels of roles.
-          </p>
-          <p>
-            Quintela can help you find the right competencies that fit your
-            company, providing you with the support you need to make the right
-            talent management decisions. Ready to get started with your
-            competency model library? Contact us today to learn more about
-            custom solutions for your business.
-          </p>
-        </div>
-      </div>
+      <DigitalInterviewBuilderSection
+        header="Competency Model Library Benefits"
+        body={<CompetencyModelLibrarySection />}
+        bkg="blue"
+      />
 
       <SmallQuote
         desc='"We use Quintela for our interview guide system and assessment dashboard because they work with us to create what WE want/need rather than limiting us to off the shelf products that don’t fully meet our needs."'
         title="Director Talent Management, PhD,"
         company="Billion-Dollar Industrial Manufacturer"
+        className="pb-0"
       />
     </>
   );

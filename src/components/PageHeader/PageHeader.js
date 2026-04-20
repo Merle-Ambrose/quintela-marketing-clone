@@ -14,7 +14,7 @@ function PageHeader({
 }) {
   return (
     <div
-      className={`pageHeader${bkgClassName ? ` ${bkgClassName}` : ""}`}
+      className={`pageHeader py-5${bkgClassName ? ` ${bkgClassName}` : ""}`}
       id={id}
     >
       <div className="container">
