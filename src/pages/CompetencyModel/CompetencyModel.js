@@ -1,12 +1,12 @@
-import "../css/SharedSections.css";
-import "../css/CompetencyModel.css";
+import "../../components/SectionStyles/SectionStyles.css";
+import "./CompetencyModel.css";
 
 import React, { useState } from "react";
-import ListPoint from "../utils/ListPoint";
-import SmallQuote from "../utils/SmallQuote";
-import CompetencyBox from "../components/CompetencyBox";
-import PageHeader from "../components/PageHeader";
-import { HOVER_IMAGES } from "../constants/competencyModelConstants";
+import ListPoint from "../../components/ListPoint/ListPoint";
+import SmallQuote from "../../components/SmallQuote/SmallQuote";
+import CompetencyBox from "../../components/CompetencyBox/CompetencyBox";
+import PageHeader from "../../components/PageHeader/PageHeader";
+import { HOVER_IMAGES } from "../../constants/competencyModelConstants";
 
 function CompetencyModel() {
   const [hoverImgSrc, setHoverImgSrc] = useState(HOVER_IMAGES.default);

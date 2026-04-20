@@ -1,4 +1,4 @@
-import "../css/FeaturedArticleCard.css";
+import "./FeaturedArticleCard.css";
 
 import React from "react";
 

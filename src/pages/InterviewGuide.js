@@ -1,55 +1,28 @@
+import "../components/SectionStyles/SectionStyles.css";
+
 import React from "react";
-import ListPoint from "../utils/ListPoint";
-import SmallQuote from "../utils/SmallQuote";
-import SystemIntegrations from "../utils/SystemIntegrations";
-import { BLUE_BACKGROUND_STYLE } from "../constants/backgroundStyles";
+import ListPoint from "../components/ListPoint/ListPoint";
+import SmallQuote from "../components/SmallQuote/SmallQuote";
+import SystemIntegrations from "../components/SystemIntegrations/SystemIntegrations";
+import PageHeader from "../components/PageHeader/PageHeader";
 
 function InterviewGuide() {
   return (
     <>
-      {/* Page Introduction */}
-      <div className="digitalInterviewQuote">
-        <div
-          className="midnightBackground"
-          id="digitalInterviewHeader"
-          style={BLUE_BACKGROUND_STYLE}
-        >
-          <h1 className="introHeaderHeading text-center">
-            Digital Interview Guides
-          </h1>
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-2"></div>
-              <img
-                src="./img/header/digitalInterview.png"
-                alt="Review of potential candidates."
-                className="introHeaderImg col-4"
-              />
-              <div className="introHeaderText col-4">
-                <p>
-                  By building digital interview guide systems, hiring managers
+      <PageHeader
+        id="digitalInterviewHeader"
+        bkgClassName="bkg-blue"
+        heading="Digital Interview Guides"
+        imgSrc="./img/header/digitalInterview.png"
+        imgAlt="Review of potential candidates."
+        description="By building digital interview guide systems, hiring managers
                   and recruiters can seamlessly integrate the interview notes
-                  and ratings into the hiring process.
-                </p>
-                <div className="text-center">
-                  <a href="/contact-us">
-                    <button type="button" className="introHeaderBtn">
-                      Schedule a Demo
-                      <div className="introHeaderBtnArrow">
-                        <i className="bi bi-caret-right"></i>
-                      </div>
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                  and ratings into the hiring process."
+      />
 
       {/* Images/text */}
-      <div style={{ backgroundColor: "#f8fbfe" }}>
-        <div className="listPoints container" id="listPointsInterview">
+      <div className="listPointsAssessmentWrapper">
+        <div className="listPoints container py-5" id="listPointsInterview">
           <div className="listPoint">
             <hr />
             <div className="listPointParagraph">
@@ -103,11 +76,7 @@ function InterviewGuide() {
         company="Fortune 500 Telecommunications Organization"
       />
 
-      <div
-        className="exerpt"
-        id="exerptDigitalInterview"
-        style={BLUE_BACKGROUND_STYLE}
-      >
+      <div className="exerpt exerpt-blue" id="exerptDigitalInterview">
         <div className="container">
           <h1 className="text-center">Digital Interview Online Builder</h1>
           <p>
@@ -136,7 +105,7 @@ function InterviewGuide() {
             avoid bad performers by working with Quintela to develop an online
             interview management system.
           </p>
-          <p style={{ fontWeight: "bold" }}>
+          <p className="fw-bold">
             Using a digital interview builder to improve your hiring process.
           </p>
           <p>

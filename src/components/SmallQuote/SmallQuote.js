@@ -1,4 +1,4 @@
-import "../css/SmallQuote.css";
+import "./SmallQuote.css";
 
 import React from "react";
 

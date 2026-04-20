@@ -1,54 +1,28 @@
 import React from "react";
-import ListPoint from "../utils/ListPoint";
-import SmallQuote from "../utils/SmallQuote";
-import SystemIntegrations from "../utils/SystemIntegrations";
+import ListPoint from "../components/ListPoint/ListPoint";
+import SmallQuote from "../components/SmallQuote/SmallQuote";
+import SystemIntegrations from "../components/SystemIntegrations/SystemIntegrations";
+import PageHeader from "../components/PageHeader/PageHeader";
 
 function AssessmentTechnology() {
   return (
     <>
-      {/* Page Introduction */}
-      <div className="digitalInterviewQuote">
-        <div className="midnightBackground" id="assessmentTechnologyHeader">
-          <h1 className="introHeaderHeading text-center">
-            Assessment Technology
-          </h1>
-          <div className="container">
-            <div className="row align-items-center justify-content-center">
-              <div className="col-1"></div>
-              <img
-                src="./img/header/brain.png"
-                alt="Review of potential candidates."
-                className="introHeaderImg col-4"
-                id="introHeaderAssessmentTechnology"
-              />
-              <div className="introHeaderText col-4">
-                <p>
-                  Assessments have become a valuable talent management tool
+      <PageHeader
+        id="assessmentTechnologyHeader"
+        heading="Assessment Technology"
+        imgSrc="./img/header/brain.png"
+        imgAlt="Review of potential candidates."
+        description="Assessments have become a valuable talent management tool
                   throughout the entire employee experience. Unfortunately, this
                   also creates a significant challenge for talent management
                   professionals who have to jump from one assessment platform to
                   another. What if you could manage all of your assessments from
-                  one platform?
-                </p>
-                <div className="text-center">
-                  <a href="/contact-us">
-                    <button type="button" className="introHeaderBtn">
-                      Schedule a Demo
-                      <div className="introHeaderBtnArrow">
-                        <i className="bi bi-caret-right"></i>
-                      </div>
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                  one platform?"
+      />
 
       {/* Images/text */}
-      <div style={{ backgroundColor: "#f8fbfe" }}>
-        <div className="listPoints container" id="listPointsAssessment">
+      <div className="listPointsAssessmentWrapper">
+        <div className="listPoints container py-5" id="listPointsAssessment">
           <div className="listPoint">
             <hr />
             <div className="listPointParagraph">

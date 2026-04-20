@@ -1,4 +1,4 @@
-import "../css/ListPoint.css";
+import "./ListPoint.css";
 
 import React from "react";
 

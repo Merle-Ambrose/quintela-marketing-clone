@@ -1,0 +1,40 @@
+.articleBox {
+  min-height: 400px;
+  border-radius: 20px;
+  box-shadow: rgba(99, 108, 117, 0.2) 0px 8px 24px;
+  padding-bottom: 20px;
+}
+
+.articleBoxText {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.articleBox img {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 20px;
+  aspect-ratio: 1 / 0.6;
+  object-fit: cover;
+  animation: fadeInImage 0.6s ease-in-out;
+}
+
+.articleBox h5 {
+  font-size: 1.5625rem;
+  padding-top: 10px;
+  color: #333333;
+}
+
+.articleBox p {
+  font-size: 1.25rem;
+  color: #666;
+}
+
+.articleBoxCredit {
+  font-size: 0.75rem !important;
+}
+
+.articleBox a {
+  text-decoration: none;
+}

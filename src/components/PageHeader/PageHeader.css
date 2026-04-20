@@ -1,0 +1,73 @@
+.pageHeader {
+  width: 100%;
+  color: white;
+  padding: 48px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.pageHeader .container {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.pageHeaderHeading {
+  font-size: 2.1875rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.pageHeaderImg {
+  width: 100%;
+  height: auto;
+  animation: fadeInImage 0.6s ease-in-out;
+}
+
+.pageHeaderContent {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  padding-left: 30px;
+}
+
+#assessmentTechnologyHeader {
+  color: white;
+  font-size: 1.25rem;
+  line-height: 35px;
+  background-image: radial-gradient(
+    circle at center,
+    #e01c11 0%,
+    #210444 100%
+  ) !important;
+  width: 100%;
+}
+
+#competencyModelHeader {
+  color: white;
+  font-size: 1.25rem;
+  line-height: 35px;
+}
+
+@media screen and (max-width: 768px) {
+  .pageHeader .row {
+    flex-direction: column;
+  }
+
+  .pageHeader .col-5,
+  .pageHeader .col-7 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .pageHeaderImg {
+    width: 70%;
+    margin: 0 auto 20px;
+    display: block;
+  }
+
+  .pageHeaderContent {
+    text-align: center;
+    padding-left: 0;
+  }
+}

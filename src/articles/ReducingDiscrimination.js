@@ -1,5 +1,5 @@
 import React from "react";
-import Article from "../pages/Article";
+import Article from "../pages/Article/Article";
 
 function ReducingDiscrimination() {
   return (

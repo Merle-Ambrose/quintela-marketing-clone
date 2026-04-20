@@ -1,9 +1,9 @@
-import "../css/SharedSections.css";
-import "../css/PsychobabbleZone.css";
+import "../../components/SectionStyles/SectionStyles.css";
+import "./PsychobabbleZone.css";
 
 import React from "react";
-import FeaturedArticleCard from "../components/FeaturedArticleCard";
-import { FEATURED_ARTICLES } from "../constants/psychobabbleConstants";
+import FeaturedArticleCard from "../../components/FeaturedArticleCard/FeaturedArticleCard";
+import { FEATURED_ARTICLES } from "../../constants/psychobabbleConstants";
 
 function PsychobabbleZone() {
   return (

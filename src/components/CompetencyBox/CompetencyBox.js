@@ -1,4 +1,4 @@
-import "../css/CompetencyBox.css";
+import "./CompetencyBox.css";
 
 import React from "react";
 

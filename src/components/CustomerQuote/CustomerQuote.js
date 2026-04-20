@@ -1,4 +1,4 @@
-import "../css/CustomerQuote.css";
+import "./CustomerQuote.css";
 
 import React from "react";
 

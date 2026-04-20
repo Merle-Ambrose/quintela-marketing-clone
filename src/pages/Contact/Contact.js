@@ -1,8 +1,8 @@
-import "../css/SharedSections.css";
-import "../css/Contact.css";
+import "../../components/SectionStyles/SectionStyles.css";
+import "./Contact.css";
 
 import React, { useState } from "react";
-import CustomerQuote from "../utils/CustomerQuote";
+import CustomerQuote from "../../components/CustomerQuote/CustomerQuote";
 
 function validateEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.toLowerCase());

@@ -1,9 +1,9 @@
-import "../css/SharedSections.css";
-import "../css/Home.css";
+import "../../components/SectionStyles/SectionStyles.css";
+import "./Home.css";
 
 import React from "react";
-import CustomerQuote from "../utils/CustomerQuote";
-import ListPoint from "../utils/ListPoint";
+import CustomerQuote from "../../components/CustomerQuote/CustomerQuote";
+import ListPoint from "../../components/ListPoint/ListPoint";
 
 function Home() {
   return (

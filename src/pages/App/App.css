@@ -119,6 +119,7 @@ footer p {
   }
 }
 
+
 @media screen and (max-device-width: 1000px) {
   .siteNavFrame {
     width: 100%;
@@ -140,3 +141,4 @@ footer p {
     margin: 0 auto;
   }
 }
+

@@ -1,28 +1,28 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import "../css/App.css";
-import { navbarToggle, onLoadNav } from "./CheckNavbarToggle";
-import { NAV_ITEMS } from "../constants/appNavigation";
-import { buildAppRoutes } from "../constants/appRoutes";
+import "./App.css";
+import { navbarToggle, onLoadNav } from "../CheckNavbarToggle";
+import { NAV_ITEMS } from "../../constants/appNavigation";
+import { buildAppRoutes } from "../../constants/appRoutes";
 
 import React, { Suspense, useEffect } from "react";
 import { BrowserRouter, Link, NavLink, Route, Routes } from "react-router-dom";
-import ErrorPage from "./ErrorPage";
-import Loader from "./Loader";
-import Home from "./Home";
-import InterviewGuide from "./InterviewGuide";
-import AssessmentTechnology from "./AssessmentTechnology";
-import CompetencyModel from "./CompetencyModel";
-import PsychobabbleZone from "./PsychobabbleZone";
-import Contact from "./Contact";
-const HRDiverse = React.lazy(() => import("../articles/HRDiverse"));
+import ErrorPage from "../ErrorPage";
+import Loader from "../Loader";
+import Home from "../Home/Home";
+import InterviewGuide from "../InterviewGuide";
+import AssessmentTechnology from "../AssessmentTechnology";
+import CompetencyModel from "../CompetencyModel/CompetencyModel";
+import PsychobabbleZone from "../PsychobabbleZone/PsychobabbleZone";
+import Contact from "../Contact/Contact";
+const HRDiverse = React.lazy(() => import("../../articles/HRDiverse"));
 const ReducingDiscrimination = React.lazy(
-  () => import("../articles/ReducingDiscrimination"),
+  () => import("../../articles/ReducingDiscrimination"),
 );
 const DigitalInterview = React.lazy(
-  () => import("../articles/DigitalInterview"),
+  () => import("../../articles/DigitalInterview"),
 );
-const ProInterview = React.lazy(() => import("../articles/ProInterview"));
+const ProInterview = React.lazy(() => import("../../articles/ProInterview"));
 
 const APP_ROUTES = buildAppRoutes({
   Home,
@@ -48,42 +48,15 @@ function App() {
       <div className="App">
         {/* Navbar! */}
         <nav className="navbar navbar-expand-lg sticky-top navbar-light bg-light">
-          <Link
-            className="navbar-toggler companyNavLogo"
-            id="logoCollapsed"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            to="/"
-          >
-            <img
-              src="img/logo.png"
-              className="d-inline-block align-top"
-              id="logo"
-              alt="brand logo"
-            />
-          </Link>
-          <button
-            onClick={navbarToggle}
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div
-            className="collapse navbar-collapse justify-content-center"
-            id="navbarNav"
-          >
+          <div className="siteFrame siteNavFrame">
             <Link
-              className="navbar-brand companyNavLogo"
-              id="nonToggledNavbarLogo"
+              className="navbar-toggler companyNavLogo"
+              id="logoCollapsed"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
               to="/"
             >
               <img
@@ -93,15 +66,44 @@ function App() {
                 alt="brand logo"
               />
             </Link>
-            <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-              {NAV_ITEMS.map(({ to, label }) => (
-                <li className="nav-item" key={to}>
-                  <NavLink className="nav-link" to={to}>
-                    {label}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
+            <button
+              onClick={navbarToggle}
+              className="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div
+              className="collapse navbar-collapse justify-content-center"
+              id="navbarNav"
+            >
+              <Link
+                className="navbar-brand companyNavLogo"
+                id="nonToggledNavbarLogo"
+                to="/"
+              >
+                <img
+                  src="img/logo.png"
+                  className="d-inline-block align-top"
+                  id="logo"
+                  alt="brand logo"
+                />
+              </Link>
+              <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+                {NAV_ITEMS.map(({ to, label }) => (
+                  <li className="nav-item" key={to}>
+                    <NavLink className="nav-link" to={to}>
+                      {label}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </nav>
 

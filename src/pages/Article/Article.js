@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/Article.css";
+import "./Article.css";
 
 function Article({ heading, details, paragArr = [] }) {
   return (

@@ -1,0 +1,114 @@
+.heroSection {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  width: 100%;
+  color: white;
+  padding: 60px 20px 0;
+}
+
+.bkg-blue {
+  background-image: url("../../../public/img/bkgs/blue.png");
+}
+
+.bkg-cmp {
+  background-image: url("../../../public/img/bkgs/cmp.png");
+}
+
+.heroImgHangingWrapper {
+  position: relative;
+  z-index: 1;
+  margin-bottom: -120px;
+}
+
+.heroImg {
+  width: 63.25%;
+  max-width: 886px;
+  aspect-ratio: 1 / 0.75;
+  object-fit: contain;
+  animation: fadeInImage 0.6s ease-in-out;
+}
+
+.exerpt {
+  color: white;
+  font-size: 1.125rem;
+  line-height: 35px;
+  width: 100%;
+  padding: 60px 0;
+}
+
+.exerpt-blue {
+  background-image: url("../../../public/img/bkgs/blue.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.exerpt-geometric {
+  background-image: url("../../../public/img/bkgs/geometric.png"),
+    linear-gradient(135deg, #53a0fd 0%, #4161d4 100%);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: center, center;
+}
+
+.exerpt .container {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.introHeaderHeading {
+  margin-bottom: 40px;
+  font-size: 2.1875rem;
+  font-weight: bold;
+}
+
+.introHeaderBtn {
+  border-radius: 61px;
+  font-size: 1.125rem;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 0.3em 1em;
+  margin-top: 10px;
+  transition: all 300ms ease 0ms;
+}
+
+.introHeaderBtn:hover {
+  border-color: transparent;
+  margin-right: 20px;
+}
+
+.introHeaderBtn:hover .introHeaderBtnArrow {
+  visibility: visible;
+  left: 20px;
+  transition: all 300ms ease 0ms;
+}
+
+.introHeaderBtnArrow {
+  display: inline;
+  position: relative;
+  margin-left: -15px;
+  left: -25px;
+  top: 1px;
+  visibility: hidden;
+}
+
+#exerptDigitalInterview h1 {
+  padding-bottom: 30px;
+  font-weight: bold;
+}
+
+.required-marker {
+  color: #990000;
+  font-weight: normal;
+}
+
+@media screen and (max-device-width: 1000px) {
+  .exerpt {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}

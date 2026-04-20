@@ -1,7 +1,7 @@
-import "../css/SystemIntegrations.css";
+import "./SystemIntegrations.css";
 
 import React from "react";
-import { SYSTEM_LOGOS } from "../constants/systemIntegrationsConstants";
+import { SYSTEM_LOGOS } from "../../constants/systemIntegrationsConstants";
 
 function SystemIntegrations() {
   return (
