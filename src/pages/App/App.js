@@ -102,7 +102,7 @@ function App() {
           <div className="container">
             {/* Blue gradient card */}
             <div
-              className="row justify-content-between align-items-center mb-4 py-4 px-2 shadow footerCtaCard"
+              className="row justify-content-between align-items-center mb-2 py-4 px-2 shadow footerCtaCard"
             >
               <div className="col-md-8 col-12 mb-2 mb-md-0 fs-3 fw-bold text-md-start text-start">
                 Ready to Get Started?
