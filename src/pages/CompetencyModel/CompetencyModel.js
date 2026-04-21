@@ -29,7 +29,13 @@ function CompetencyModel() {
       <div className="listPointsAssessmentWrapper py-5">
         <div className="listPoints container py-5" id="listPointsAssessment">
           <ListPointDivider>
-            What can a competency model library do for your organization? Competency models are frameworks that provide a "recipe" for the capabilities needed for good job performance. From marketing to manufacturing, from administrative work to accounting and beyond, Quintela's competency library platform can be leveraged to help you assess candidates and evaluate employees based on the most desirable skills for their job.
+            What can a competency model library do for your organization?
+            Competency models are frameworks that provide a "recipe" for the
+            capabilities needed for good job performance. From marketing to
+            manufacturing, from administrative work to accounting and beyond,
+            Quintela's competency library platform can be leveraged to help you
+            assess candidates and evaluate employees based on the most desirable
+            skills for their job.
           </ListPointDivider>
           <ListPoint
             url="/contact-us"
@@ -40,7 +46,10 @@ function CompetencyModel() {
             isImgOnLeft={true}
           />
           <ListPointDivider>
-            Assign entities to each competency that will allow you to build any talent management assessment. For example, assign interview questions to competencies or psychometric items and scoring to each competency in your profile.
+            Assign entities to each competency that will allow you to build any
+            talent management assessment. For example, assign interview
+            questions to competencies or psychometric items and scoring to each
+            competency in your profile.
           </ListPointDivider>
           <div
             className="listPoint row g-4 align-items-center justify-content-center"
@@ -74,7 +83,7 @@ function CompetencyModel() {
       </div>
 
       {/* Assessment Builder section and analytics in one container with my-4 */}
-        <div className="container py-5 my-5 d-grid gap-4">
+      <div className="container py-5 my-5 d-grid gap-4">
         <div id="assessmentBuilderDiv">
           <h1>
             Only Competency-Based Assessment Builder That You Will Ever Need

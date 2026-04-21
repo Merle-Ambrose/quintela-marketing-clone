@@ -22,10 +22,20 @@ function AssessmentTechnology() {
       />
 
       {/* Images/text */}
-      <div className="listPointsAssessmentWrapper">
-        <div className="listPoints container py-5" id="listPointsAssessment">
+      <div className="listPointsAssessmentWrapper py-5">
+        <div className="listPoints container" id="listPointsAssessment">
           <ListPointDivider>
-            Our assessment solution is used for both talent acquisition and development purposes. Whether you have a high-volume hiring event or an internal development program, our platform integrates multiple assessment vendors, proprietary assessments, or competencies in a simple dashboard with just the information you need. The result is an efficient assessment process based on your evaluation framework and competency models that helps you screen and select the right talent in a fraction of the time. For programs that focus on talent development for existing employees, the dashboard can be used to lessen burden of test administration, track assessment completion progress, and store several reports in one participant record.
+            Our assessment solution is used for both talent acquisition and
+            development purposes. Whether you have a high-volume hiring event or
+            an internal development program, our platform integrates multiple
+            assessment vendors, proprietary assessments, or competencies in a
+            simple dashboard with just the information you need. The result is
+            an efficient assessment process based on your evaluation framework
+            and competency models that helps you screen and select the right
+            talent in a fraction of the time. For programs that focus on talent
+            development for existing employees, the dashboard can be used to
+            lessen burden of test administration, track assessment completion
+            progress, and store several reports in one participant record.
           </ListPointDivider>
           <ListPoint
             url="/contact-us"
@@ -35,7 +45,9 @@ function AssessmentTechnology() {
             desc="Create test batteries using assessments from multiple vendors. Customize with your own tests or 360s. Build custom competencies and scores. Combine competencies into job profiles. Send participants one link to access all tests."
           />
           <ListPointDivider>
-            Our platform also helps you track completions and access reports efficiently, improving the participant experience and streamlining your workflow.
+            Our platform also helps you track completions and access reports
+            efficiently, improving the participant experience and streamlining
+            your workflow.
           </ListPointDivider>
           <ListPoint
             url="/contact-us"

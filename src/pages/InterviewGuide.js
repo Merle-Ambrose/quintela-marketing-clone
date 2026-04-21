@@ -24,8 +24,8 @@ function InterviewGuide() {
       />
 
       {/* Images/text */}
-      <div className="listPointsAssessmentWrapper">
-        <div className="listPoints container py-5" id="listPointsInterview">
+      <div className="listPointsAssessmentWrapper py-5">
+        <div className="listPoints container" id="listPointsInterview">
           <ListPointDivider>
             Our interview builder is a tool that allows talent acquisition teams
             to create interview guides, competency models, and screening
