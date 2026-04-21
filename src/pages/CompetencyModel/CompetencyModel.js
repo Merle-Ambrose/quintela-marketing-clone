@@ -27,7 +27,7 @@ function CompetencyModel() {
 
       {/* List points: intro paragraph + first ListPoint */}
       <div className="listPointsAssessmentWrapper py-5">
-        <div className="listPoints container py-5" id="listPointsAssessment">
+        <div className="listPoints container py-5 listPointsAssessment">
           <ListPointDivider>
             What can a competency model library do for your organization?
             Competency models are frameworks that provide a "recipe" for the
@@ -51,34 +51,17 @@ function CompetencyModel() {
             questions to competencies or psychometric items and scoring to each
             competency in your profile.
           </ListPointDivider>
-          <div
-            className="listPoint row g-4 align-items-center justify-content-center"
-            id="competencyAssessmentDiv"
-          >
-            <div className="listPointText col-12 col-lg-4" id="hoverImgDesc">
-              <h1>Assessment Building Blocks</h1>
-              <p>
-                Assign entities to each competency that will allow you to build
-                any talent management assessment. For example, assign interview
-                questions to competencies or psychometric items and scoring to
-                each competency in your profile.
-              </p>
-              <a href="/contact-us">
-                <button type="button" className="listPointBtn">
-                  Know More
-                </button>
-              </a>
-            </div>
-            <div className="col-12 col-lg-7">
-              <img
-                src={hoverImgSrc}
-                alt="Browser window with the Quintela interview application."
-                id="hoverImg"
-                onMouseEnter={() => setHoverImgSrc(HOVER_IMAGES.active)}
-                onMouseLeave={() => setHoverImgSrc(HOVER_IMAGES.default)}
-              />
-            </div>
-          </div>
+          <ListPoint
+            url="/contact-us"
+            img="./img/listpoint/assessment-blocks.png"
+            altImgText="Browser window with the Quintela interview application."
+            heading="Assessment Building Blocks"
+            desc="Assign entities to each competency that will allow you to build any talent management assessment. For example, assign interview questions to competencies or psychometric items and scoring to each competency in your profile."
+            isImgOnLeft={false}
+            hoverImgSrc={hoverImgSrc}
+            onHoverImgEnter={() => setHoverImgSrc(HOVER_IMAGES.active)}
+            onHoverImgLeave={() => setHoverImgSrc(HOVER_IMAGES.default)}
+          />
         </div>
       </div>
 
@@ -95,7 +78,7 @@ function CompetencyModel() {
             assessment processes.
           </p>
           <p>Someone provides information about…</p>
-          <ul className="text-start d-inline-block">
+          <ul className="text-start d-inline-block noBullets">
             <li>Themselves (eg Psychometric Tests)</li>
             <li>Someone Else (eg 360/180 Surveys)</li>
             <li>Something (eg Job Analysis Surveys)</li>
@@ -152,7 +135,7 @@ function CompetencyModel() {
       </div>
 
       <div className="listPointsAssessmentWrapper py-5">
-        <div className="listPoints container py-5" id="listPointsAssessment">
+        <div className="listPoints container py-5 listPointsAssessment">
           <ListPoint
             url="/contact-us"
             img="./img/listpoint/analytics.png"

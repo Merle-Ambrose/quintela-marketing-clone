@@ -10,47 +10,13 @@
   color: #535b7c;
 }
 
-#competencyAssessmentDiv {
-  margin: 0;
-}
-
-#hoverImgDesc {
-  padding: 0;
-}
-
-#hoverImg {
-  max-width: 800px !important;
-  width: 100%;
-  box-shadow: rgba(99, 108, 117, 0.2) 0px 8px 24px;
-  border: solid 1px #eaeaea !important;
-  border-radius: 20px;
-  object-fit: cover;
-  animation: fadeInOrgImg 0.5s;
-}
-
-@keyframes fadeInOrgImg {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+.noBullets {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 @media screen and (max-device-width: 1000px) {
-  #hoverImg {
-    visibility: collapse;
-    height: 0;
-    margin: 0;
-    padding: 0;
-    aspect-ratio: auto;
-  }
-
-  #hoverImgDesc {
-    margin: 0;
-  }
-
   #assessmentBuilderDiv ul {
     text-align: left;
   }

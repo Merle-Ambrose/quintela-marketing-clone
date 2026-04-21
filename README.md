@@ -11,6 +11,9 @@ https://taupe-torte-b3213b.netlify.app
 
 ### TODO
 [ ] Have consistent bootstrap use!
+[ ] Fix some styles
+[ ] Remove a bunch of ids in the css
+[ ] Allow mobile viewing
 [ ] On tab click, users should be taken to the top of the screen, same for refreshes
 [ ] Make sure there are no duplicates of files
 [ ] Get rid of Section.css file

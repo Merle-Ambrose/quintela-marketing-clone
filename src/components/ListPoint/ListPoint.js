@@ -10,9 +10,21 @@ function KnowMoreButton({ url }) {
   );
 }
 
-function ListPoint({ img, altImgText, heading, desc, url, isImgOnLeft }) {
+function ListPoint({
+  img,
+  altImgText,
+  heading,
+  desc,
+  url,
+  isImgOnLeft,
+  hoverImgSrc,
+  onHoverImgEnter,
+  onHoverImgLeave,
+}) {
+  const isHoverable = !!hoverImgSrc && !!onHoverImgEnter && !!onHoverImgLeave;
+
   const textBlock = (
-    <div className="listPointText col-12 col-lg d-grid gap-3">
+    <div className={`listPointText col-12 d-grid gap-3 ${isHoverable ? 'col-lg-4' : 'col-lg'}`}>
       <h1>{heading}</h1>
       <p>{desc}</p>
       <KnowMoreButton url={url} />
@@ -20,13 +32,19 @@ function ListPoint({ img, altImgText, heading, desc, url, isImgOnLeft }) {
   );
 
   const imageBlock = (
-    <div className="col-12 col-lg-auto d-flex justify-content-center">
-      <img src={img} alt={altImgText} className="listPointImg img-fluid" />
+    <div className={`col-12 d-flex justify-content-center ${isHoverable ? 'col-lg-8' : 'col-lg-auto'}`}>
+      <img
+        src={hoverImgSrc || img}
+        alt={altImgText}
+        className={`img-fluid ${isHoverable ? 'hoverImg' : 'listPointImg'}`}
+        onMouseEnter={onHoverImgEnter}
+        onMouseLeave={onHoverImgLeave}
+      />
     </div>
   );
 
   return (
-    <div className="listPoint row g-0 gap-5 align-items-center justify-content-center">
+    <div className={`listPoint row align-items-center justify-content-center ${isHoverable ? 'g-5' : ''}`}>
       {isImgOnLeft ? imageBlock : textBlock}
       {isImgOnLeft ? textBlock : imageBlock}
     </div>

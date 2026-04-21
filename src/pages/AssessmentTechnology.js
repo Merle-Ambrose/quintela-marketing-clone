@@ -23,7 +23,7 @@ function AssessmentTechnology() {
 
       {/* Images/text */}
       <div className="listPointsAssessmentWrapper py-5">
-        <div className="listPoints container" id="listPointsAssessment">
+        <div className="listPoints container listPointsAssessment">
           <ListPointDivider>
             Our assessment solution is used for both talent acquisition and
             development purposes. Whether you have a high-volume hiring event or
