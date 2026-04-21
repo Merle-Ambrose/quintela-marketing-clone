@@ -31,21 +31,7 @@ img {
 .siteFrame {
   width: min(100%, 1000px);
   margin: 0 auto;
-  padding: 0;
-}
-
-.siteNavFrame {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 0;
-}
-
-.navbar-toggler {
-  margin-right: 30px;
-}
-
-footer {
+  /* Removed custom navbar styles to use Bootstrap defaults. Add minimal tweaks below if needed. */
   color: #84bdff;
   font-size: 0.9375rem;
 }
@@ -70,44 +56,21 @@ footer p {
   text-align: left;
 }
 
-#footerCard {
-  background-image: linear-gradient(243deg, #3d72e7 0%, #53a0fe 100%);
-  text-align: center;
-  color: white;
-  font-size: 2.1875rem;
-  font-weight: bold;
-  padding: 25px 30px;
+.footerCtaCard {
+  background: linear-gradient(243deg, #3d72e7 0%, #53a0fe 100%);
   border-radius: 4px;
-  top: 50px;
+  margin-top: -80px;
   position: relative;
-  width: min(calc(100% - 32px), 1000px);
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-#footerCard button {
-  color: #3d72e7;
-  border-width: 0px;
-  border-radius: 26px;
-  letter-spacing: 1px;
-  font-weight: 800;
-  font-size: 0.9375rem;
-  padding: 15px 30px;
-  background-color: white;
-  text-transform: uppercase;
-}
-
-#footerBkgBottom {
-  background-color: #202332;
-  padding-bottom: 100px;
-}
-
-#footerSocials {
-  font-size: 1.875rem;
+  z-index: 2;
 }
 
 #footerSocials a {
   margin-right: 10px;
+}
+
+/* Custom margin top utility for extra space above footer */
+.mt-7 {
+  margin-top: 5rem !important;
 }
 
 @keyframes fadeInImage {
@@ -118,7 +81,6 @@ footer p {
     opacity: 1;
   }
 }
-
 
 @media screen and (max-device-width: 1000px) {
   .siteNavFrame {

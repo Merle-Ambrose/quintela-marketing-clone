@@ -1,15 +1,13 @@
-.article {
-  margin-top: 100px;
-  margin-bottom: 100px;
+.articleContainer {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-.article p {
-  font-size: 1.25rem;
-  line-height: 30px;
-  color: #666666;
+.details-article {
+  font-size: 1rem !important;
 }
 
-.details {
-  font-size: 0.9375rem !important;
-  margin-bottom: 35px !important;
+.article-paragraph {
+  font-size: 1.125rem;
+  color: #666;
 }

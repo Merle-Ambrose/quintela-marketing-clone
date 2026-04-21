@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
-import { navbarToggle, onLoadNav } from "../CheckNavbarToggle";
 import { NAV_ITEMS } from "../../constants/appNavigation";
 import { buildAppRoutes } from "../../constants/appRoutes";
 
@@ -38,40 +38,17 @@ const APP_ROUTES = buildAppRoutes({
 });
 
 function App() {
-  useEffect(() => {
-    const cleanup = onLoadNav();
-    return cleanup;
-  }, []);
-
   return (
     <BrowserRouter>
       <div className="App">
         {/* Navbar! */}
         <nav className="navbar navbar-expand-lg sticky-top navbar-light bg-light">
           <div className="siteFrame siteNavFrame">
-            <Link
-              className="navbar-toggler companyNavLogo"
-              id="logoCollapsed"
-              data-toggle="collapse"
-              data-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              to="/"
-            >
-              <img
-                src="img/logo.png"
-                className="d-inline-block align-top"
-                id="logo"
-                alt="brand logo"
-              />
-            </Link>
             <button
-              onClick={navbarToggle}
               className="navbar-toggler"
               type="button"
-              data-toggle="collapse"
-              data-target="#navbarNav"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
               aria-controls="navbarNav"
               aria-expanded="false"
               aria-label="Toggle navigation"
@@ -79,22 +56,20 @@ function App() {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div
-              className="collapse navbar-collapse justify-content-center"
+              className="collapse navbar-collapse"
               id="navbarNav"
             >
-              <Link
-                className="navbar-brand companyNavLogo"
-                id="nonToggledNavbarLogo"
-                to="/"
-              >
-                <img
-                  src="img/logo.png"
-                  className="d-inline-block align-top"
-                  id="logo"
-                  alt="brand logo"
-                />
-              </Link>
-              <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+              <ul className="navbar-nav align-items-center w-100">
+                <li className="nav-item">
+                  <Link className="navbar-brand companyNavLogo" to="/">
+                    <img
+                      src="img/logo.png"
+                      className="d-inline-block align-top"
+                      id="logo"
+                      alt="brand logo"
+                    />
+                  </Link>
+                </li>
                 {NAV_ITEMS.map(({ to, label }) => (
                   <li className="nav-item" key={to}>
                     <NavLink className="nav-link" to={to}>
@@ -118,62 +93,66 @@ function App() {
         </Suspense>
 
         {/* Footer! */}
-        <footer className="text-center">
-          <div>
-            {/* Blue div (ready to get started) */}
-            <div id="footerCard" className="clearfix bg-secondary">
-              <div className="float-start">Ready to Get Started?</div>
-              <div className="float-end">
-                <Link to="/contact-us">
-                  <button type="button">Sign Up Today</button>
-                </Link>
+        <footer className="text-center bg-dark text-light pt-4 mt-7">
+          <div className="container">
+            {/* Blue gradient card */}
+            <div
+              className="row justify-content-between align-items-center mb-4 py-4 px-2 shadow footerCtaCard"
+            >
+              <div className="col-md-8 col-12 mb-2 mb-md-0 fs-3 fw-bold text-md-start text-start">
+                Ready to Get Started?
+              </div>
+              <div className="col-md-4 col-12 text-md-end text-center">
+                <a
+                  href="/contact-us"
+                  className="btn btn-light fw-bold px-4 py-2 rounded-pill text-primary"
+                >
+                  Sign Up Today
+                </a>
               </div>
             </div>
 
-            {/* Gray div */}
-            <div id="footerBkgBottom"></div>
-          </div>
-
-          <div id="footerParagraphsBkg">
-            <div className="container">
-              <div className="justify-content-md-center">
-                <div id="footerContent">
-                  <div id="footerSocials">
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      href="https://www.facebook.com/quintelagroup"
-                    >
-                      <i className="bi-facebook"></i>
-                    </a>{" "}
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      href="https://twitter.com/quintela_io"
-                    >
-                      <i className="bi-twitter"></i>
-                    </a>
-                  </div>
-                  <p>
-                    © 2022 Quintela Group LLC. 7722 Oak Moss Dr, Spring, TX
-                    77379 · (844) 428-2924 ·{" "}
-                    <a href="mailto:hello@quintela.io">hello@quintela.io</a>
-                  </p>
-                  <p>
-                    <a href="/no-privacy-policy-on-this-site">Privacy Policy</a>{" "}
-                    · <a href="/no-cookie-policy-on-this-site">Cookie Policy</a>
-                  </p>
-                  <p>This is NOT Quintela Group's official website!</p>
-                  <p>
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      href="https://www.polinatik.com"
-                    >
-                      Website Redesign By: Polina Tikhomirova
-                    </a>
-                  </p>
+            {/* Socials and info */}
+            <div className="row justify-content-center pb-2">
+              <div>
+                <div className="d-flex justify-content-center gap-3">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.facebook.com/quintelagroup"
+                    className="text-light fs-4"
+                  >
+                    <i className="bi-facebook"></i>
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://twitter.com/quintela_io"
+                    className="text-light fs-4"
+                  >
+                    <i className="bi-twitter"></i>
+                  </a>
                 </div>
+                <p className="mb-1">
+                  © 2022 Quintela Group LLC. 7722 Oak Moss Dr, Spring, TX 77379 · (844) 428-2924 ·{' '}
+                  <a href="mailto:hello@quintela.io" className="text-info">hello@quintela.io</a>
+                </p>
+                <p className="mb-1">
+                  <a href="/no-privacy-policy-on-this-site" className="text-info">Privacy Policy</a>
+                  {' '}·{' '}
+                  <a href="/no-cookie-policy-on-this-site" className="text-info">Cookie Policy</a>
+                </p>
+                <p className="mb-1">This is NOT Quintela Group's official website!</p>
+                <p className="mb-1">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.polinatik.com"
+                    className="text-info"
+                  >
+                    Website Redesign By: Polina Tikhomirova
+                  </a>
+                </p>
               </div>
             </div>
           </div>

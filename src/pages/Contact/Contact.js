@@ -49,7 +49,7 @@ function Contact() {
 
     if (isNameValid && isEmailValid) {
       alert(
-        `Your full name: ${formFullName.trim()} \nYour email: ${formEmail.trim()} \nSince this is a demo website, your information will not be stored/sent anywhere. \nYou will now be redirected to the homepage...`,
+        `Your full name: ${formFullName.trim()} \nYour email: ${formEmail.trim()} \nThis is a demo website, so your information will not be stored/sent anywhere. \nYou will now be redirected to the homepage...`,
       );
       window.location.assign("/");
     }
@@ -69,50 +69,54 @@ function Contact() {
       </div>
 
       {/* Contact Form */}
-      <div className="py-5 text-center">
+      <div className="pt-5 text-center">
         <div id="contactUsBox">
-          <form onSubmit={submitForm} noValidate>
-            <label htmlFor="fullName">
-              Full Name
-              <span className="required-marker">*</span>
-            </label>
-            <input
-              type="text"
-              id="fullName"
-              name="fullName"
-              autoComplete="name"
-              onBlur={(e) => checkName(e.target.value)}
-              onChange={() => {
-                if (fullNameMsg) {
-                  setFullNameMsg("");
-                }
-              }}
-              required
-            />
-            <p className="errorMsg fullNameErrorMsg" aria-live="polite">
-              {fullNameMsg}
-            </p>
-            <label htmlFor="email">
-              Company Email
-              <span className="required-marker">*</span>
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              autoComplete="email"
-              onBlur={(e) => checkEmail(e.target.value)}
-              onChange={() => {
-                if (emailMsg) {
-                  setEmailMsg("");
-                }
-              }}
-              required
-            />
-            <p className="errorMsg" aria-live="polite">
-              {emailMsg}
-            </p>
-            <button type="submit">Submit</button>
+          <form onSubmit={submitForm} noValidate className="text-start">
+            <div className="mb-3 form-group">
+              <label htmlFor="fullName" className="form-label text-start w-100">
+                Full Name <span className="required-marker">*</span>
+              </label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                autoComplete="name"
+                className={`form-control${fullNameMsg ? ' is-invalid' : ''}`}
+                onBlur={(e) => checkName(e.target.value)}
+                onChange={() => {
+                  if (fullNameMsg) {
+                    setFullNameMsg("");
+                  }
+                }}
+                required
+              />
+              <div className="invalid-feedback text-start" style={{ display: fullNameMsg ? 'block' : 'none' }}>
+                {fullNameMsg}
+              </div>
+            </div>
+            <div className="mb-3 form-group">
+              <label htmlFor="email" className="form-label text-start w-100">
+                Company Email <span className="required-marker">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autoComplete="email"
+                className={`form-control${emailMsg ? ' is-invalid' : ''}`}
+                onBlur={(e) => checkEmail(e.target.value)}
+                onChange={() => {
+                  if (emailMsg) {
+                    setEmailMsg("");
+                  }
+                }}
+                required
+              />
+              <div className="invalid-feedback text-start" style={{ display: emailMsg ? 'block' : 'none' }}>
+                {emailMsg}
+              </div>
+            </div>
+            <button type="submit" className="btn btn-primary w-100 mt-2">Submit</button>
           </form>
         </div>
       </div>
