@@ -45,6 +45,28 @@
   line-height: 35px;
 }
 
+.heroSection {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  width: 100%;
+  color: white;
+}
+
+.heroImgHangingWrapper {
+  position: relative;
+  z-index: 1;
+  margin-bottom: -120px;
+}
+
+.heroImg {
+  width: 63.25%;
+  max-width: 886px;
+  aspect-ratio: 1 / 0.75;
+  object-fit: contain;
+  animation: fadeInImage 0.6s ease-in-out;
+}
+
 @media screen and (max-width: 768px) {
   .pageHeader .row {
     flex-direction: column;

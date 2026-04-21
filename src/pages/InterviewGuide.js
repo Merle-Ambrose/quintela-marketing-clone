@@ -1,4 +1,4 @@
-import "../components/SectionStyles/SectionStyles.css";
+import "./InterviewGuide.css";
 
 import React from "react";
 import ListPoint from "../components/ListPoint/ListPoint";

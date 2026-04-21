@@ -2,7 +2,6 @@
   font-family: "Nunito Sans", Helvetica, Arial, Lucida, sans-serif;
 }
 
-/* Generalized content section styles */
 .contentSection {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -46,7 +45,6 @@ img {
 .siteFrame {
   width: min(100%, 1000px);
   margin: 0 auto;
-  /* Removed custom navbar styles to use Bootstrap defaults. Add minimal tweaks below if needed. */
   color: #84bdff;
   font-size: 0.9375rem;
 }
@@ -83,12 +81,10 @@ footer p {
   margin-right: 10px;
 }
 
-/* Custom margin top utility for extra space above footer */
 .mt-7 {
   margin-top: 5rem !important;
 }
 
-/* Flexbox layout to keep footer at bottom */
 .app-flex-wrapper {
   min-height: 100vh;
   display: flex;
@@ -102,6 +98,16 @@ footer p {
 footer {
   flex-shrink: 0;
 }
+
+.bkg-blue {
+  background-image: url("../../../public/img/bkgs/blue.png");
+}
+
+.bkg-cmp {
+  background-image: url("../../../public/img/bkgs/cmp.png");
+}
+
+
 
 @keyframes fadeInImage {
   0% {
@@ -133,4 +139,3 @@ footer {
     margin: 0 auto;
   }
 }
-

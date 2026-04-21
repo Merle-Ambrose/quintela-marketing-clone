@@ -1,4 +1,5 @@
 import React from "react";
+import "./DigitalInterviewBuilderSection.css";
 
 function DigitalInterviewBuilderSection({ header, body, bkg = "blue", id }) {
   // bkg: 'blue' or 'geometric'

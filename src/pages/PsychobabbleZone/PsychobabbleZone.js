@@ -1,4 +1,3 @@
-import "../../components/SectionStyles/SectionStyles.css";
 import "./PsychobabbleZone.css";
 
 import React from "react";

@@ -1,4 +1,3 @@
-import "../../components/SectionStyles/SectionStyles.css";
 import "./Contact.css";
 
 import React, { useState } from "react";

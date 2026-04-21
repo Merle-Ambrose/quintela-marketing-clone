@@ -1,4 +1,3 @@
-import "../../components/SectionStyles/SectionStyles.css";
 import "./Home.css";
 
 import React from "react";

@@ -1,4 +1,3 @@
-import "../../components/SectionStyles/SectionStyles.css";
 import "./CompetencyModel.css";
 
 import React, { useState } from "react";

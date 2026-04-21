@@ -1,5 +1,4 @@
 import "./PageHeader.css";
-import "../SectionStyles/SectionStyles.css";
 
 import React from "react";
 import IntroHeaderButton from "../IntroHeaderButton/IntroHeaderButton";
