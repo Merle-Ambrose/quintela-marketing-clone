@@ -15,6 +15,7 @@ import AssessmentTechnology from "../AssessmentTechnology";
 import CompetencyModel from "../CompetencyModel/CompetencyModel";
 import PsychobabbleZone from "../PsychobabbleZone/PsychobabbleZone";
 import Contact from "../Contact/Contact";
+import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
 const HRDiverse = React.lazy(() => import("../../articles/HRDiverse"));
 const ReducingDiscrimination = React.lazy(
   () => import("../../articles/ReducingDiscrimination"),
@@ -40,6 +41,7 @@ const APP_ROUTES = buildAppRoutes({
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="App app-flex-wrapper">
         {/* Navbar! */}
         <nav className="navbar navbar-expand-lg sticky-top navbar-light bg-light">
