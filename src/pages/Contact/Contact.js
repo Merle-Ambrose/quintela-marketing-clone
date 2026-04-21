@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import CustomerQuote from "../../components/CustomerQuote/CustomerQuote";
 import DigitalInterviewBuilderSection from "../../components/DigitalInterviewBuilderSection/DigitalInterviewBuilderSection";
 import ContactGeometricInterviewSection from "../../components/DigitalInterviewBuilderSection/sections/ContactGeometricInterviewSection";
+import PageHeader from "../../components/PageHeader/PageHeader";
 
 function validateEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.toLowerCase());
@@ -57,16 +58,15 @@ function Contact() {
 
   return (
     <>
-      {/* Hero Section */}
-      <div className="heroSection text-center bkg-blue py-5">
-        <div className="container px-3">
-          <h1 className="fw-bold mb-3">Schedule a 30-minute demo</h1>
-          <p className="fs-5 fw-bold">
-            Our mission is to make managing all of your interview guides and
-            administering talent management assessments as simple as possible.
-          </p>
-        </div>
-      </div>
+      <PageHeader
+        heading="Schedule a 30-minute demo"
+        description={
+          "Our mission is to make managing all of your interview guides and administering talent management assessments as simple as possible."
+        }
+        bkgClassName="bkg-blue"
+        centerContent
+        hideIntroButton
+      />
 
       {/* Contact Form */}
       <div className="pt-5 text-center">

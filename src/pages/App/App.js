@@ -40,7 +40,7 @@ const APP_ROUTES = buildAppRoutes({
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App app-flex-wrapper">
         {/* Navbar! */}
         <nav className="navbar navbar-expand-lg sticky-top navbar-light bg-light">
           <div className="siteFrame siteNavFrame">
@@ -82,15 +82,18 @@ function App() {
           </div>
         </nav>
 
+
         {/* Content of webpage */}
-        <Suspense fallback={<Loader />}>
-          <Routes>
-            {APP_ROUTES.map(({ path, element }) => (
-              <Route key={path} path={path} element={element} />
-            ))}
-            <Route path="*" element={<ErrorPage />} />
-          </Routes>
-        </Suspense>
+        <main>
+          <Suspense fallback={<Loader />}>
+            <Routes>
+              {APP_ROUTES.map(({ path, element }) => (
+                <Route key={path} path={path} element={element} />
+              ))}
+              <Route path="*" element={<ErrorPage />} />
+            </Routes>
+          </Suspense>
+        </main>
 
         {/* Footer! */}
         <footer className="text-center bg-dark text-light pt-4 mt-7">

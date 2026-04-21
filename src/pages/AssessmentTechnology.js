@@ -9,7 +9,7 @@ function AssessmentTechnology() {
   return (
     <>
       <PageHeader
-        id="assessmentTechnologyHeader"
+        bkgClassName="assessmentTechnologyHeader"
         heading="Assessment Technology"
         imgSrc="./img/header/brain.png"
         imgAlt="Review of potential candidates."

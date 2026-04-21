@@ -5,31 +5,23 @@ import React from "react";
 import CustomerQuote from "../../components/CustomerQuote/CustomerQuote";
 import DigitalInterviewBuilderSection from "../../components/DigitalInterviewBuilderSection/DigitalInterviewBuilderSection";
 import HomeGeometricInterviewSection from "../../components/DigitalInterviewBuilderSection/sections/HomeGeometricInterviewSection";
-import IntroHeaderButton from "../../components/IntroHeaderButton/IntroHeaderButton";
 import ListPoint from "../../components/ListPoint/ListPoint";
+import PageHeader from "../../components/PageHeader/PageHeader";
 
 function Home() {
   return (
     <>
-      {/* Hero Section */}
-      <div className="heroSection text-center bkg-blue pt-5">
-        <div className="container px-3">
-          <h1 className="fw-bold mb-4">Digital Interview Guides</h1>
-          <IntroHeaderButton
-            href="/contact-us"
-            label="Schedule a Demo"
-            className="mb-4"
-            id="btnHomeSchedule"
-          />
-          <div className="heroImgHangingWrapper">
-            <img
-              src="./img/peopleWorking.png"
-              alt="People surrounding a whiteboard choosing a potential hire."
-              className="heroImg"
-            />
-          </div>
-        </div>
-      </div>
+      <PageHeader
+        heading="Digital Interview Guides"
+        bkgClassName="bkg-blue"
+        isHero
+        imgSrc="./img/peopleWorking.png"
+        imgAlt="People surrounding a whiteboard choosing a potential hire."
+        ctaHref="/contact-us"
+        ctaLabel="Schedule a Demo"
+        ctaClassName="mb-4"
+        ctaId="btnHomeSchedule"
+      />
 
       <CustomerQuote className="quoteFromCustomerHangingImage" />
 

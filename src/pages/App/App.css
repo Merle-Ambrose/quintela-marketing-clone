@@ -2,6 +2,21 @@
   font-family: "Nunito Sans", Helvetica, Arial, Lucida, sans-serif;
 }
 
+/* Generalized content section styles */
+.contentSection {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.content-details {
+  font-size: 1rem !important;
+}
+
+.content-paragraph {
+  font-size: 1.125rem;
+  color: #666;
+}
+
 img {
   animation: fadeInImage 0.6s ease-in-out;
 }
@@ -71,6 +86,21 @@ footer p {
 /* Custom margin top utility for extra space above footer */
 .mt-7 {
   margin-top: 5rem !important;
+}
+
+/* Flexbox layout to keep footer at bottom */
+.app-flex-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-flex-wrapper > main {
+  flex: 1 1 auto;
+}
+
+footer {
+  flex-shrink: 0;
 }
 
 @keyframes fadeInImage {

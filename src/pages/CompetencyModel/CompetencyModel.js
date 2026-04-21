@@ -17,7 +17,6 @@ function CompetencyModel() {
   return (
     <>
       <PageHeader
-        id="competencyModelHeader"
         bkgClassName="bkg-blue"
         heading="Competency Management System"
         imgSrc="./img/header/cycle.png"

@@ -13,7 +13,6 @@ function InterviewGuide() {
   return (
     <>
       <PageHeader
-        id="digitalInterviewHeader"
         bkgClassName="bkg-blue"
         heading="Digital Interview Guides"
         imgSrc="./img/header/digitalInterview.png"

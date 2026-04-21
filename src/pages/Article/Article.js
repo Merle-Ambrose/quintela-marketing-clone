@@ -1,15 +1,15 @@
 import React from "react";
-import "./Article.css";
+import "../App/App.css";
 
 function Article({ heading, details, paragArr = [] }) {
   return (
-    <div className="container articleContainer">
+    <div className="container contentSection">
       <h1 className="mb-3 display-5">{heading}</h1>
-      <p className="text-secondary small details-article">{details}</p>
+      <p className="text-secondary small content-details">{details}</p>
       {paragArr.map((paragraph, index) => (
         <p
           key={`${index}-${paragraph.slice(0, 20)}`}
-          className="text-muted article-paragraph"
+          className="text-muted content-paragraph"
         >
           {paragraph}
         </p>
