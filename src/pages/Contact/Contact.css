@@ -1,21 +1,18 @@
-
 .contactUsBox {
   max-width: 500px;
   background: #fff;
   border-radius: 1rem;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
   padding: 2rem 2.5rem;
   position: relative;
   z-index: 2;
   margin: -90px auto 2.5rem auto;
 }
 
-
 .contactUsBox label {
   margin-bottom: 0.25rem;
   font-weight: 500;
 }
-
 
 .contactUsBox input {
   width: 100%;
@@ -24,9 +21,8 @@
 
 .contactUsBox input:focus {
   outline: none;
-  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
-
 
 .contactUsBox button {
   margin-top: 0.5rem;

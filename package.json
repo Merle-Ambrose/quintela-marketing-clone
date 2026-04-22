@@ -18,8 +18,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "format": "prettier --write \"src/**/*.js\" \"src/css/*.css\"",
-    "format:check": "prettier --check \"src/**/*.js\" \"src/css/*.css\"",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css}\"",
     "prestart": "npm run format:check",
     "prebuild": "npm run format:check",
     "start": "react-scripts start",

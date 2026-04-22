@@ -3,7 +3,16 @@ import "./FeaturedArticleCard.css";
 import React from "react";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 
-function FeaturedArticleCard({ heading, desc, img, alt, author, date, category, url }) {
+function FeaturedArticleCard({
+  heading,
+  desc,
+  img,
+  alt,
+  author,
+  date,
+  category,
+  url,
+}) {
   return (
     <div className="col">
       <div className="card h-100">
@@ -14,7 +23,9 @@ function FeaturedArticleCard({ heading, desc, img, alt, author, date, category, 
           <a href={url} className="text-decoration-none text-dark">
             <h5 className="card-title">{heading}</h5>
           </a>
-          <p className="text-muted small mb-2">By {author} | {date} | {category}</p>
+          <p className="text-muted small mb-2">
+            By {author} | {date} | {category}
+          </p>
           <p className="card-text mb-4">{desc}</p>
           <div className="mt-auto">
             <PrimaryButton href={url} className="primaryBtn--read">

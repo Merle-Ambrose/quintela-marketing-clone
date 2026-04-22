@@ -13,7 +13,8 @@
 }
 
 .exerpt-geometric {
-  background-image: url("../../../public/img/bkgs/geometric.png"),
+  background-image:
+    url("../../../public/img/bkgs/geometric.png"),
     linear-gradient(135deg, #53a0fd 0%, #4161d4 100%);
   background-blend-mode: overlay;
   background-repeat: no-repeat, no-repeat;

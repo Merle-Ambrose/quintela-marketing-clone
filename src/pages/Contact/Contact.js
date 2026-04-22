@@ -80,7 +80,7 @@ function Contact() {
                 id="fullName"
                 name="fullName"
                 autoComplete="name"
-                className={`form-control${fullNameMsg ? ' is-invalid' : ''}`}
+                className={`form-control${fullNameMsg ? " is-invalid" : ""}`}
                 onBlur={(e) => checkName(e.target.value)}
                 onChange={() => {
                   if (fullNameMsg) {
@@ -100,7 +100,7 @@ function Contact() {
                 id="email"
                 name="email"
                 autoComplete="email"
-                className={`form-control${emailMsg ? ' is-invalid' : ''}`}
+                className={`form-control${emailMsg ? " is-invalid" : ""}`}
                 onBlur={(e) => checkEmail(e.target.value)}
                 onChange={() => {
                   if (emailMsg) {
@@ -111,7 +111,9 @@ function Contact() {
               />
               <div className="invalid-feedback text-start">{emailMsg}</div>
             </div>
-            <button type="submit" className="btn btn-primary w-100 mt-2">Submit</button>
+            <button type="submit" className="btn btn-primary w-100 mt-2">
+              Submit
+            </button>
           </form>
         </div>
       </div>

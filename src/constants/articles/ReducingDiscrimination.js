@@ -24,8 +24,7 @@ export const META = {
     "If your organization is not already practicing structured interviews, it may be time to consider a change in order to find the right person for the job and still be sure you’re avoiding discrimination in the process, resulting in greater diversity and better business practices.",
     "Article originally published on Business2Community.",
   ],
-  desc:
-    "Despite changing times, hiring discrimination is still as prevalent today as it was 20 years ago. Over the years, more and more organizations have tried to mandate hiring practices that reduce bias and discrimination based on race, ethnicity, gender, sexual...",
+  desc: "Despite changing times, hiring discrimination is still as prevalent today as it was 20 years ago. Over the years, more and more organizations have tried to mandate hiring practices that reduce bias and discrimination based on race, ethnicity, gender, sexual...",
   img: "./img/articles/handshake.jpg",
   alt: "Article thumbnail about reducing discrimination",
   author: "Joel Quintela",

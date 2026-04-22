@@ -65,7 +65,7 @@ function CompetencyModel() {
 
       {/* Assessment Builder section and analytics */}
       <div className="container py-5 my-5 d-grid gap-4">
-          <div className="assessmentBuilderDiv">
+        <div className="assessmentBuilderDiv">
           <h1>
             Only Competency-Based Assessment Builder That You Will Ever Need
           </h1>
@@ -76,7 +76,9 @@ function CompetencyModel() {
             assessment processes.
           </p>
           <div>
-            <p className="m-1 fw-bold fst-italic">Information may be collected from:</p>
+            <p className="m-1 fw-bold fst-italic">
+              Information may be collected from:
+            </p>
             <ul className="text-start d-inline-block noBullets">
               <li>Themselves (e.g. Psychometric Tests)</li>
               <li>Someone Else (e.g. 360/180 Surveys)</li>

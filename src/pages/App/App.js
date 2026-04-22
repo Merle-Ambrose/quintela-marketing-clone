@@ -5,7 +5,7 @@ import "./App.css";
 import { NAV_ITEMS } from "../../constants/appNavigation";
 import { buildAppRoutes } from "../../constants/appRoutes";
 
-import React, { Suspense, useEffect } from "react";
+import React, { Suspense } from "react";
 import { BrowserRouter, Link, NavLink, Route, Routes } from "react-router-dom";
 import ErrorPage from "../ErrorPage";
 import Loader from "../Loader";
@@ -16,14 +16,18 @@ import CompetencyModel from "../CompetencyModel/CompetencyModel";
 import PsychobabbleZone from "../PsychobabbleZone/PsychobabbleZone";
 import Contact from "../Contact/Contact";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
-const HRDiverse = React.lazy(() => import("../../constants/articles/HRDiverse"));
+const HRDiverse = React.lazy(
+  () => import("../../constants/articles/HRDiverse"),
+);
 const ReducingDiscrimination = React.lazy(
   () => import("../../constants/articles/ReducingDiscrimination"),
 );
 const DigitalInterview = React.lazy(
   () => import("../../constants/articles/DigitalInterview"),
 );
-const ProInterview = React.lazy(() => import("../../constants/articles/ProInterview"));
+const ProInterview = React.lazy(
+  () => import("../../constants/articles/ProInterview"),
+);
 
 const APP_ROUTES = buildAppRoutes({
   Home,
@@ -57,10 +61,7 @@ function App() {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarNav"
-            >
+            <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav align-items-center w-100">
                 <li className="nav-item">
                   <Link className="navbar-brand companyNavLogo" to="/">
@@ -84,7 +85,6 @@ function App() {
           </div>
         </nav>
 
-
         {/* Content of webpage */}
         <main>
           <Suspense fallback={<Loader />}>
@@ -101,9 +101,7 @@ function App() {
         <footer className="text-center bg-dark text-light pt-4 mt-7">
           <div className="container">
             {/* Blue gradient card */}
-            <div
-              className="row justify-content-between align-items-center mb-2 py-4 px-2 shadow footerCtaCard"
-            >
+            <div className="row justify-content-between align-items-center mb-2 py-4 px-2 shadow footerCtaCard">
               <div className="col-md-8 col-12 mb-2 mb-md-0 fs-3 fw-bold text-md-start text-start">
                 Ready to Get Started?
               </div>
@@ -139,15 +137,30 @@ function App() {
                   </a>
                 </div>
                 <p className="mb-1">
-                  © 2022 Quintela Group LLC. 7722 Oak Moss Dr, Spring, TX 77379 · (844) 428-2924 ·{' '}
-                  <a href="mailto:hello@quintela.io" className="text-info">hello@quintela.io</a>
+                  © 2022 Quintela Group LLC. 7722 Oak Moss Dr, Spring, TX 77379
+                  · (844) 428-2924 ·{" "}
+                  <a href="mailto:hello@quintela.io" className="text-info">
+                    hello@quintela.io
+                  </a>
                 </p>
                 <p className="mb-1">
-                  <a href="/no-privacy-policy-on-this-site" className="text-info">Privacy Policy</a>
-                  {' '}·{' '}
-                  <a href="/no-cookie-policy-on-this-site" className="text-info">Cookie Policy</a>
+                  <a
+                    href="/no-privacy-policy-on-this-site"
+                    className="text-info"
+                  >
+                    Privacy Policy
+                  </a>{" "}
+                  ·{" "}
+                  <a
+                    href="/no-cookie-policy-on-this-site"
+                    className="text-info"
+                  >
+                    Cookie Policy
+                  </a>
                 </p>
-                <p className="mb-1">This is NOT Quintela Group's official website!</p>
+                <p className="mb-1">
+                  This is NOT Quintela Group's official website!
+                </p>
                 <p className="mb-1">
                   <a
                     target="_blank"
