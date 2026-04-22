@@ -24,9 +24,22 @@ img {
   animation: fadeInImage 0.6s ease-in-out;
 }
 
+/* Keep navbar logo container stable to avoid jitter */
+.companyNavLogo {
+  display: flex;
+  align-items: center;
+  min-height: 35px;
+  width: 140px;
+  flex: 0 0 140px;
+  justify-content: flex-start;
+}
+
 #logo {
-  width: auto;
+  display: block;
+  max-height: 35px;
   height: 35px;
+  width: auto;
+  max-width: 100%;
   animation: none;
 }
 

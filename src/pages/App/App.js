@@ -66,10 +66,13 @@ function App() {
                 <li className="nav-item">
                   <Link className="navbar-brand companyNavLogo" to="/">
                     <img
-                      src="img/logo.png"
+                      src="/img/logo.png"
                       className="d-inline-block align-top"
                       id="logo"
                       alt="brand logo"
+                      decoding="async"
+                      loading="eager"
+                      fetchpriority="high"
                     />
                   </Link>
                 </li>

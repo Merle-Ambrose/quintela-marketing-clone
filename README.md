@@ -17,7 +17,7 @@ https://taupe-torte-b3213b.netlify.app
 [x] Get rid of Section.css file
 [x] Get rid of unnecessary css files
 [x] Remove a bunch of ids in the css and remove unused classes/ids in the css
-[ ] Fix jerk-y image loading
+[x] Fix jerk-y image loading
 [ ] Allow mobile viewing
 [ ] Convert images to .webp
 [ ] Have a lot of the packages that were in the portfolio (i.e. sass)

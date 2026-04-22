@@ -52,7 +52,15 @@ function PageHeader({
             {heroButtonMarkup}
             {heroDescription}
             <div className="heroImgHangingWrapper">
-              {imgSrc && <img src={imgSrc} alt={imgAlt} className="heroImg" />}
+              {imgSrc && (
+                <img
+                  src={imgSrc}
+                  alt={imgAlt}
+                  className="heroImg"
+                  decoding="async"
+                  loading="eager"
+                />
+              )}
             </div>
           </>
         ) : (
@@ -66,7 +74,13 @@ function PageHeader({
               {imgSrc ? (
                 <>
                   <div className="col-5">
-                    <img src={imgSrc} alt={imgAlt} className="pageHeaderImg" />
+                    <img
+                      src={imgSrc}
+                      alt={imgAlt}
+                      className="pageHeaderImg"
+                      decoding="async"
+                      loading="lazy"
+                    />
                   </div>
                   <div
                     className={`col-7 pageHeaderContent${centerContent ? " text-center" : ""}`}
