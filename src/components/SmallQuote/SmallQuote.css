@@ -3,7 +3,7 @@
   background-image: url("../../../public/img/bkgs/quote.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: 10%;
 }
 
 /* Mobile improvements (screens <= 1000px) */

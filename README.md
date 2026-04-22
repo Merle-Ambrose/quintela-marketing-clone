@@ -19,5 +19,11 @@ https://taupe-torte-b3213b.netlify.app
 [x] Remove a bunch of ids in the css and remove unused classes/ids in the css
 [x] Fix jerk-y image loading
 [ ] Allow mobile viewing
+    [ ] Update navbar to have bigger anchor click-able areas
+    [ ] Update footer "Ready to Get Started?" button
+    [ ] Update footer icon sizes
+    [ ] Increase left/right padding for elements
+    [ ] Decrease amount of text on mobile (especially in paragraphs) and experiment with font sizes
+[ ] Update caret icon to simpler caret icon
 [ ] Convert images to .webp
 [ ] Have a lot of the packages that were in the portfolio (i.e. sass)
