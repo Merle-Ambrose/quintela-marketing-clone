@@ -69,7 +69,7 @@ function Contact() {
 
       {/* Contact Form */}
       <div className="pt-5 text-center">
-        <div id="contactUsBox">
+        <div className="contactUsBox">
           <form onSubmit={submitForm} noValidate className="text-start">
             <div className="mb-3 form-group">
               <label htmlFor="fullName" className="form-label text-start w-100">
@@ -89,9 +89,7 @@ function Contact() {
                 }}
                 required
               />
-              <div className="invalid-feedback text-start" style={{ display: fullNameMsg ? 'block' : 'none' }}>
-                {fullNameMsg}
-              </div>
+              <div className="invalid-feedback text-start">{fullNameMsg}</div>
             </div>
             <div className="mb-3 form-group">
               <label htmlFor="email" className="form-label text-start w-100">
@@ -111,9 +109,7 @@ function Contact() {
                 }}
                 required
               />
-              <div className="invalid-feedback text-start" style={{ display: emailMsg ? 'block' : 'none' }}>
-                {emailMsg}
-              </div>
+              <div className="invalid-feedback text-start">{emailMsg}</div>
             </div>
             <button type="submit" className="btn btn-primary w-100 mt-2">Submit</button>
           </form>

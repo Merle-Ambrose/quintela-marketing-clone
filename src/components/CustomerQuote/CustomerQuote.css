@@ -3,13 +3,6 @@
   justify-content: center;
 }
 
-#srhmLogo {
-  width: 100%;
-  max-width: none;
-  height: auto;
-  animation: fadeInImage 0.6s ease-in-out;
-}
-
 .quoteFromCustomer {
   background-color: #f8fbfe;
   line-height: 30px;

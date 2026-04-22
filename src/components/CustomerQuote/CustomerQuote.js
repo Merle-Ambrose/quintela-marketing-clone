@@ -14,7 +14,6 @@ function CustomerQuote({ className }) {
               src="./img/companies/SRHM.png"
               alt="SHRM Logo"
               className="img-fluid pt-1"
-              id="srhmLogo"
             />
           </div>
           <div className="col-12 col-md-10 quoteText">

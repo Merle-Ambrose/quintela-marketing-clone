@@ -9,7 +9,6 @@ function SystemIntegrations() {
       <div className="container">
         <h2
           className="text-center fw-bold mb-4 text-secondary"
-          id="integrationCompanies"
         >
           Systems Integrations
         </h2>

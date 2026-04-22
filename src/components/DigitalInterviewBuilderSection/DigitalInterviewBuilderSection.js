@@ -1,11 +1,11 @@
 import React from "react";
 import "./DigitalInterviewBuilderSection.css";
 
-function DigitalInterviewBuilderSection({ header, body, bkg = "blue", id }) {
+function DigitalInterviewBuilderSection({ header, body, bkg = "blue" }) {
   // bkg: 'blue' or 'geometric'
   const bkgClass = bkg === "geometric" ? "exerpt-geometric" : "exerpt-blue";
   return (
-    <div className={`exerpt ${bkgClass} py-5`} id={id}>
+    <div className={`exerpt ${bkgClass} py-5`}>
       <div className="container px-4">
         <h1 className="text-center pb-4 fw-bold">{header}</h1>
         {Array.isArray(body) ? (

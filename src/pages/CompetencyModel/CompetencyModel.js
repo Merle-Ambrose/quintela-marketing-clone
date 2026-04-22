@@ -63,9 +63,9 @@ function CompetencyModel() {
         </div>
       </div>
 
-      {/* Assessment Builder section and analytics in one container with my-4 */}
+      {/* Assessment Builder section and analytics */}
       <div className="container py-5 my-5 d-grid gap-4">
-        <div id="assessmentBuilderDiv">
+          <div className="assessmentBuilderDiv">
           <h1>
             Only Competency-Based Assessment Builder That You Will Ever Need
           </h1>

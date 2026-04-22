@@ -1,10 +1,11 @@
-#assessmentBuilderDiv {
+.assessmentBuilderDiv {
   color: #959baf;
   line-height: 25px;
   text-align: center;
+  font-size: 1.125rem;
 }
 
-#assessmentBuilderDiv h1 {
+.assessmentBuilderDiv h1 {
   font-weight: bold;
   font-size: 1.875rem;
   color: #535b7c;
@@ -17,7 +18,7 @@
 }
 
 @media screen and (max-device-width: 1000px) {
-  #assessmentBuilderDiv ul {
+  .assessmentBuilderDiv ul {
     text-align: left;
   }
 }

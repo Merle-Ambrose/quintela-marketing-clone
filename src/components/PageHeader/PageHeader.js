@@ -16,7 +16,6 @@ function PageHeader({
   ctaHref,
   ctaLabel,
   ctaClassName,
-  ctaId,
 }) {
   const noImage = !imgSrc;
 
@@ -27,7 +26,6 @@ function PageHeader({
       href={ctaHref || "/contact-us"}
       label={ctaLabel || "Schedule a Demo"}
       className={ctaClassName}
-      id={ctaId}
     />
   ) : null;
 

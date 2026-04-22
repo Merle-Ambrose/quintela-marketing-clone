@@ -1,5 +1,5 @@
 
-#contactUsBox {
+.contactUsBox {
   max-width: 500px;
   background: #fff;
   border-radius: 1rem;
@@ -11,37 +11,24 @@
 }
 
 
-#contactUsBox label {
+.contactUsBox label {
   margin-bottom: 0.25rem;
   font-weight: 500;
 }
 
 
-#contactUsBox input {
+.contactUsBox input {
   width: 100%;
   margin-bottom: 0.5rem;
 }
 
-
-#contactUsBox .errorMsg {
-  font-size: 0.85rem;
-  min-height: 1.3em;
-  color: #dc3545;
-  margin-bottom: 0.5rem;
-}
-
-#contactUsBox .errorMsg:empty {
-  visibility: hidden;
-}
-
-
-#contactUsBox input:focus {
+.contactUsBox input:focus {
   outline: none;
   box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
 
 
-#contactUsBox button {
+.contactUsBox button {
   margin-top: 0.5rem;
 }
 

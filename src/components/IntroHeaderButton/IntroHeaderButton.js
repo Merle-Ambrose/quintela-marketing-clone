@@ -2,12 +2,11 @@ import "./IntroHeaderButton.css";
 
 import React from "react";
 
-function IntroHeaderButton({ href, label, className, id }) {
+function IntroHeaderButton({ href, label, className }) {
   return (
     <a
       href={href}
       className={`introHeaderBtn${className ? ` ${className}` : ""}`}
-      id={id}
     >
       {label}
       <div className="introHeaderBtnArrow">

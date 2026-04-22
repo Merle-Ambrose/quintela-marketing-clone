@@ -2,9 +2,9 @@ import "./PrimaryButton.css";
 
 import React from "react";
 
-function PrimaryButton({ href, children, className = "", id }) {
+function PrimaryButton({ href, children, className = "" }) {
   return (
-    <a href={href} className={`primaryBtn ${className}`} id={id}>
+    <a href={href} className={`primaryBtn ${className}`}>
       {children}
     </a>
   );
