@@ -5,8 +5,8 @@ import "./App.css";
 import { NAV_ITEMS } from "../../constants/appNavigation";
 import { buildAppRoutes } from "../../constants/appRoutes";
 
-import React, { Suspense } from "react";
-import { BrowserRouter, Link, NavLink, Route, Routes } from "react-router-dom";
+import React, { Suspense, useEffect } from "react";
+import { BrowserRouter, Link, NavLink, Route, Routes, useLocation } from "react-router-dom";
 import ErrorPage from "../ErrorPage";
 import Loader from "../Loader";
 import Home from "../Home/Home";
@@ -43,51 +43,90 @@ const APP_ROUTES = buildAppRoutes({
 });
 
 function App() {
+  function NavbarComp() {
+    const location = useLocation();
+
+    useEffect(() => {
+      const el = document.getElementById("navbarNav");
+      if (!el) return;
+
+      const toggler = document.querySelector(".navbar-toggler");
+      const bs = window.bootstrap;
+
+      // If collapse is open or mid-transition, ensure it is fully closed and
+      // that the toggler state/attributes reflect the collapsed state. This
+      // avoids leaving inline styles or classes that prevent future toggles.
+      try {
+        if (bs && bs.Collapse) {
+          const inst = bs.Collapse.getInstance(el) || new bs.Collapse(el, { toggle: false });
+          inst.hide();
+        }
+      } catch (e) {
+        // fall through to DOM cleanup
+      }
+
+      // DOM cleanup to guarantee a clean collapsed state for non-Bootstrap
+      // or after programmatic hide.
+      el.classList.remove("show", "collapsing");
+      el.style.display = "";
+      el.style.height = "";
+
+      if (toggler) {
+        toggler.classList.add("collapsed");
+        toggler.setAttribute("aria-expanded", "false");
+      }
+    }, [location]);
+
+    return (
+      <nav className="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+        <div className="siteFrame siteNavFrame">
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          {/* Keep the brand/logo outside the collapsing menu so it's always visible on mobile */}
+          <Link className="navbar-brand companyNavLogo" to="/">
+            <img
+              src="/img/logo.png"
+              className="d-inline-block align-top"
+              id="logo"
+              alt="brand logo"
+              decoding="async"
+              loading="eager"
+              fetchpriority="high"
+            />
+          </Link>
+
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav align-items-center ms-auto">
+              {NAV_ITEMS.map(({ to, label }) => (
+                <li className="nav-item" key={to}>
+                  <NavLink className="nav-link" to={to}>
+                    {label}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </nav>
+    );
+  }
+
   return (
     <BrowserRouter>
       <ScrollToTop />
       <div className="App app-flex-wrapper">
         {/* Navbar! */}
-        <nav className="navbar navbar-expand-lg sticky-top navbar-light bg-light">
-          <div className="siteFrame siteNavFrame">
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-
-            {/* Keep the brand/logo outside the collapsing menu so it's always visible on mobile */}
-            <Link className="navbar-brand companyNavLogo" to="/">
-              <img
-                src="/img/logo.png"
-                className="d-inline-block align-top"
-                id="logo"
-                alt="brand logo"
-                decoding="async"
-                loading="eager"
-                fetchpriority="high"
-              />
-            </Link>
-
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav align-items-center ms-auto">
-                {NAV_ITEMS.map(({ to, label }) => (
-                  <li className="nav-item" key={to}>
-                    <NavLink className="nav-link" to={to}>
-                      {label}
-                    </NavLink>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </nav>
+        <NavbarComp />
 
         {/* Content of webpage */}
         <main>
