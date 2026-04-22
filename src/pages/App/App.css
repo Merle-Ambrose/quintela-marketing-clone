@@ -62,6 +62,30 @@ img {
   font-size: 0.9375rem;
 }
 
+/* Ensure navbar items and brand sit on a single row */
+.siteNavFrame {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-collapse {
+  flex-grow: 1;
+}
+
+/* Default ordering for desktop: logo sits next to nav content */
+.siteNavFrame .companyNavLogo {
+  order: 0;
+  margin-right: 0.75rem;
+}
+
+.siteNavFrame .navbar-collapse {
+  order: 1;
+}
+
+.siteNavFrame .navbar-toggler {
+  order: 2;
+}
+
 footer a {
   color: #84bdff;
   text-decoration: none;
@@ -134,6 +158,13 @@ footer {
     max-width: 1000px;
     margin: 0 auto;
   }
+
+  /* On desktop make nav items sit immediately after the logo */
+  .navbar-nav.ms-auto {
+    margin-left: 0 !important;
+    display: flex;
+    gap: 1rem;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -144,17 +175,33 @@ footer {
     box-sizing: border-box;
   }
 
-  .companyNavLogo {
-    min-height: 28px;
-    width: 120px;
-    flex: 0 0 120px;
-    margin-right: 0;
-    width: fit-content;
-  }
-
   #logo {
     height: 28px;
     max-height: 28px;
+  }
+
+  .siteNavFrame {
+    /* Allow the collapse to wrap to a new row when opened */
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .siteNavFrame .navbar-toggler {
+    order: 0;
+    margin-right: 0;
+  }
+
+  /* Make the logo sit before the expanded menu so it stays at the top */
+  .siteNavFrame .companyNavLogo {
+    order: 1;
+    margin-left: auto;
+    margin-right: 0.5rem;
+    max-width: fit-content !important;
+    min-height: 28px;
+    width: 120px;
+    flex: 0 0 120px;
+    width: fit-content;
+    z-index: 3;
   }
 
   .contentSection {

@@ -61,21 +61,22 @@ function App() {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
+
+            {/* Keep the brand/logo outside the collapsing menu so it's always visible on mobile */}
+            <Link className="navbar-brand companyNavLogo" to="/">
+              <img
+                src="/img/logo.png"
+                className="d-inline-block align-top"
+                id="logo"
+                alt="brand logo"
+                decoding="async"
+                loading="eager"
+                fetchpriority="high"
+              />
+            </Link>
+
             <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav align-items-center w-100">
-                <li className="nav-item">
-                  <Link className="navbar-brand companyNavLogo" to="/">
-                    <img
-                      src="/img/logo.png"
-                      className="d-inline-block align-top"
-                      id="logo"
-                      alt="brand logo"
-                      decoding="async"
-                      loading="eager"
-                      fetchpriority="high"
-                    />
-                  </Link>
-                </li>
+              <ul className="navbar-nav align-items-center ms-auto">
                 {NAV_ITEMS.map(({ to, label }) => (
                   <li className="nav-item" key={to}>
                     <NavLink className="nav-link" to={to}>
