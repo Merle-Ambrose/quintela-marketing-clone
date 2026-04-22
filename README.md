@@ -24,6 +24,8 @@ https://taupe-torte-b3213b.netlify.app
     [ ] Update footer icon sizes
     [ ] Increase left/right padding for elements
     [ ] Decrease amount of text on mobile (especially in paragraphs) and experiment with font sizes
+[ ] Fix quote background
 [ ] Update caret icon to simpler caret icon
-[ ] Convert images to .webp
+[ ] Convert images to .webp and convert quintela header image to svg
+[ ] Fix smaller screen grid article display
 [ ] Have a lot of the packages that were in the portfolio (i.e. sass)
