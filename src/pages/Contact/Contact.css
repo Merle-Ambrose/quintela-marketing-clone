@@ -32,3 +32,15 @@
   color: #990000;
   font-weight: normal;
 }
+
+@media screen and (max-width: 1000px) {
+  .contactUsBox {
+    margin: -40px auto 1.5rem auto;
+    padding: 1rem 1rem;
+    width: calc(100% - 32px);
+  }
+
+  .contactUsBox input {
+    font-size: 1rem;
+  }
+}

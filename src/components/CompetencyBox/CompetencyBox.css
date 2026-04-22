@@ -1,7 +1,7 @@
 .modelBox {
   border-top: 6px #3d72e7 solid;
   min-height: 350px;
-  min-width: 200px;
+  min-width: max(250px, 90%);
   border-radius: 5px;
   box-shadow: rgba(99, 108, 117, 0.2) 0px 8px 24px;
   text-align: center;
@@ -25,4 +25,16 @@
 
 .modelBox p {
   font-size: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .modelBox {
+    padding: 20px;
+    margin: 0 auto 1rem auto;
+    width: max(250px, 90%);
+  }
+
+  .modelboxIcon {
+    font-size: 1.5rem;
+  }
 }

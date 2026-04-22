@@ -7,3 +7,24 @@
   border-radius: 0.75rem;
   box-shadow: rgba(99, 108, 117, 0.08) 0px 6px 18px;
 }
+
+@media screen and (max-width: 1000px) {
+  .card {
+    margin: 0 0 1rem 0;
+    padding: 12px;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-text {
+    margin-bottom: 0 !important;
+  }
+
+  .card-body .mt-auto {
+    display: flex;
+    justify-content: center;
+  }
+}

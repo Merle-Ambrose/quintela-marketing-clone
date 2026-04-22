@@ -50,3 +50,12 @@
 .primaryBtn--read:hover span {
   transform: translateX(6px);
 }
+
+@media screen and (max-width: 1000px) {
+  .primaryBtn,
+  .primaryBtn--list,
+  .primaryBtn--read {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+}

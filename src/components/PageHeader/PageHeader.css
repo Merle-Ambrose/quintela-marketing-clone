@@ -90,3 +90,30 @@
     padding-left: 0;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .pageHeaderHeading {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .pageHeaderImg,
+  .heroImg,
+  .card-img-top,
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .heroImg {
+    width: 80%;
+  }
+
+  .pageHeaderContent {
+    font-size: 1.125rem;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

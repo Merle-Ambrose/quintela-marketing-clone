@@ -42,23 +42,6 @@
   animation: fadeInImage 0.6s ease-in-out;
 }
 
-.listPointsAssessmentWrapper {
-  background-color: #f8fbfe;
-}
-
-.listPointsAssessment {
-  color: #959baf;
-  font-size: 1.125rem;
-}
-
-.listPointsAssessment .listPointImg {
-  width: min(100%, 400px);
-  height: auto;
-  max-height: 500px;
-  max-width: 400px;
-  animation: fadeInImage 0.6s ease-in-out;
-}
-
 .hoverImg {
   max-width: 800px !important;
   width: 100%;
@@ -68,6 +51,7 @@
   object-fit: cover;
   animation: fadeInOrgImg 0.5s;
 }
+
 
 @keyframes fadeInOrgImg {
   0% {
@@ -79,18 +63,37 @@
   }
 }
 
-@media screen and (max-device-width: 1000px) {
-  .listPointImg {
-    min-width: 100px;
-    width: 90%;
-    aspect-ratio: 1 / 0.78;
+@media screen and (max-width: 1000px) {
+  .listPoint {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 2rem !important;
   }
 
-  .hoverImg {
-    visibility: collapse;
-    height: 0;
-    margin: 0;
-    padding: 0;
-    aspect-ratio: auto;
+  .listPoint .listPointText,
+  .listPoint > .listPointText {
+    order: 0 !important;
+    margin-bottom: 0.25rem;
+  }
+
+  .listPoint .listPointText p,
+  .listPoint p {
+    margin-bottom: 0 !important;
+  }
+
+  .listPoint .listPointImg,
+  .listPoint .hoverImg,
+  .listPoint img,
+  .listPoint > :not(.listPointText) {
+    order: 1 !important;
+    height: auto !important;
+    margin-top: 0.5rem !important;
+    display: block !important;
+    align-self: center;
+  }
+
+  .listPointText {
+    margin-top: 2rem;
   }
 }

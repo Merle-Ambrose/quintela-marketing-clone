@@ -33,9 +33,24 @@
   font-weight: bold;
 }
 
-@media screen and (max-device-width: 1000px) {
+@media screen and (max-width: 1000px) {
   .exerpt {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 0.275rem;
+    padding-right: 0.275rem;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+
+    h1 {
+      text-align: left !important;
+    }
+
+    h3 {
+      padding-top: 0.5rem !important;
+      padding-bottom: 0 !important;
+    }
+
+    p {
+      margin-bottom: 0.275rem !important;
+    }
   }
 }

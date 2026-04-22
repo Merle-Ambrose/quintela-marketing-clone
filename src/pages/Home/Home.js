@@ -23,7 +23,7 @@ function Home() {
 
       <CustomerQuote className="quoteFromCustomerHangingImage" />
 
-      <div className="container listPoints py-5 my-5">
+      <div className="container listPoints my-5">
         <ListPoint
           url="/digital-online-interview-builder"
           img="./img/listpoint/checkboxes.png"

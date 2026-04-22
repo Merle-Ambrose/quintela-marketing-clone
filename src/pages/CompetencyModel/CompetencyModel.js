@@ -75,7 +75,7 @@ function CompetencyModel() {
             we had to design our platform to account for the only three
             assessment processes.
           </p>
-          <div>
+          <div className="listContainer">
             <p className="m-1 fw-bold fst-italic">
               Information may be collected from:
             </p>
@@ -87,7 +87,7 @@ function CompetencyModel() {
           </div>
         </div>
 
-        <div className="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+        <div className="competency-grid">
           <CompetencyBox
             icon="bi bi-pen"
             title="Job Analyses"

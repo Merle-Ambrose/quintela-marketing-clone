@@ -3,5 +3,16 @@
   background-image: url("../../../public/img/bkgs/quote.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: initial;
+  background-size: contain;
+}
+
+/* Mobile improvements (screens <= 1000px) */
+@media screen and (max-width: 1000px) {
+  .digitalInterviewQuote {
+    background-size: 20%;
+  }
+  
+  .digitalInterviewQuote p:first-child {
+    font-size: 1.125rem !important;
+  }
 }
