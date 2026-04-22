@@ -75,12 +75,14 @@ function CompetencyModel() {
             we had to design our platform to account for the only three
             assessment processes.
           </p>
-          <p>Someone provides information about…</p>
-          <ul className="text-start d-inline-block noBullets">
-            <li>Themselves (eg Psychometric Tests)</li>
-            <li>Someone Else (eg 360/180 Surveys)</li>
-            <li>Something (eg Job Analysis Surveys)</li>
-          </ul>
+          <div>
+            <p className="m-1 fw-bold fst-italic">Information may be collected from:</p>
+            <ul className="text-start d-inline-block noBullets">
+              <li>Themselves (e.g. Psychometric Tests)</li>
+              <li>Someone Else (e.g. 360/180 Surveys)</li>
+              <li>Something (e.g. Job Analysis Surveys)</li>
+            </ul>
+          </div>
         </div>
 
         <div className="row row-cols-1 row-cols-md-3 g-4 justify-content-center">

@@ -1,14 +1,7 @@
 import "./ListPoint.css";
 
 import React from "react";
-
-function KnowMoreButton({ url }) {
-  return (
-    <a href={url} className="listPointBtn">
-      Know More
-    </a>
-  );
-}
+import PrimaryButton from "../PrimaryButton/PrimaryButton";
 
 function ListPoint({
   img,
@@ -27,7 +20,9 @@ function ListPoint({
     <div className={`listPointText col-12 d-grid gap-3 ${isHoverable ? 'col-lg-4' : 'col-lg'}`}>
       <h1>{heading}</h1>
       <p>{desc}</p>
-      <KnowMoreButton url={url} />
+      <PrimaryButton href={url} className="primaryBtn--list">
+        Know More
+      </PrimaryButton>
     </div>
   );
 
@@ -44,7 +39,7 @@ function ListPoint({
   );
 
   return (
-    <div className={`listPoint row align-items-center justify-content-center ${isHoverable ? 'g-5' : ''}`}>
+    <div className={`listPoint row align-items-center justify-content-center g-5`}>
       {isImgOnLeft ? imageBlock : textBlock}
       {isImgOnLeft ? textBlock : imageBlock}
     </div>

@@ -19,6 +19,7 @@ function AssessmentTechnology() {
                   professionals who have to jump from one assessment platform to
                   another. What if you could manage all of your assessments from
                   one platform?"
+        descClassName="mb-1"
       />
 
       {/* Images/text */}

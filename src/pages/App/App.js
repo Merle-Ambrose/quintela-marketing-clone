@@ -16,14 +16,14 @@ import CompetencyModel from "../CompetencyModel/CompetencyModel";
 import PsychobabbleZone from "../PsychobabbleZone/PsychobabbleZone";
 import Contact from "../Contact/Contact";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
-const HRDiverse = React.lazy(() => import("../../articles/HRDiverse"));
+const HRDiverse = React.lazy(() => import("../../constants/articles/HRDiverse"));
 const ReducingDiscrimination = React.lazy(
-  () => import("../../articles/ReducingDiscrimination"),
+  () => import("../../constants/articles/ReducingDiscrimination"),
 );
 const DigitalInterview = React.lazy(
-  () => import("../../articles/DigitalInterview"),
+  () => import("../../constants/articles/DigitalInterview"),
 );
-const ProInterview = React.lazy(() => import("../../articles/ProInterview"));
+const ProInterview = React.lazy(() => import("../../constants/articles/ProInterview"));
 
 const APP_ROUTES = buildAppRoutes({
   Home,

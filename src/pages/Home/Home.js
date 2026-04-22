@@ -19,7 +19,6 @@ function Home() {
         ctaHref="/contact-us"
         ctaLabel="Schedule a Demo"
         ctaClassName="mb-4"
-        ctaId="btnHomeSchedule"
       />
 
       <CustomerQuote className="quoteFromCustomerHangingImage" />

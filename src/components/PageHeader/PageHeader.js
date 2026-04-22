@@ -11,6 +11,7 @@ function PageHeader({
   description,
   centerContent,
   hideIntroButton,
+  descClassName,
   isHero,
   ctaHref,
   ctaLabel,
@@ -35,11 +36,7 @@ function PageHeader({
   ) : null;
 
   const nonHeroButtonMarkup = introButtonElement ? (
-    centerContent ? (
-      <div className="d-flex justify-content-center">{introButtonElement}</div>
-    ) : (
-      introButtonElement
-    )
+    <div className="text-center">{introButtonElement}</div>
   ) : null;
 
   const heroDescription = description ? (
@@ -70,7 +67,7 @@ function PageHeader({
                     <img src={imgSrc} alt={imgAlt} className="pageHeaderImg" />
                   </div>
                   <div className={`col-7 pageHeaderContent${centerContent ? " text-center" : ""}`}>
-                    <p className={centerContent ? "mb-3" : ""}>{description}</p>
+                    <p className={centerContent ? "mb-3" : descClassName}>{description}</p>
                     {nonHeroButtonMarkup}
                   </div>
                 </>
