@@ -59,6 +59,8 @@ function Contact() {
     <>
       <PageHeader
         heading="Schedule a 30-minute demo"
+        mobileHeading="Schedule Demo"
+        mobileDescription="Manage interview guides and assessments simply. Schedule a demo to see how we can help."
         description={
           "Our mission is to make managing all of your interview guides and administering talent management assessments as simple as possible."
         }

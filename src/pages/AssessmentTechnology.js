@@ -11,6 +11,8 @@ function AssessmentTechnology() {
       <PageHeader
         bkgClassName="assessmentTechnologyHeader"
         heading="Assessment Technology"
+        mobileHeading="Assessment Tech"
+        mobileDescription="Manage multiple assessments from one dashboard."
         imgSrc="./img/header/brain.png"
         imgAlt="Review of potential candidates."
         description="Assessments have become a valuable talent management tool

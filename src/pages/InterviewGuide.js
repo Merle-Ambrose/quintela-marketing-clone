@@ -15,6 +15,8 @@ function InterviewGuide() {
       <PageHeader
         bkgClassName="bkg-blue"
         heading="Digital Interview Guides"
+        mobileHeading="Interview Guides"
+        mobileDescription="Build digital guides to capture interview notes and ratings consistently."
         imgSrc="./img/header/digitalInterview.png"
         imgAlt="Review of potential candidates."
         description="By building digital interview guide systems, hiring managers

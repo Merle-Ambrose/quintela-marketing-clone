@@ -1,14 +1,17 @@
 import "./PageHeader.css";
 
 import React from "react";
+import useIsMobile from "../../utils/useIsMobile";
 import IntroHeaderButton from "../IntroHeaderButton/IntroHeaderButton";
 
 function PageHeader({
   bkgClassName,
   heading,
+  mobileHeading,
   imgSrc,
   imgAlt,
   description,
+  mobileDescription,
   centerContent,
   hideIntroButton,
   descClassName,
@@ -18,6 +21,7 @@ function PageHeader({
   ctaClassName,
 }) {
   const noImage = !imgSrc;
+  const isMobile = useIsMobile();
 
   const bgClass = bkgClassName || "";
   // build intro button once
@@ -41,6 +45,9 @@ function PageHeader({
     <p className="fs-5 fw-bold mb-0 text-center">{description}</p>
   ) : null;
 
+  const effectiveHeading = isMobile && mobileHeading ? mobileHeading : heading;
+  const effectiveDescription = isMobile && mobileDescription ? mobileDescription : description;
+
   return (
     <div
       className={`pageHeader ${isHero ? "heroSection text-center pt-5" : "py-5"}${bgClass ? ` ${bgClass}` : ""}`}
@@ -48,9 +55,9 @@ function PageHeader({
       <div className={isHero ? "container px-3" : "container"}>
         {isHero ? (
           <>
-            <h1 className="fw-bold mb-4">{heading}</h1>
+            <h1 className="fw-bold mb-4">{effectiveHeading}</h1>
             {heroButtonMarkup}
-            {heroDescription}
+            {heroDescription ? heroDescription : effectiveDescription ? <p className="fs-5 fw-bold mb-0 text-center">{effectiveDescription}</p> : null}
             <div className="heroImgHangingWrapper">
               {imgSrc && (
                 <img
@@ -68,7 +75,7 @@ function PageHeader({
             <h1
               className={`pageHeaderHeading text-center${noImage ? " mb-4" : ""}`}
             >
-              {heading}
+              {effectiveHeading}
             </h1>
             <div className="row align-items-center">
               {imgSrc ? (
@@ -86,7 +93,7 @@ function PageHeader({
                     className={`col-7 pageHeaderContent${centerContent ? " text-center" : ""}`}
                   >
                     <p className={centerContent ? "mb-3" : descClassName}>
-                      {description}
+                      {effectiveDescription}
                     </p>
                     {nonHeroButtonMarkup}
                   </div>
@@ -95,7 +102,7 @@ function PageHeader({
                 <div
                   className={`col-12 pageHeaderContent${centerContent ? " text-center" : ""}`}
                 >
-                  <p className={centerContent ? "mb-3" : ""}>{description}</p>
+                  <p className={centerContent ? "mb-3" : ""}>{effectiveDescription}</p>
                   {nonHeroButtonMarkup}
                 </div>
               )}

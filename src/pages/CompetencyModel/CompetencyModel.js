@@ -18,6 +18,8 @@ function CompetencyModel() {
       <PageHeader
         bkgClassName="bkg-blue"
         heading="Competency Management System"
+        mobileHeading="Competency Library"
+        mobileDescription="Leverage Quintela's library to define role skills and improve hiring."
         imgSrc="./img/header/cycle.png"
         imgAlt="Cycle of reviewing potential candidates."
         description="With the help of Quintela’s proprietary online system, your company can leverage our extensive library to define the exact skill sets that are needed to succeed in a variety of jobs, and then incorporate those competencies into your hiring, development and performance management programs."
