@@ -168,7 +168,7 @@ function App() {
             </div>
 
             {/* Socials and info */}
-            <div className="row justify-content-center pb-2">
+            <div className="row justify-content-center pb-2 contact-info">
               <div>
                 <div className="d-flex justify-content-center gap-3">
                   <a

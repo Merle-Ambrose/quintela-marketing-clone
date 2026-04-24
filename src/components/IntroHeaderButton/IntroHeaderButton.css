@@ -39,7 +39,7 @@
   visibility: hidden;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1080px) {
   .introHeaderBtn {
     margin-bottom: 0 !important;
   }

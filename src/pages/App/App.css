@@ -99,7 +99,7 @@ footer p {
 .footerCtaCard {
   background: linear-gradient(243deg, #3d72e7 0%, #53a0fe 100%);
   border-radius: 4px;
-  margin-top: -80px;
+  margin-top: -5rem;
   position: relative;
   z-index: 2;
 }
@@ -112,6 +112,7 @@ footer p {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .app-flex-wrapper > main {
@@ -128,6 +129,24 @@ footer {
 
 .bkg-cmp {
   background-image: url("../../../public/img/bkgs/cmp.png");
+}
+
+.listPoints {
+  display: grid;
+  gap: 3rem;
+  color: #959baf;
+  font-size: 1.125rem;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+  box-sizing: border-box;
+}
+
+.listPoints .listPointImg {
+  width: min(100%, 450px);
+  height: auto;
+  max-height: 450px;
+  max-width: 450px;
+  animation: fadeInImage 0.6s ease-in-out;
 }
 
 .listPointsAssessmentWrapper {
@@ -148,12 +167,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 1001px) {
-  .container {
-    max-width: 1000px !important;
-    padding: 0 !important;
-  }
-
+@media screen and (min-width: 992px) {
   .navbar-collapse {
     max-width: 1000px;
     margin: 0 auto;
@@ -165,43 +179,26 @@ footer {
     display: flex;
     gap: 1rem;
   }
+
+  #logo {
+    padding-left: var(--bs-navbar-nav-link-padding-x);
+  }
 }
 
-@media screen and (max-width: 1000px) {
+/* General desktop/layout breakpoint: apply container sizing at 1001px and up */
+@media screen and (min-width: 1001px) {
+  .container {
+    max-width: 1000px !important;
+  }
+}
+
+/* General mobile / small-screen adjustments apply up to 1080px */
+@media screen and (max-width: 1080px) {
   .siteFrame,
   .container {
     width: 100% !important;
-    padding: 0 12px !important;
+    padding: 0 8px !important;
     box-sizing: border-box;
-  }
-
-  #logo {
-    height: 28px;
-    max-height: 28px;
-  }
-
-  .siteNavFrame {
-    /* Allow the collapse to wrap to a new row when opened */
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .siteNavFrame .navbar-toggler {
-    order: 0;
-    margin-right: 0;
-  }
-
-  /* Make the logo sit before the expanded menu so it stays at the top */
-  .siteNavFrame .companyNavLogo {
-    order: 1;
-    margin-left: auto;
-    margin-right: 0.5rem;
-    max-width: fit-content !important;
-    min-height: 28px;
-    width: 120px;
-    flex: 0 0 120px;
-    width: fit-content;
-    z-index: 3;
   }
 
   .contentSection {
@@ -222,9 +219,6 @@ footer {
   .listPoints {
     gap: 1rem !important;
     padding-top: 1.5rem !important;
-    overflow-x: hidden;
-    overflow-y: visible;
-    box-sizing: border-box;
 
     .listPoint:last-child {
       margin-bottom: 0 !important;
@@ -341,6 +335,88 @@ footer {
     gap: 0.25rem !important;
   }
 
+  /* Footer CTA: stack on small screens and align text left/right */
+  .footerCtaCard {
+    gap: 0.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1.5rem !important;
+    padding: 1.5rem !important;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footerCtaCard > .col-12:first-child {
+    text-align: left !important;
+    font-size: 2rem !important;
+    width: fit-content;
+  }
+
+  .footerCtaCard > .col-12:last-child {
+    text-align: right !important;
+    width: fit-content;
+  }
+
+  .contact-info {
+    margin-bottom: 1.5rem;
+
+    i {
+      font-size: 2rem;
+    }
+  }
+  .siteNavFrame {
+    display: flex;
+    justify-content: space-between;
+
+    #navbarNav {
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+/* Navbar-specific mobile adjustments remain at 991px breakpoint so navbar
+   collapses earlier while layout adjustments extend to 1080px. */
+@media screen and (max-width: 991px) {
+  #logo {
+    height: 28px;
+    max-height: 28px;
+  }
+
+  /* Header / navbar mobile adjustments */
+  .siteNavFrame {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .siteNavFrame .navbar-toggler {
+    order: 0;
+    margin-right: 0;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+  }
+
+  /* Make the logo sit before the expanded menu so it stays at the top */
+  .siteNavFrame .companyNavLogo {
+    order: 1;
+    margin-left: auto;
+    margin-right: 0.5rem;
+    max-width: fit-content !important;
+    min-height: 28px;
+    width: 120px;
+    flex: 0 0 120px;
+    width: fit-content;
+    z-index: 3;
+  }
+
   /* Mobile-friendly navbar: larger, full-width tap targets */
   .navbar-collapse {
     z-index: 2;
@@ -356,7 +432,7 @@ footer {
   .navbar-nav .nav-item {
     width: 100%;
     display: block;
-    border-bottom: 1px solid rgba(61,114,231,0.18); /* subtle brand-blue divider */
+    border-bottom: 1px solid rgba(61, 114, 231, 0.18); /* subtle brand-blue divider */
   }
 
   .navbar-nav .nav-link {
@@ -377,7 +453,7 @@ footer {
   .navbar-nav .nav-link:focus,
   .navbar-nav .nav-link:hover {
     text-decoration: none;
-    background: rgba(61,114,231,0.06); /* gentle blue tint on hover/focus */
+    background: rgba(61, 114, 231, 0.06); /* gentle blue tint on hover/focus */
   }
 
   /* Remove divider after the last item so footer spacing looks clean */

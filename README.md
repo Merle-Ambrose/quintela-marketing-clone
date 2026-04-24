@@ -20,8 +20,8 @@ https://taupe-torte-b3213b.netlify.app
 [x] Fix jerk-y image loading
 [ ] Allow mobile viewing
     [x] Update navbar to have bigger anchor click-able areas
-    [ ] Update footer "Ready to Get Started?" button
-    [ ] Update footer icon sizes
+    [x] Update footer "Ready to Get Started?" button
+    [x] Update footer icon sizes
     [ ] Increase left/right padding for elements
     [ ] Decrease amount of text on mobile (especially in paragraphs) and experiment with font sizes
 [ ] Fix quote background

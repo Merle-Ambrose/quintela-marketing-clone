@@ -6,8 +6,7 @@
   background-size: 10%;
 }
 
-/* Mobile improvements (screens <= 1000px) */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1080px) {
   .digitalInterviewQuote {
     background-size: 20%;
   }

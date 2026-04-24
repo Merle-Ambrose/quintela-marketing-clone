@@ -23,7 +23,7 @@
 }
 
 .exerpt .container {
-  width: min(100%, 1000px);
+  width: min(100%, 1080px);
   margin: 0 auto;
 }
 
@@ -33,7 +33,7 @@
   font-weight: bold;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1080px) {
   .exerpt {
     padding-left: 0.275rem;
     padding-right: 0.275rem;

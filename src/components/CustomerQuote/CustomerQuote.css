@@ -10,12 +10,15 @@
 
 .quoteFromCustomerHangingImage {
   padding-top: 150px !important;
+  overflow-x: hidden;
 }
 
 .quoteText {
   word-spacing: 1px;
   color: #666666;
   font-size: 1.125rem;
+    overflow-x: hidden;
+
 }
 
 .quoteName {
@@ -28,7 +31,7 @@
   font-size: 1.25rem;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1080px) {
   .quoteLogo {
     display: none;
     justify-content: flex-start !important;
