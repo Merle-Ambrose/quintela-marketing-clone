@@ -42,5 +42,6 @@
 @media screen and (max-width: 1080px) {
   .introHeaderBtn {
     margin-bottom: 0 !important;
+    font-size: 1.125rem;
   }
 }

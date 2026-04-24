@@ -94,7 +94,6 @@
 
 @media screen and (max-width: 1080px) {
   .pageHeaderHeading {
-    font-size: 1.6rem;
     margin-bottom: 20px;
     text-align: center;
   }
@@ -112,7 +111,6 @@
   }
 
   .pageHeaderContent {
-    font-size: 1.125rem;
     text-align: center;
     padding-left: 1rem;
     padding-right: 1rem;

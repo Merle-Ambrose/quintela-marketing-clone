@@ -401,6 +401,8 @@ footer {
   .siteNavFrame {
     flex-wrap: wrap;
     align-items: center;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
 
   .siteNavFrame .navbar-toggler {
@@ -439,6 +441,11 @@ footer {
     width: 100%;
     display: block;
     border-bottom: 1px solid rgba(61, 114, 231, 0.18); /* subtle brand-blue divider */
+
+    a {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
   }
 
   .navbar-nav .nav-link {

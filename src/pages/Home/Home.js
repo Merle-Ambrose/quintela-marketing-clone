@@ -12,7 +12,7 @@ function Home() {
     <>
       <PageHeader
         heading="Digital Interview Guides"
-        mobileHeading="Interview Guides"
+        mobileHeading="Digital Interview Guides"
         bkgClassName="bkg-blue"
         isHero
         imgSrc="./img/peopleWorking.png"
