@@ -22,7 +22,7 @@ https://taupe-torte-b3213b.netlify.app
     [x] Update navbar to have bigger anchor click-able areas
     [x] Update footer "Ready to Get Started?" button
     [x] Update footer icon sizes
-    [ ] Increase left/right padding for elements
+    [x] Increase left/right padding for elements
     [ ] Decrease amount of text on mobile (especially in paragraphs) and experiment with font sizes
 [ ] Fix quote background
 [ ] Update caret icon to simpler caret icon

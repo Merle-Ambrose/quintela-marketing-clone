@@ -31,7 +31,8 @@
   .modelBox {
     padding: 20px;
     margin: 0 auto 1rem auto;
-    width: max(250px, 90%);
+    min-width: auto;
+    max-width: 300px;
   }
 
   .modelboxIcon {

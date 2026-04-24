@@ -35,8 +35,8 @@
 
 @media screen and (max-width: 1080px) {
   .exerpt {
-    padding-left: 0.275rem;
-    padding-right: 0.275rem;
+    padding-left: 0;
+    padding-right: 0;
     padding-top: 2rem !important;
     padding-bottom: 2rem !important;
 

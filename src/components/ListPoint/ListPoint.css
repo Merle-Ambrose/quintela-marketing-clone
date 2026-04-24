@@ -70,11 +70,16 @@
     order: 1 !important;
     height: auto !important;
     margin-top: 0.5rem !important;
-    display: block !important;
+    display: block;
     align-self: center;
   }
 
   .listPointText {
     margin-top: 2rem;
+  }
+
+  .hoverImg {
+    margin: -1rem;
+    display: none !important;
   }
 }
