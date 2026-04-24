@@ -115,6 +115,40 @@ footer p {
   overflow-x: hidden;
 }
 
+/* When navbar is fixed to top, reserve space so content isn't hidden */
+.app-flex-wrapper {
+  padding-top: 56px; /* matches typical navbar height */
+}
+
+/* Ensure fixed navbar sits above content */
+.navbar.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1040;
+  width: 100%;
+}
+
+/* Overlay placed above page content but under navbar controls to
+   blur everything outside the expanded mobile navbar. */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease, visibility 200ms ease;
+  z-index: 3; /* below navbar-collapse (z-index:5) and toggler (z-index:6) */
+}
+
+.nav-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 .app-flex-wrapper > main {
   flex: 1 1 auto;
 }
@@ -395,6 +429,7 @@ footer {
   #logo {
     height: 28px;
     max-height: 28px;
+    padding-left: 0.5rem;
   }
 
   /* Header / navbar mobile adjustments */
@@ -403,26 +438,44 @@ footer {
     align-items: center;
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
+    position: relative;
   }
 
-  .siteNavFrame .navbar-toggler {
-    order: 0;
-    margin-right: 0;
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.5rem;
-  }
-
-  /* Make the logo sit before the expanded menu so it stays at the top */
+  /* On mobile: place logo on the left, toggler on the right */
   .siteNavFrame .companyNavLogo {
-    order: 1;
-    margin-left: auto;
-    margin-right: 0.5rem;
+    order: 0;
+    margin-left: 0;
+    margin-right: auto;
     max-width: fit-content !important;
     min-height: 28px;
     width: 120px;
     flex: 0 0 120px;
     width: fit-content;
     z-index: 3;
+  }
+
+  .siteNavFrame .navbar-toggler {
+    order: 2;
+    margin-right: 0;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 6; /* sit above expanded collapse */
+  }
+
+  /* Position expanded collapse absolutely below header so it doesn't
+     increase the header's height (prevents toggler from moving). */
+  .siteNavFrame .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: white;
+    z-index: 5; /* below toggler but above page content */
   }
 
   /* Mobile-friendly navbar: larger, full-width tap targets */
@@ -440,11 +493,11 @@ footer {
   .navbar-nav .nav-item {
     width: 100%;
     display: block;
-    border-bottom: 1px solid rgba(61, 114, 231, 0.18); /* subtle brand-blue divider */
+    border-bottom: 1px solid #3d72e72e; /* subtle brand-blue divider */
 
     a {
-      padding-left: 1rem !important;
-      padding-right: 1rem !important;
+      padding-left: 1.25rem !important;
+      padding-right: 1.25rem !important;
     }
   }
 
@@ -466,12 +519,17 @@ footer {
   .navbar-nav .nav-link:focus,
   .navbar-nav .nav-link:hover {
     text-decoration: none;
-    background: rgba(61, 114, 231, 0.06); /* gentle blue tint on hover/focus */
+    background: #3d72e70f; /* gentle blue tint on hover/focus */
   }
 
-  /* Remove divider after the last item so footer spacing looks clean */
+  /* Visual end-of-list marker for the mobile nav */
   .navbar-nav .nav-item:last-child {
-    border-bottom: none;
+    border-bottom: 3px solid #3d73e7; /* distinctive brand-blue divider */
+  }
+
+  .navbar-nav .nav-item:first-child {
+    margin-top: 0.5rem; /* add a bit of breathing room at the top */
+    border-top: 1px solid #3d72e72e; /* distinctive brand-blue divider */
   }
 
   /* Make the toggler slightly larger for better touch targets */

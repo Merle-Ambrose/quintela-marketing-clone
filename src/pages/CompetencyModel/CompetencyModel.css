@@ -20,7 +20,7 @@
 .listContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 /* Competency boxes responsive grid: each box has a 250px minimum width.

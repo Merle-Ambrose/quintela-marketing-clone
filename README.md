@@ -23,7 +23,8 @@ https://taupe-torte-b3213b.netlify.app
     [x] Update footer "Ready to Get Started?" button
     [x] Update footer icon sizes
     [x] Increase left/right padding for elements
-    [ ] Decrease amount of text on mobile (especially in paragraphs) and experiment with font sizes
+    [x] Decrease amount of text on mobile (especially in paragraphs) and experiment with font sizes
+    [x] Make the mobile header sticky and swap logo and hot dog menu icon
 [ ] Fix quote background
 [ ] Update caret icon to simpler caret icon
 [ ] Convert images to .webp and convert quintela header image to svg

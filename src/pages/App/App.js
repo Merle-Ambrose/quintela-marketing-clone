@@ -60,6 +60,44 @@ function App() {
       const toggler = document.querySelector(".navbar-toggler");
       const bs = window.bootstrap;
 
+      // Create or reuse a page overlay used to blur the page when the
+      // mobile navbar is expanded. Place it under the navbar but above
+      // the page content so backdrop-filter blurs the page content.
+      const overlayId = "navOverlay";
+      let overlay = document.getElementById(overlayId);
+      if (!overlay) {
+        overlay = document.createElement("div");
+        overlay.id = overlayId;
+        overlay.className = "nav-overlay";
+        document.body.appendChild(overlay);
+      }
+
+      const showOverlay = () => {
+        overlay.classList.add("show");
+        document.body.classList.add("nav-open");
+      };
+
+      const hideOverlay = () => {
+        overlay.classList.remove("show");
+        document.body.classList.remove("nav-open");
+      };
+
+      // Clicking the overlay should close the menu
+      const onOverlayClick = () => {
+        try {
+          if (bs && bs.Collapse) {
+            const inst = bs.Collapse.getInstance(el) || new bs.Collapse(el, { toggle: false });
+            inst.hide();
+          } else {
+            el.classList.remove("show");
+            hideOverlay();
+          }
+        } catch (e) {
+          hideOverlay();
+        }
+      };
+      overlay.addEventListener("click", onOverlayClick);
+
       // If collapse is open or mid-transition, ensure it is fully closed and
       // that the toggler state/attributes reflect the collapsed state. This
       // avoids leaving inline styles or classes that prevent future toggles.
@@ -84,10 +122,30 @@ function App() {
         toggler.classList.add("collapsed");
         toggler.setAttribute("aria-expanded", "false");
       }
+
+      // Listen for bootstrap collapse events so we can show/hide overlay
+      try {
+        el.addEventListener("show.bs.collapse", showOverlay);
+        el.addEventListener("hide.bs.collapse", hideOverlay);
+      } catch (e) {
+        // ignore if events aren't supported in this env
+      }
+
+      // Cleanup listeners and overlay when this effect re-runs/unmounts
+      return () => {
+        try {
+          // Ensure overlay is hidden on navigation or unmount
+          hideOverlay();
+          el.removeEventListener("show.bs.collapse", showOverlay);
+          el.removeEventListener("hide.bs.collapse", hideOverlay);
+        } catch (e) {}
+        overlay.removeEventListener("click", onOverlayClick);
+        // leave overlay in DOM so it can be reused across navigations
+      };
     }, [location]);
 
     return (
-      <nav className="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg fixed-top navbar-light bg-light">
         <div className="siteFrame siteNavFrame">
           <button
             className="navbar-toggler"

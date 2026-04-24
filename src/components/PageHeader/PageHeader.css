@@ -81,14 +81,22 @@
   }
 
   .pageHeaderImg {
-    width: 70%;
-    margin: 0 auto 20px;
+    width: 100%;
+    margin: 0 0 20px;
     display: block;
   }
 
   .pageHeaderContent {
-    text-align: center;
+    text-align: left;
     padding-left: 0;
+
+    .text-center {
+      text-align: left !important;
+    }
+  }
+
+  .noImgHeader {
+    text-align: left !important;
   }
 }
 
@@ -111,7 +119,7 @@
   }
 
   .pageHeaderContent {
-    text-align: center;
+    text-align: left;
     padding-left: 1rem;
     padding-right: 1rem;
   }

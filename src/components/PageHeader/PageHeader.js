@@ -73,7 +73,7 @@ function PageHeader({
         ) : (
           <>
             <h1
-              className={`pageHeaderHeading text-center${noImage ? " mb-4" : ""}`}
+              className={`pageHeaderHeading text-center${noImage ? " noImgHeader mb-4" : ""}`}
             >
               {effectiveHeading}
             </h1>

@@ -78,7 +78,7 @@ function CompetencyModel() {
             assessment processes.
           </p>
           <div className="listContainer">
-            <p className="m-1 fw-bold fst-italic">
+            <p className="mb-1 fw-bold fst-italic">
               Information may be collected from:
             </p>
             <ul className="text-start d-inline-block noBullets">
