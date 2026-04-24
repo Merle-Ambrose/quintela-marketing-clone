@@ -6,7 +6,14 @@ import { NAV_ITEMS } from "../../constants/appNavigation";
 import { buildAppRoutes } from "../../constants/appRoutes";
 
 import React, { Suspense, useEffect } from "react";
-import { BrowserRouter, Link, NavLink, Route, Routes, useLocation } from "react-router-dom";
+import {
+  BrowserRouter,
+  Link,
+  NavLink,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import ErrorPage from "../ErrorPage";
 import Loader from "../Loader";
 import Home from "../Home/Home";
@@ -58,7 +65,9 @@ function App() {
       // avoids leaving inline styles or classes that prevent future toggles.
       try {
         if (bs && bs.Collapse) {
-          const inst = bs.Collapse.getInstance(el) || new bs.Collapse(el, { toggle: false });
+          const inst =
+            bs.Collapse.getInstance(el) ||
+            new bs.Collapse(el, { toggle: false });
           inst.hide();
         }
       } catch (e) {

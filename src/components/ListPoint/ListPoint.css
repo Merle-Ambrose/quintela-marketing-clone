@@ -52,7 +52,6 @@
   animation: fadeInOrgImg 0.5s;
 }
 
-
 @keyframes fadeInOrgImg {
   0% {
     opacity: 0;
