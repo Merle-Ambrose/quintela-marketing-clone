@@ -1,6 +1,32 @@
 import React from "react";
+import useIsMobile from "../../../utils/useIsMobile";
 
 function CompetencyModelLibrarySection() {
+  const isMobile = useIsMobile();
+
+  if (isMobile) {
+    return (
+      <>
+        <p>
+          Competency libraries set clear expectations and a shared language
+          for roles, helping teams hire, train, and evaluate more effectively.
+        </p>
+        <p>
+          They highlight training needs, clarify role expectations, and give
+          hiring managers a consistent framework to assess candidates and
+          employees against the same standards.
+        </p>
+        <p>
+          Quintela's system includes researched competency definitions across
+          roles and levels. We can map competencies to interview questions and
+          reports so you get actionable insights from every hiring and
+          development activity.
+        </p>
+        <p>Contact us to explore a tailored competency library for your team.</p>
+      </>
+    );
+  }
+
   return (
     <>
       <p>

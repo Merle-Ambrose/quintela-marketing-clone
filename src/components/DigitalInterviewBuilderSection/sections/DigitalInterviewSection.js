@@ -1,6 +1,38 @@
 import React from "react";
+import useIsMobile from "../../../utils/useIsMobile";
 
 function DigitalInterviewSection() {
+  const isMobile = useIsMobile();
+
+  if (isMobile) {
+    return (
+      <>
+        <p>
+          A digital interview builder centralizes interview content so teams
+          can create, deploy, and manage consistent behavioral interviews from
+          one place, reducing fragmentation and manual work. It also keeps
+          interview materials current as roles evolve.
+        </p>
+        <p>
+          Structured guides focus interviews on measurable behaviors, which
+          reduces the risk and cost of poor hires and improves decision quality.
+          Linking questions to competencies produces clearer, comparable data
+          across candidates.
+        </p>
+        <ul>
+          <li>Centralized content, templates and question libraries</li>
+          <li>Structured, measurable guides linked to competencies</li>
+          <li>Better data to compare candidates consistently</li>
+        </ul>
+        <p>
+          Quintela helps you build and maintain guides, set scoring rules, and
+          establish workflows that make interviewing faster, fairer, and more
+          data-driven. Contact us to learn how to implement this at scale.
+        </p>
+      </>
+    );
+  }
+
   return (
     <>
       <p>

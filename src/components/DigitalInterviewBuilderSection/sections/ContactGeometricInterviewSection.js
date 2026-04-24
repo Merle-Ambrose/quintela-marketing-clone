@@ -1,6 +1,34 @@
 import React from "react";
+import useIsMobile from "../../../utils/useIsMobile";
 
 function ContactGeometricInterviewSection() {
+  const isMobile = useIsMobile();
+
+  if (isMobile) {
+    return (
+      <>
+        <p>
+          Quintela takes the guesswork out of hiring. Our digital interview
+          tools save time, reduce administrative burden, and help you hire more
+          accurately across roles. The system keeps guides current as roles and
+          competencies change.
+        </p>
+        <p>
+          We provide practical guides, competency support, and implementation
+          help so your teams can focus on the right behaviors and make
+          confident, consistent hiring choices. We also help set scoring rules
+          and workflows to streamline reviewer input.
+        </p>
+        <p>
+          Whether you need a small pilot or a full rollout, Quintela offers
+          hands-on support to configure the library, train users, and produce
+          clear hiring reports.
+        </p>
+        <p>Reach out to explore tailored solutions that fit your organization.</p>
+      </>
+    );
+  }
+
   return (
     <>
       <p>

@@ -1,6 +1,40 @@
 import React from "react";
+import useIsMobile from "../../../utils/useIsMobile";
 
 function HomeGeometricInterviewSection() {
+  const isMobile = useIsMobile();
+
+  if (isMobile) {
+    return (
+      <>
+        <p>
+          Looking for an easy-to-use digital interview builder? Quintela
+          removes guesswork from hiring with tools that save time, reduce
+          administrative work, and improve hiring accuracy across the employee
+          lifecycle. Our platform helps teams centralize guides, share best
+          practices, and apply the same standards across roles.
+        </p>
+        <h3 className="fw-bold py-3">Will it help my team?</h3>
+        <p>
+          We provide concise guides, practical interviewer tips, and structured
+          templates so managers spend less time preparing and more time
+          assessing candidates consistently. That leads to fairer interviews
+          and clearer hiring decisions.
+        </p>
+        <ul>
+          <li>Consistent interviews and shared expectations</li>
+          <li>Measurable ratings mapped to competencies</li>
+          <li>Faster decisions with better candidate fit</li>
+        </ul>
+        <p>
+          Quintela molds itself to your workflows and tooling, keeping your
+          practices intact while reducing administrative work and improving
+          hiring outcomes.
+        </p>
+      </>
+    );
+  }
+
   return (
     <>
       <p>
