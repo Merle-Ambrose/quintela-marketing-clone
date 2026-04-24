@@ -19,7 +19,7 @@ https://taupe-torte-b3213b.netlify.app
 [x] Remove a bunch of ids in the css and remove unused classes/ids in the css
 [x] Fix jerk-y image loading
 [ ] Allow mobile viewing
-    [ ] Update navbar to have bigger anchor click-able areas
+    [x] Update navbar to have bigger anchor click-able areas
     [ ] Update footer "Ready to Get Started?" button
     [ ] Update footer icon sizes
     [ ] Increase left/right padding for elements

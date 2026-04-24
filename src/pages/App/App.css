@@ -340,4 +340,54 @@ footer {
   .g-1 {
     gap: 0.25rem !important;
   }
+
+  /* Mobile-friendly navbar: larger, full-width tap targets */
+  .navbar-collapse {
+    z-index: 2;
+    box-shadow: none; /* remove bright shadow so expanded menu matches navbar */
+    box-sizing: border-box;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    display: block;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid rgba(61,114,231,0.18); /* subtle brand-blue divider */
+  }
+
+  .navbar-nav .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.85rem 0.75rem; /* larger tap area */
+    font-size: 1.0625rem;
+    text-align: left;
+    border-radius: 0.5rem;
+    margin: 0.125rem 0;
+    color: #111 !important;
+  }
+
+  .navbar-nav {
+    margin-top: 0; /* remove gap so expanded area blends with the rest */
+  }
+
+  .navbar-nav .nav-link:focus,
+  .navbar-nav .nav-link:hover {
+    text-decoration: none;
+    background: rgba(61,114,231,0.06); /* gentle blue tint on hover/focus */
+  }
+
+  /* Remove divider after the last item so footer spacing looks clean */
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Make the toggler slightly larger for better touch targets */
+  .siteNavFrame .navbar-toggler {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+  }
 }
