@@ -22,21 +22,12 @@ function CompetencyModel() {
         mobileDescription="Leverage Quintela's library to define role skills and improve hiring."
         imgSrc="./img/header/cycle.png"
         imgAlt="Cycle of reviewing potential candidates."
-        description="With the help of Quintela’s proprietary online system, your company can leverage our extensive library to define the exact skill sets that are needed to succeed in a variety of jobs, and then incorporate those competencies into your hiring, development and performance management programs."
+        description="Use Quintela’s competency library to define role skills, map them to job profiles, and integrate them into hiring, development, and performance programs."
       />
 
       {/* List points: intro paragraph + first ListPoint */}
       <div className="listPointsAssessmentWrapper py-5">
         <div className="listPoints container py-5 listPointsAssessment">
-          <ListPointDivider>
-            What can a competency model library do for your organization?
-            Competency models are frameworks that provide a "recipe" for the
-            capabilities needed for good job performance. From marketing to
-            manufacturing, from administrative work to accounting and beyond,
-            Quintela's competency library platform can be leveraged to help you
-            assess candidates and evaluate employees based on the most desirable
-            skills for their job.
-          </ListPointDivider>
           <ListPoint
             url="/contact-us"
             img="./img/listpoint/airplane.png"
@@ -45,12 +36,6 @@ function CompetencyModel() {
             desc="Take advantage of Quintela's extensive framework and/or upload all of your competency content.  Configure the system around your specific hierarchy and structure.  Manage and segment multiple competency models for those departments and business units that have their own models."
             isImgOnLeft={true}
           />
-          <ListPointDivider>
-            Assign entities to each competency that will allow you to build any
-            talent management assessment. For example, assign interview
-            questions to competencies or psychometric items and scoring to each
-            competency in your profile.
-          </ListPointDivider>
           <ListPoint
             url="/contact-us"
             img="./img/listpoint/assessment-blocks.png"

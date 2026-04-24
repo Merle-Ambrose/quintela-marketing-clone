@@ -15,31 +15,13 @@ function AssessmentTechnology() {
         mobileDescription="Manage multiple assessments from one dashboard."
         imgSrc="./img/header/brain.png"
         imgAlt="Review of potential candidates."
-        description="Assessments have become a valuable talent management tool
-                  throughout the entire employee experience. Unfortunately, this
-                  also creates a significant challenge for talent management
-                  professionals who have to jump from one assessment platform to
-                  another. What if you could manage all of your assessments from
-                  one platform?"
+        description="Assessments are valuable across the employee lifecycle, but switching platforms creates a burden for talent teams. Manage all your assessments from a single dashboard."
         descClassName="mb-1"
       />
 
       {/* Images/text */}
       <div className="listPointsAssessmentWrapper py-5">
         <div className="listPoints container listPointsAssessment">
-          <ListPointDivider>
-            Our assessment solution is used for both talent acquisition and
-            development purposes. Whether you have a high-volume hiring event or
-            an internal development program, our platform integrates multiple
-            assessment vendors, proprietary assessments, or competencies in a
-            simple dashboard with just the information you need. The result is
-            an efficient assessment process based on your evaluation framework
-            and competency models that helps you screen and select the right
-            talent in a fraction of the time. For programs that focus on talent
-            development for existing employees, the dashboard can be used to
-            lessen burden of test administration, track assessment completion
-            progress, and store several reports in one participant record.
-          </ListPointDivider>
           <ListPoint
             url="/contact-us"
             img="./img/listpoint/admin.png"
@@ -47,11 +29,6 @@ function AssessmentTechnology() {
             heading="Administering"
             desc="Create test batteries using assessments from multiple vendors. Customize with your own tests or 360s. Build custom competencies and scores. Combine competencies into job profiles. Send participants one link to access all tests."
           />
-          <ListPointDivider>
-            Our platform also helps you track completions and access reports
-            efficiently, improving the participant experience and streamlining
-            your workflow.
-          </ListPointDivider>
           <ListPoint
             url="/contact-us"
             img="./img/listpoint/tracking.png"

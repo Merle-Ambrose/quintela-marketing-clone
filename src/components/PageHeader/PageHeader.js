@@ -46,7 +46,8 @@ function PageHeader({
   ) : null;
 
   const effectiveHeading = isMobile && mobileHeading ? mobileHeading : heading;
-  const effectiveDescription = isMobile && mobileDescription ? mobileDescription : description;
+  const effectiveDescription =
+    isMobile && mobileDescription ? mobileDescription : description;
 
   return (
     <div
@@ -57,7 +58,13 @@ function PageHeader({
           <>
             <h1 className="fw-bold mb-4">{effectiveHeading}</h1>
             {heroButtonMarkup}
-            {heroDescription ? heroDescription : effectiveDescription ? <p className="fs-5 fw-bold mb-0 text-center">{effectiveDescription}</p> : null}
+            {heroDescription ? (
+              heroDescription
+            ) : effectiveDescription ? (
+              <p className="fs-5 fw-bold mb-0 text-center">
+                {effectiveDescription}
+              </p>
+            ) : null}
             <div className="heroImgHangingWrapper">
               {imgSrc && (
                 <img
@@ -102,7 +109,9 @@ function PageHeader({
                 <div
                   className={`col-12 pageHeaderContent${centerContent ? " text-center" : ""}`}
                 >
-                  <p className={centerContent ? "mb-3" : ""}>{effectiveDescription}</p>
+                  <p className={centerContent ? "mb-3" : ""}>
+                    {effectiveDescription}
+                  </p>
                   {nonHeroButtonMarkup}
                 </div>
               )}

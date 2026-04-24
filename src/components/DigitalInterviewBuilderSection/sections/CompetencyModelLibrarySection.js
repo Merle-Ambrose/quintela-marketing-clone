@@ -8,8 +8,8 @@ function CompetencyModelLibrarySection() {
     return (
       <>
         <p>
-          Competency libraries set clear expectations and a shared language
-          for roles, helping teams hire, train, and evaluate more effectively.
+          Competency libraries set clear expectations and a shared language for
+          roles, helping teams hire, train, and evaluate more effectively.
         </p>
         <p>
           They highlight training needs, clarify role expectations, and give
@@ -22,7 +22,9 @@ function CompetencyModelLibrarySection() {
           reports so you get actionable insights from every hiring and
           development activity.
         </p>
-        <p>Contact us to explore a tailored competency library for your team.</p>
+        <p>
+          Contact us to explore a tailored competency library for your team.
+        </p>
       </>
     );
   }

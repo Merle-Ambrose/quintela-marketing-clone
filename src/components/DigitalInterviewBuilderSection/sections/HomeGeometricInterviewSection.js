@@ -8,18 +8,18 @@ function HomeGeometricInterviewSection() {
     return (
       <>
         <p>
-          Looking for an easy-to-use digital interview builder? Quintela
-          removes guesswork from hiring with tools that save time, reduce
-          administrative work, and improve hiring accuracy across the employee
-          lifecycle. Our platform helps teams centralize guides, share best
-          practices, and apply the same standards across roles.
+          Looking for an easy-to-use digital interview builder? Quintela removes
+          guesswork from hiring with tools that save time, reduce administrative
+          work, and improve hiring accuracy across the employee lifecycle. Our
+          platform helps teams centralize guides, share best practices, and
+          apply the same standards across roles.
         </p>
         <h3 className="fw-bold py-3">Will it help my team?</h3>
         <p>
           We provide concise guides, practical interviewer tips, and structured
           templates so managers spend less time preparing and more time
-          assessing candidates consistently. That leads to fairer interviews
-          and clearer hiring decisions.
+          assessing candidates consistently. That leads to fairer interviews and
+          clearer hiring decisions.
         </p>
         <ul>
           <li>Consistent interviews and shared expectations</li>

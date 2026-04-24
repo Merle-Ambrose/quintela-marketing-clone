@@ -135,12 +135,14 @@ footer p {
 .nav-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(255,255,255,0.25);
+  background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 200ms ease, visibility 200ms ease;
+  transition:
+    opacity 200ms ease,
+    visibility 200ms ease;
   z-index: 3; /* below navbar-collapse (z-index:5) and toggler (z-index:6) */
 }
 

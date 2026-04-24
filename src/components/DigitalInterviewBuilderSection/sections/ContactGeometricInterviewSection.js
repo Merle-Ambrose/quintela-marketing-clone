@@ -24,7 +24,9 @@ function ContactGeometricInterviewSection() {
           hands-on support to configure the library, train users, and produce
           clear hiring reports.
         </p>
-        <p>Reach out to explore tailored solutions that fit your organization.</p>
+        <p>
+          Reach out to explore tailored solutions that fit your organization.
+        </p>
       </>
     );
   }

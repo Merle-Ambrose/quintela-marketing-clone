@@ -8,10 +8,10 @@ function DigitalInterviewSection() {
     return (
       <>
         <p>
-          A digital interview builder centralizes interview content so teams
-          can create, deploy, and manage consistent behavioral interviews from
-          one place, reducing fragmentation and manual work. It also keeps
-          interview materials current as roles evolve.
+          A digital interview builder centralizes interview content so teams can
+          create, deploy, and manage consistent behavioral interviews from one
+          place, reducing fragmentation and manual work. It also keeps interview
+          materials current as roles evolve.
         </p>
         <p>
           Structured guides focus interviews on measurable behaviors, which

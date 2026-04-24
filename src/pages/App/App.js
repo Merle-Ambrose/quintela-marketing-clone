@@ -86,7 +86,9 @@ function App() {
       const onOverlayClick = () => {
         try {
           if (bs && bs.Collapse) {
-            const inst = bs.Collapse.getInstance(el) || new bs.Collapse(el, { toggle: false });
+            const inst =
+              bs.Collapse.getInstance(el) ||
+              new bs.Collapse(el, { toggle: false });
             inst.hide();
           } else {
             el.classList.remove("show");
