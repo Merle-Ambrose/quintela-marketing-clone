@@ -3,19 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "bootstrap": "^5.2.0-beta1",
-    "bootstrap-icons": "^1.8.3",
-    "jquery": "^3.6.0",
-    "popper": "^1.0.1",
-    "popper.js": "^1.16.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-router-dom": "^7.14.2",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^5.2.0"
   },
   "scripts": {
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css}\"",
@@ -46,7 +40,13 @@
     ]
   },
   "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "prettier": "^3.8.3",
-    "sharp": "^0.34.5"
+    "sass": "^1.99.0",
+    "sharp": "^0.34.5",
+    "typescript": "^4.9.5",
+    "typescript-plugin-css-modules": "^5.2.0",
+    "vnu-jar": "^26.4.16"
   }
 }
