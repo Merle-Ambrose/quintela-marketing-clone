@@ -164,7 +164,7 @@ function App() {
           {/* Keep the brand/logo outside the collapsing menu so it's always visible on mobile */}
           <Link className="navbar-brand companyNavLogo" to="/">
             <img
-              src="/img/logo.png"
+              src="/img/logo.svg"
               className="d-inline-block align-top"
               id="logo"
               alt="brand logo"

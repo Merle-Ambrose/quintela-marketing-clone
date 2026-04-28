@@ -29,5 +29,6 @@ https://taupe-torte-b3213b.netlify.app
 [x] Update hr divider paragraph sections
 [x] Update caret icon to simpler caret icon
 [x] Fix smaller screen grid article display
-[ ] Convert images to .webp and convert quintela header image to svg
+[x] Fix certain image quality: convert quintela header image to svg and enhance .ico
+[ ] Decrease image space
 [ ] Have a lot of the packages that were in the portfolio (i.e. sass)
