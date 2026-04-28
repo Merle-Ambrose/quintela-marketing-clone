@@ -16,6 +16,12 @@
   margin-right: 20px;
 }
 
+.introHeaderBtnArrow i {
+  /* subtle shadow to give a heavier appearance */
+  text-shadow: 0 0 0.2px currentColor;
+  filter: drop-shadow(0 0 0.2px currentColor);
+}
+
 .introHeaderBtn:hover,
 .introHeaderBtn:focus,
 .introHeaderBtn:active,

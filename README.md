@@ -27,7 +27,7 @@ https://taupe-torte-b3213b.netlify.app
     [x] Make the mobile header sticky and swap logo and hot dog menu icon
 [x] Fix quote background
 [x] Update hr divider paragraph sections
-[ ] Update caret icon to simpler caret icon
+[x] Update caret icon to simpler caret icon
 [ ] Convert images to .webp and convert quintela header image to svg
 [ ] Fix smaller screen grid article display
 [ ] Have a lot of the packages that were in the portfolio (i.e. sass)

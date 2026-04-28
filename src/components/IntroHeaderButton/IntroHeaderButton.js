@@ -10,7 +10,7 @@ function IntroHeaderButton({ href, label, className }) {
     >
       {label}
       <div className="introHeaderBtnArrow">
-        <i className="bi bi-caret-right"></i>
+        <i className="bi bi-chevron-right"></i>
       </div>
     </a>
   );
