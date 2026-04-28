@@ -15,13 +15,26 @@ function AssessmentTechnology() {
         mobileDescription="Manage multiple assessments from one dashboard."
         imgSrc="./img/header/brain.png"
         imgAlt="Review of potential candidates."
-        description="Assessments are valuable across the employee lifecycle, but switching platforms creates a burden for talent teams. Manage all your assessments from a single dashboard."
+        description="Assessments are valuable across the employee lifecycle, and switching platforms burdens talent teams. Manage all assessments from one dashboard that tracks completions and provides fast access to reports."
         descClassName="mb-1"
       />
 
       {/* Images/text */}
       <div className="listPointsAssessmentWrapper py-5">
         <div className="listPoints container listPointsAssessment">
+          <ListPointDivider>
+            Our assessment solution is used for both talent acquisition and
+            development purposes. Whether you have a high-volume hiring event or
+            an internal development program, our platform integrates multiple
+            assessment vendors, proprietary assessments, or competencies in a
+            simple dashboard with just the information you need. The result is
+            an efficient assessment process based on your evaluation framework
+            and competency models that helps you screen and select the right
+            talent in a fraction of the time. For programs that focus on talent
+            development for existing employees, the dashboard can be used to
+            lessen burden of test administration, track assessment completion
+            progress, and store several reports in one participant record.
+          </ListPointDivider>
           <ListPoint
             url="/contact-us"
             img="./img/listpoint/admin.png"

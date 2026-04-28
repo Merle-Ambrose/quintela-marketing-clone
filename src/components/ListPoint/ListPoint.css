@@ -6,7 +6,7 @@
 .listPointText {
   text-align: left;
   color: #959baf !important;
-  line-height: 30px;
+  line-height: 1.875rem;
   display: grid;
   gap: 1rem;
 }

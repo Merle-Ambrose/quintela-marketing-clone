@@ -22,17 +22,26 @@ function CompetencyModel() {
         mobileDescription="Leverage Quintela's library to define role skills and improve hiring."
         imgSrc="./img/header/cycle.png"
         imgAlt="Cycle of reviewing potential candidates."
-        description="Use Quintela’s competency library to define role skills, map them to job profiles, and integrate them into hiring, development, and performance programs."
+        description="Use Quintela’s competency library to define role skills, map them to job profiles, and integrate them into hiring, development, and performance programs, applicable across all industries and functions."
       />
 
       {/* List points: intro paragraph + first ListPoint */}
       <div className="listPointsAssessmentWrapper py-5">
-        <div className="listPoints container py-5 listPointsAssessment">
+        <div className="listPoints container listPointsAssessment">
+          <ListPointDivider>
+            What can a competency model library do for your organization?
+            Competency models are frameworks that provide a "recipe" for the
+            capabilities needed for good job performance. From marketing to
+            manufacturing, from administrative work to accounting and beyond,
+            Quintela's competency library platform can be leveraged to help you
+            assess candidates and evaluate employees based on the most desirable
+            skills for their job.
+          </ListPointDivider>
           <ListPoint
             url="/contact-us"
             img="./img/listpoint/airplane.png"
             altImgText="Three people looking at charts."
-            heading="Your competency model(s)"
+            heading="Your Competency Model"
             desc="Take advantage of Quintela's extensive framework and/or upload all of your competency content.  Configure the system around your specific hierarchy and structure.  Manage and segment multiple competency models for those departments and business units that have their own models."
             isImgOnLeft={true}
           />
@@ -51,11 +60,9 @@ function CompetencyModel() {
       </div>
 
       {/* Assessment Builder section and analytics */}
-      <div className="container py-5 my-5 d-grid gap-4">
+      <div className="container py-5 d-grid gap-4">
         <div className="assessmentBuilderDiv">
-          <h1>
-            Only Competency-Based Assessment Builder That You Will Ever Need
-          </h1>
+          <h1>The only competency-based assessment builder you'll need.</h1>
           <p>
             Build any talent assessment by combining a list of competencies and
             their assigned entities. We are real assessment experts, so we knew
@@ -66,7 +73,7 @@ function CompetencyModel() {
             <p className="mb-1 fw-bold fst-italic">
               Information may be collected from:
             </p>
-            <ul className="text-start d-inline-block noBullets">
+            <ul className="text-start d-inline-block informationMayBeCollectedFromBullets">
               <li>Themselves (e.g. Psychometric Tests)</li>
               <li>Someone Else (e.g. 360/180 Surveys)</li>
               <li>Something (e.g. Job Analysis Surveys)</li>
@@ -124,7 +131,7 @@ function CompetencyModel() {
       </div>
 
       <div className="listPointsAssessmentWrapper py-5">
-        <div className="listPoints container py-5 listPointsAssessment">
+        <div className="listPoints container listPointsAssessment">
           <ListPoint
             url="/contact-us"
             img="./img/listpoint/analytics.png"

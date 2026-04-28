@@ -1,6 +1,6 @@
 .assessmentBuilderDiv {
   color: #959baf;
-  line-height: 25px;
+  line-height: 1.563rem;
   text-align: left;
   font-size: 1.125rem;
 }
@@ -11,9 +11,7 @@
   color: #535b7c;
 }
 
-.noBullets {
-  list-style-type: none;
-  padding-left: 0;
+.informationMayBeCollectedFromBullets {
   margin-left: 0;
 }
 

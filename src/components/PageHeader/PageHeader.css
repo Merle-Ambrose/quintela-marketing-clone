@@ -87,16 +87,12 @@
   }
 
   .pageHeaderContent {
-    text-align: left;
+    text-align: center;
     padding-left: 0;
-
-    .text-center {
-      text-align: left !important;
-    }
   }
 
   .noImgHeader {
-    text-align: left !important;
+    text-align: center !important;
   }
 }
 

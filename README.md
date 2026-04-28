@@ -25,7 +25,8 @@ https://taupe-torte-b3213b.netlify.app
     [x] Increase left/right padding for elements
     [x] Decrease amount of text on mobile (especially in paragraphs) and experiment with font sizes
     [x] Make the mobile header sticky and swap logo and hot dog menu icon
-[ ] Fix quote background
+[x] Fix quote background
+[x] Update hr divider paragraph sections
 [ ] Update caret icon to simpler caret icon
 [ ] Convert images to .webp and convert quintela header image to svg
 [ ] Fix smaller screen grid article display

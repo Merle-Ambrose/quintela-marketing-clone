@@ -1,15 +1,8 @@
 .listPointDividerParagraph {
-  width: 90%;
-  margin: 0 auto;
+  line-height: 1.875rem;
 }
 
 @media screen and (max-width: 1080px) {
-  .listPointDividerParagraph {
-    width: 100%;
-    padding: 0 1rem;
-    margin: 0 0 2rem;
-  }
-
   .listPointDivider {
     display: none !important;
   }
