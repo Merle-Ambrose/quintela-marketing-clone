@@ -32,5 +32,5 @@ https://taupe-torte-b3213b.netlify.app
 [x] Fix system interation grid
 [x] Fix certain image quality: convert quintela header image to svg and enhance .ico
 [x] Decrease image space
-[ ] Decrease !important usage
+[x] Decrease !important usage
 [ ] Have a lot of the packages that were in the portfolio (i.e. sass)

@@ -37,8 +37,6 @@
   .exerpt {
     padding-left: 0;
     padding-right: 0;
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
 
     h1 {
       text-align: left !important;
@@ -50,7 +48,7 @@
     }
 
     p {
-      margin-bottom: 0.275rem !important;
+      margin-bottom: 0.275rem;
     }
   }
 }

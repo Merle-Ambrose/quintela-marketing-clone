@@ -1,12 +1,12 @@
 .pt-three {
-  padding-top: 3rem !important;
-  padding-bottom: 2rem !important;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }
 
 @media screen and (max-width: 1080px) {
   .pt-three {
-    padding-top: 1.5rem !important;
-    padding-bottom: 1rem !important;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
   }
 
   .container.pt-three .row.row-cols-1.row-cols-md-2.row-cols-xl-2 {

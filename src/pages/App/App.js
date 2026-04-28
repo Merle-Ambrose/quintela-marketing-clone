@@ -147,7 +147,7 @@ function App() {
     }, [location]);
 
     return (
-      <nav className="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg fixed-top navbar-light">
         <div className="siteFrame siteNavFrame">
           <button
             className="navbar-toggler"

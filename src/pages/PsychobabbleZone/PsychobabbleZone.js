@@ -11,7 +11,7 @@ function PsychobabbleZone() {
       <PageHeader
         heading="Psychobabble-Free Zone"
         mobileHeading="Psych-Free Zone"
-        mobileDescription="A clear, practical take on talent science without the noise."
+        mobileDescription="A no-nonsense, practical take on talent management science with clear insights."
         description={
           'The word "science" has been so overused in Talent Management that it\'s lost its meaning. When you hear it, you probably tune out just like we do. It is a shame, because there is a lot of value once you get past the nonsense. That\'s why we decided to offer a psychobabble-free zone where we discuss the "science" without the better-than-you attitude. We hope you enjoy!'
         }

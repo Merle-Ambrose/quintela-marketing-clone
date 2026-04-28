@@ -5,7 +5,7 @@
 
 .listPointText {
   text-align: left;
-  color: #959baf !important;
+  color: #959baf;
   line-height: 1.875rem;
   display: grid;
   gap: 1rem;
@@ -25,10 +25,10 @@
 }
 
 .hoverImg {
-  max-width: 800px !important;
+  max-width: 800px;
   width: 100%;
-  box-shadow: rgba(99, 108, 117, 0.2) 0px 8px 24px;
-  border: solid 1px #eaeaea !important;
+  border: solid 1px #eaeaea;
+  box-shadow: 5px 5px 5px rgba(99,108,117,0.18), 0 4px 10px rgba(99,108,117,0.08);
   border-radius: 20px;
   object-fit: cover;
   animation: fadeInOrgImg 0.5s;
@@ -49,27 +49,27 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    margin-bottom: 2rem !important;
+    margin-bottom: 2rem;
   }
 
   .listPoint .listPointText,
   .listPoint > .listPointText {
-    order: 0 !important;
+    order: 0;
     margin-bottom: 0.25rem;
   }
 
   .listPoint .listPointText p,
   .listPoint p {
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
   }
 
   .listPoint .listPointImg,
   .listPoint .hoverImg,
   .listPoint img,
   .listPoint > :not(.listPointText) {
-    order: 1 !important;
-    height: auto !important;
-    margin-top: 0.5rem !important;
+    order: 1;
+    height: auto;
+    margin-top: 0.5rem;
     display: block;
     align-self: center;
   }

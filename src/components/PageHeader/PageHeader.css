@@ -38,11 +38,7 @@
 }
 
 .assessmentTechnologyHeader {
-  background-image: radial-gradient(
-    circle at center,
-    #e01c11 0%,
-    #210444 100%
-  ) !important;
+  background-image: radial-gradient(circle at center, #e01c11 0%, #210444 100%);
   width: 100%;
 }
 
@@ -92,7 +88,7 @@
   }
 
   .noImgHeader {
-    text-align: center !important;
+    text-align: left !important;
   }
 }
 
