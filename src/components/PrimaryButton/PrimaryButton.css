@@ -57,5 +57,6 @@
   .primaryBtn--read {
     padding: 10px 14px;
     font-size: 0.95rem;
+    margin-top: 10px;
   }
 }

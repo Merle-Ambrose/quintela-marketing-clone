@@ -8,4 +8,24 @@
     padding-top: 1.5rem !important;
     padding-bottom: 1rem !important;
   }
+
+  .container.pt-three .row.row-cols-1.row-cols-md-2.row-cols-xl-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem; /* roughly matches bootstrap g-4 spacing */
+    align-items: start;
+    justify-content: center;
+  }
+
+  .container.pt-three .row.row-cols-1.row-cols-md-2.row-cols-xl-2 > .col {
+    width: 100%;
+    max-width: 720px; /* ensures cards don't grow too wide on mid-sized viewports */
+    justify-self: center;
+    display: block;
+  }
+
+  /* Ensure inner card spacing behaves nicely on small screens */
+  .container.pt-three .row.row-cols-1.row-cols-md-2.row-cols-xl-2 .card {
+    margin: 0 auto;
+  }
 }
