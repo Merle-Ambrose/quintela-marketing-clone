@@ -1,7 +1,7 @@
 # Quintela Marketing Demo Website Re-Imagined
 
 ### Technologies used:
-ReactJS, Bootstrap v5.0, Typescript, SASS
+ReactJS, Bootstrap v5.0, Typescript, Sass
 
 ### Description:
 (September 20, 2022) This website is a recreation of Quintela's marketing site, designed with a strong emphasis on modern, UI-driven experiences to engage potential investors and clients.
