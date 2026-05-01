@@ -33,4 +33,8 @@ https://taupe-torte-b3213b.netlify.app
 [x] Fix certain image quality: convert quintela header image to svg and enhance .ico
 [x] Decrease image space
 [x] Decrease !important usage
-[ ] Have a lot of the packages that were in the portfolio (i.e. sass)
+[x] Have a lot of the packages that were in the portfolio (i.e. sass, typescript)
+[ ] Convert everything to more scss modular-friendly
+[ ] Can anything be memo-ized?
+[ ] Check on all browsers (chrome, firefox, edge, SAFARI)
+[ ] Deploy to netlify again

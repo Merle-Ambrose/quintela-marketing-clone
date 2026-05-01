@@ -1,3 +1,21 @@
+diff --git a/node_modules/react-scripts/config/webpack.config.js b/node_modules/react-scripts/config/webpack.config.js
+index e465d8e..fbeb754 100644
+--- a/node_modules/react-scripts/config/webpack.config.js
++++ b/node_modules/react-scripts/config/webpack.config.js
+@@ -187,9 +187,10 @@ module.exports = function (webpackEnv) {
+         },
+         {
+           loader: require.resolve(preProcessor),
+-          options: {
+-            sourceMap: true,
+-          },
++          options:
++            preProcessor === 'sass-loader'
++              ? { api: 'modern', sourceMap: true }
++              : { sourceMap: true },
+         }
+       );
+     }
 diff --git a/node_modules/react-scripts/config/webpackDevServer.config.js b/node_modules/react-scripts/config/webpackDevServer.config.js
 index 522a81b..1d50719 100644
 --- a/node_modules/react-scripts/config/webpackDevServer.config.js
