@@ -1,3 +1,5 @@
+@use "../../styles" as *;
+
 .listPointParagraph {
   width: 90%;
   margin: 0 auto;
@@ -5,15 +7,15 @@
 
 .listPointText {
   text-align: left;
-  color: #959baf;
+  color: $color-body;
   line-height: 1.875rem;
   display: grid;
-  gap: 1rem;
-}
+  gap: $spacer;
 
-.listPointText h1 {
-  color: #535b7c;
-  font-weight: bold;
+  h1 {
+    color: $color-slate;
+    font-weight: bold;
+  }
 }
 
 .listPointImg {
@@ -27,11 +29,9 @@
 .hoverImg {
   max-width: 800px;
   width: 100%;
-  border: solid 1px #eaeaea;
-  box-shadow:
-    5px 5px 5px rgba(99, 108, 117, 0.18),
-    0 4px 10px rgba(99, 108, 117, 0.08);
-  border-radius: 20px;
+  border: solid 1px $color-border;
+  box-shadow: $shadow-hover-img;
+  border-radius: $border-radius-hover;
   object-fit: cover;
   animation: fadeInOrgImg 0.5s;
 }
@@ -46,42 +46,42 @@
   }
 }
 
-@media screen and (max-width: 1080px) {
+@include mobile {
   .listPoint {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    margin-bottom: 2rem;
-  }
+    margin-bottom: $spacer * 2;
 
-  .listPoint .listPointText,
-  .listPoint > .listPointText {
-    order: 0;
-    margin-bottom: 0.25rem;
-  }
+    .listPointText,
+    > .listPointText {
+      order: 0;
+      margin-bottom: $spacer * 0.25;
+    }
 
-  .listPoint .listPointText p,
-  .listPoint p {
-    margin-bottom: 0;
-  }
+    .listPointText p,
+    p {
+      margin-bottom: 0;
+    }
 
-  .listPoint .listPointImg,
-  .listPoint .hoverImg,
-  .listPoint img,
-  .listPoint > :not(.listPointText) {
-    order: 1;
-    height: auto;
-    margin-top: 0.5rem;
-    display: block;
-    align-self: center;
+    .listPointImg,
+    .hoverImg,
+    img,
+    > :not(.listPointText) {
+      order: 1;
+      height: auto;
+      margin-top: $spacer * 0.5;
+      display: block;
+      align-self: center;
+    }
   }
 
   .listPointText {
-    margin-top: 2rem;
+    margin-top: $spacer * 2;
   }
 
   .hoverImg {
-    margin: -1rem;
+    margin: -$spacer;
     display: none !important;
   }
 }

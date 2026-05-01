@@ -1,8 +1,10 @@
+@use "../../styles" as *;
+
 .listPointDividerParagraph {
   line-height: 1.875rem;
 }
 
-@media screen and (max-width: 1080px) {
+@include mobile {
   .listPointDivider {
     display: none !important;
   }

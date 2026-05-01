@@ -2,10 +2,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.scss";
-import { NAV_ITEMS } from "../../constants/appNavigation";
-import { buildAppRoutes } from "../../routes/appRoutes";
 
 import React, { Suspense, useEffect } from "react";
+import { NAV_ITEMS } from "../../constants/appNavigation";
+import { buildAppRoutes } from "../../routes/appRoutes";
 import {
   BrowserRouter,
   Link,
@@ -23,6 +23,7 @@ import CompetencyModel from "../CompetencyModel/CompetencyModel";
 import PsychobabbleZone from "../PsychobabbleZone/PsychobabbleZone";
 import Contact from "../Contact/Contact";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
+
 const HRDiverse = React.lazy(
   () => import("../../components/Article/articles/HRDiverse"),
 );

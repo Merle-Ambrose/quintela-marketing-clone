@@ -1,16 +1,18 @@
+@use "../../styles" as *;
+
 .card-img-top {
   aspect-ratio: 1 / 0.6;
   object-fit: cover;
 }
 
 .card {
-  border-radius: 0.75rem;
-  box-shadow: rgba(99, 108, 117, 0.08) 0px 6px 18px;
+  border-radius: $border-radius-card;
+  box-shadow: $shadow-card;
 }
 
-@media screen and (max-width: 1080px) {
+@include mobile {
   .card {
-    margin: 0 0 1rem 0;
+    margin: 0 0 $spacer 0;
     padding: 12px;
   }
 

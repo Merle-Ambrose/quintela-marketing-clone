@@ -1,6 +1,8 @@
+@use "../../styles" as *;
+
 .exerpt {
   color: white;
-  font-size: 1.125rem;
+  font-size: $font-size-md;
   line-height: 2.188rem;
   width: 100%;
 }
@@ -15,7 +17,7 @@
 .exerpt-geometric {
   background-image:
     url("../../../public/img/bkgs/geometric.png"),
-    linear-gradient(135deg, #53a0fd 0%, #4161d4 100%);
+    $gradient-geometric;
   background-blend-mode: overlay;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
@@ -23,17 +25,17 @@
 }
 
 .exerpt .container {
-  width: min(100%, 1080px);
+  width: min(100%, $container-max-width);
   margin: 0 auto;
 }
 
 .introHeaderHeading {
-  margin-bottom: 40px;
-  font-size: 2.1875rem;
+  margin-bottom: $spacer * 2.5;
+  font-size: $font-size-hero;
   font-weight: bold;
 }
 
-@media screen and (max-width: 1080px) {
+@include mobile {
   .exerpt {
     padding-left: 0;
     padding-right: 0;
@@ -43,7 +45,7 @@
     }
 
     h3 {
-      padding-top: 1.5rem !important;
+      padding-top: $spacer * 1.5 !important;
       padding-bottom: 0 !important;
     }
 

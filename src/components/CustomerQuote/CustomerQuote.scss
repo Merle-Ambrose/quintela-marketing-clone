@@ -1,10 +1,12 @@
+@use "../../styles" as *;
+
 .quoteLogo {
   display: flex;
   justify-content: center;
 }
 
 .quoteFromCustomer {
-  background-color: #f8fbfe;
+  background-color: $color-bg-light;
   line-height: 1.875rem;
 }
 
@@ -15,22 +17,22 @@
 
 .quoteText {
   word-spacing: 1px;
-  color: #666666;
-  font-size: 1.125rem;
+  color: $color-text-muted;
+  font-size: $font-size-md;
   overflow-x: hidden;
 }
 
 .quoteName {
   font-weight: bold;
   margin-bottom: 0;
-  font-size: 1.25rem;
+  font-size: $font-size-lg;
 }
 
 .quoteCredential {
-  font-size: 1.25rem;
+  font-size: $font-size-lg;
 }
 
-@media screen and (max-width: 1080px) {
+@include mobile {
   .quoteLogo {
     display: none;
   }

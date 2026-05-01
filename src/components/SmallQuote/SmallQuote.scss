@@ -1,3 +1,5 @@
+@use "../../styles" as *;
+
 .digitalInterviewQuote {
   width: 100%;
   background-image: url("../../../public/img/bkgs/quote.png");
@@ -6,12 +8,12 @@
   background-size: 10%;
 }
 
-@media screen and (max-width: 1080px) {
+@include mobile {
   .digitalInterviewQuote {
     background-size: 20%;
-  }
 
-  .digitalInterviewQuote p:first-child {
-    font-size: 1.125rem !important;
+    p:first-child {
+      font-size: $font-size-md !important;
+    }
   }
 }

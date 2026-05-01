@@ -1,5 +1,23 @@
+@use "../../styles" as *;
+
+// Override Bootstrap's CSS custom properties so that Bootstrap's own semantic
+// classes (.btn-primary, .text-primary, .bg-primary, .border-primary, etc.)
+// all use the brand color automatically, without needing Bootstrap Sass source.
+:root {
+  --bs-primary: #{$color-primary};
+  --bs-primary-rgb: 61, 114, 231;
+  // The "emphasis" shade is used by Bootstrap for hover/focus states on links
+  --bs-primary-text-emphasis: #{$color-primary-dark};
+  // The "subtle" background is used by Bootstrap for .bg-primary-subtle
+  --bs-primary-bg-subtle: #{$color-bg-light};
+  // Bootstrap 5.3 btn-primary generates its hover color from this
+  --bs-link-color: #{$color-primary};
+  --bs-link-color-rgb: 61, 114, 231;
+  --bs-link-hover-color: #{$color-primary-dark};
+}
+
 * {
-  font-family: "Nunito Sans", Helvetica, Arial, Lucida, sans-serif;
+  font-family: $font-family-base;
 }
 
 img {
@@ -10,18 +28,13 @@ img {
   animation: fadeInImage 0.6s ease-in-out;
 }
 
-.contentSection {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
 .content-details {
-  font-size: 1rem;
+  font-size: $font-size-base;
 }
 
 .content-paragraph {
-  font-size: 1.125rem;
-  color: #666;
+  font-size: $font-size-md;
+  color: $color-text-muted;
 }
 
 .companyNavLogo {
@@ -46,7 +59,7 @@ img {
   color: black;
   font-weight: 600;
   text-align: center;
-  font-size: 0.9375rem;
+  font-size: $font-size-sm;
 }
 
 .navbar {
@@ -55,10 +68,10 @@ img {
 }
 
 .siteFrame {
-  width: min(100%, 1000px);
+  width: min(100%, $site-max-width);
   margin: 0 auto;
-  color: #84bdff;
-  font-size: 0.9375rem;
+  color: $color-footer-link;
+  font-size: $font-size-sm;
 }
 
 .siteNavFrame {
@@ -72,7 +85,7 @@ img {
 
 .siteNavFrame .companyNavLogo {
   order: 0;
-  margin-right: 0.75rem;
+  margin-right: $spacer * 0.75;
 }
 
 .siteNavFrame .navbar-collapse {
@@ -84,25 +97,29 @@ img {
 }
 
 footer a {
-  color: #84bdff;
+  color: $color-footer-link;
   text-decoration: none;
   font-weight: bold;
 }
 
 footer p {
-  margin-bottom: 5px;
+  margin-bottom: $spacer * 0.3125;
 }
 
 .footerCtaCard {
-  background: linear-gradient(243deg, #3d72e7 0%, #53a0fe 100%);
+  background: $gradient-primary;
   border-radius: 4px;
-  margin-top: -5rem;
+  margin-top: -$spacer * 5;
   position: relative;
   z-index: 2;
 }
 
+// Bootstrap's spacing scale tops out at 5 ($spacer * 3 = 48px).
+// .mt-7 is a custom extension used by .footerCtaCard to pull itself up
+// over the section above it. Bootstrap doesn't include mt-6/mt-7 by default,
+// so this one-off utility class is intentional.
 .mt-7 {
-  margin-top: 5rem;
+  margin-top: $spacer * 5;
 }
 
 .app-flex-wrapper {
@@ -110,10 +127,7 @@ footer p {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-}
-
-.app-flex-wrapper {
-  padding-top: 56px;
+  padding-top: $navbar-height;
 }
 
 .navbar.fixed-top {
@@ -137,11 +151,11 @@ footer p {
     opacity 200ms ease,
     visibility 200ms ease;
   z-index: 3;
-}
 
-.nav-overlay.show {
-  opacity: 1;
-  visibility: visible;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .app-flex-wrapper > main {
@@ -161,30 +175,31 @@ footer {
 }
 
 .listPoints {
-  display: grid;
-  gap: 3rem;
-  color: #959baf;
-  font-size: 1.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: $spacer * 3;
+  color: $color-body;
+  font-size: $font-size-md;
   overflow-x: hidden;
   overflow-y: visible;
   box-sizing: border-box;
-}
 
-.listPoints .listPointImg {
-  width: min(100%, 450px);
-  height: auto;
-  max-height: 450px;
-  max-width: 450px;
-  animation: fadeInImage 0.6s ease-in-out;
+  .listPointImg {
+    width: min(100%, 450px);
+    height: auto;
+    max-height: 450px;
+    max-width: 450px;
+    animation: fadeInImage 0.6s ease-in-out;
+  }
 }
 
 .listPointsAssessmentWrapper {
-  background-color: #f8fbfe;
+  background-color: $color-bg-light;
 }
 
 .listPointsAssessment {
-  color: #959baf;
-  font-size: 1.125rem;
+  color: $color-body;
+  font-size: $font-size-md;
 }
 
 @keyframes fadeInImage {
@@ -196,16 +211,16 @@ footer {
   }
 }
 
-@media screen and (min-width: 992px) {
+@include above-navbar {
   .navbar-collapse {
-    max-width: 1000px;
+    max-width: $site-max-width;
     margin: 0 auto;
   }
 
   .navbar-nav.ms-auto {
     margin-left: 0;
     display: flex;
-    gap: 1rem;
+    gap: $spacer;
   }
 
   #logo {
@@ -213,27 +228,26 @@ footer {
   }
 }
 
-@media screen and (min-width: 1081px) {
+// $bp-mobile (1080px) is intentionally not a Bootstrap breakpoint (lg=992, xl=1200).
+// It was chosen to match the site's content-width design and is a project-level
+// decision, not a gap. Bootstrap's own breakpoints are used separately where
+// Bootstrap component behavior changes (e.g. navbar collapse at 992px).
+@include above-mobile {
   .container {
-    max-width: 1000px;
+    max-width: $site-max-width;
   }
 }
 
-@media screen and (max-width: 1080px) {
+@include mobile {
   .siteFrame,
   .container {
     width: 100%;
-    padding: 0 1.5rem;
+    padding: 0 $spacer * 1.5;
     box-sizing: border-box;
   }
 
-  .contentSection {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-
   .content-paragraph {
-    font-size: 1rem;
+    font-size: $font-size-base;
   }
 
   img,
@@ -243,8 +257,8 @@ footer {
   }
 
   .listPoints {
-    gap: 1rem;
-    padding-top: 1.5rem;
+    gap: $spacer;
+    padding-top: $spacer * 1.5;
 
     .listPoint:last-child {
       margin-bottom: 0;
@@ -257,14 +271,22 @@ footer {
     }
   }
 
+  // ==== START OF OVERRIDE BLOCK FOR BOOTSTRAP SPACING UTILITIES ==== //
+
+  // The following block overrides Bootstrap's spacing utility classes at mobile.
+  // This project was converted from an older codebase that used compiled Bootstrap CSS
+  // (bootstrap/dist/css/bootstrap.min.css) rather than Bootstrap's Sass source.
+  // Because the Sass source isn't consumed at build time, we can't override $spacers
+  // or $grid-gutter-width directly. That would require compiling Bootstrap from source.
+  // Instead, Bootstrap's utility classes are dialed back here for small screens.
   .py-5 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: $spacer * 1.5;
+    padding-bottom: $spacer * 1.5;
   }
 
   .my-5 {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: $spacer * 1.5;
+    margin-bottom: $spacer * 1.5;
   }
 
   .my-5.py-5 {
@@ -273,126 +295,129 @@ footer {
   }
 
   .py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: $spacer;
+    padding-bottom: $spacer;
   }
 
   .px-4 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: $spacer * 1.5;
+    padding-right: $spacer * 1.5;
   }
 
   .px-3 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: $spacer * 0.5;
+    padding-right: $spacer * 0.5;
   }
 
   .g-5 {
-    gap: 1rem;
+    gap: $spacer;
   }
 
   .g-4 {
-    gap: 0.75rem;
+    gap: $spacer * 0.75;
   }
 
   .g-3 {
-    gap: 0.5rem;
+    gap: $spacer * 0.5;
   }
 
   .pt-5 {
-    padding-top: 1.5rem;
+    padding-top: $spacer * 1.5;
   }
 
   .pb-5 {
-    padding-bottom: 1.5rem;
+    padding-bottom: $spacer * 1.5;
   }
 
   .pt-4 {
-    padding-top: 1rem;
+    padding-top: $spacer;
   }
 
   .pb-4 {
-    padding-bottom: 1rem;
+    padding-bottom: $spacer;
   }
 
   .pt-3 {
-    padding-top: 0.75rem;
+    padding-top: $spacer * 0.75;
   }
 
   .pb-3 {
-    padding-bottom: 0.75rem;
+    padding-bottom: $spacer * 0.75;
   }
 
   .py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: $spacer * 0.5;
+    padding-bottom: $spacer * 0.5;
   }
 
   .py-1 {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+    padding-top: $spacer * 0.25;
+    padding-bottom: $spacer * 0.25;
   }
 
   .px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: $spacer * 0.5;
+    padding-right: $spacer * 0.5;
   }
 
   .px-1 {
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
+    padding-left: $spacer * 0.25;
+    padding-right: $spacer * 0.25;
   }
 
   .mt-3 {
-    margin-top: 1rem;
+    margin-top: $spacer;
   }
 
   .mt-2 {
-    margin-top: 0.5rem;
+    margin-top: $spacer * 0.5;
   }
 
   .mb-3 {
-    margin-bottom: 1rem;
+    margin-bottom: $spacer;
   }
 
   .mb-2 {
-    margin-bottom: 0.5rem;
+    margin-bottom: $spacer * 0.5;
   }
 
   .g-2 {
-    gap: 0.5rem;
+    gap: $spacer * 0.5;
   }
 
   .g-1 {
-    gap: 0.25rem;
+    gap: $spacer * 0.25;
   }
+
+  // ==== END OF OVERRIDE BLOCK FOR BOOTSTRAP SPACING UTILITIES ==== //
 
   .footerCtaCard {
-    gap: 0.5rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 1.5rem !important;
-    padding: 1.5rem !important;
+    gap: $spacer * 0.5;
+    margin-left: $spacer;
+    margin-right: $spacer;
+    margin-bottom: $spacer * 1.5 !important;
+    padding: $spacer * 1.5 !important;
     display: flex;
     justify-content: space-between;
-  }
 
-  .footerCtaCard > .col-12:first-child {
-    font-size: 2rem !important;
-    width: fit-content;
-  }
+    > .col-12:first-child {
+      font-size: $spacer * 2 !important;
+      width: fit-content;
+    }
 
-  .footerCtaCard > .col-12:last-child {
-    width: fit-content;
+    > .col-12:last-child {
+      width: fit-content;
+    }
   }
 
   .contact-info {
-    margin-bottom: 1.5rem;
+    margin-bottom: $spacer * 1.5;
 
     i {
-      font-size: 2rem;
+      font-size: $spacer * 2;
     }
   }
+
   .siteNavFrame {
     display: flex;
     justify-content: space-between;
@@ -412,53 +437,53 @@ footer {
   }
 }
 
-@media screen and (max-width: 991px) {
+@include below-navbar {
   #logo {
     height: 28px;
     max-height: 28px;
-    padding-left: 0.5rem;
+    padding-left: $spacer * 0.5;
   }
 
   .siteNavFrame {
     flex-wrap: wrap;
     align-items: center;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: $spacer * 0.5;
+    padding-right: $spacer * 0.5;
     position: relative;
-  }
 
-  .siteNavFrame .companyNavLogo {
-    order: 0;
-    margin-left: 0;
-    margin-right: auto;
-    max-width: fit-content;
-    min-height: 28px;
-    width: 120px;
-    flex: 0 0 120px;
-    width: fit-content;
-    z-index: 3;
-  }
+    .companyNavLogo {
+      order: 0;
+      margin-left: 0;
+      margin-right: auto;
+      max-width: fit-content;
+      min-height: 28px;
+      width: 120px;
+      flex: 0 0 120px;
+      width: fit-content;
+      z-index: 3;
+    }
 
-  .siteNavFrame .navbar-toggler {
-    order: 2;
-    margin-right: 0;
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.5rem;
-    position: absolute;
-    right: 0.75rem;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 6;
-  }
+    .navbar-toggler {
+      order: 2;
+      margin-right: 0;
+      padding: $spacer * 0.5 $spacer * 0.75;
+      border-radius: $border-radius-nav;
+      position: absolute;
+      right: $spacer * 0.75;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 6;
+    }
 
-  .siteNavFrame .navbar-collapse {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background: white;
-    z-index: 5;
+    .navbar-collapse {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background: white;
+      z-index: 5;
+    }
   }
 
   .navbar-collapse {
@@ -470,51 +495,49 @@ footer {
   .navbar-nav {
     width: 100%;
     display: block;
-  }
 
-  .navbar-nav .nav-item {
-    width: 100%;
-    display: block;
-    border-bottom: 1px solid #3d72e72e;
+    .nav-item {
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid $color-primary-border;
 
-    a {
-      padding-left: 1.25rem !important;
-      padding-right: 1.25rem !important;
+      a {
+        padding-left: $spacer * 1.25 !important;
+        padding-right: $spacer * 1.25 !important;
+      }
+    }
+
+    .nav-link {
+      display: block;
+      width: 100%;
+      padding: $spacer * 0.85 $spacer * 0.75;
+      font-size: $font-size-base * 1.0625;
+      text-align: left;
+      border-radius: $border-radius-nav;
+      margin: $spacer * 0.125 0;
+      color: $color-nav-text;
+
+      &:focus,
+      &:hover {
+        text-decoration: none;
+        background: $color-primary-alpha;
+      }
+    }
+
+    margin-top: 0;
+
+    .nav-item:last-child {
+      border-bottom: 3px solid $color-primary;
+    }
+
+    .nav-item:first-child {
+      margin-top: $spacer * 0.5;
+      border-top: 1px solid $color-primary-border;
     }
   }
 
-  .navbar-nav .nav-link {
-    display: block;
-    width: 100%;
-    padding: 0.85rem 0.75rem;
-    font-size: 1.0625rem;
-    text-align: left;
-    border-radius: 0.5rem;
-    margin: 0.125rem 0;
-    color: #111;
-  }
-
-  .navbar-nav {
-    margin-top: 0;
-  }
-
-  .navbar-nav .nav-link:focus,
-  .navbar-nav .nav-link:hover {
-    text-decoration: none;
-    background: #3d72e70f;
-  }
-
-  .navbar-nav .nav-item:last-child {
-    border-bottom: 3px solid #3d73e7;
-  }
-
-  .navbar-nav .nav-item:first-child {
-    margin-top: 0.5rem;
-    border-top: 1px solid #3d72e72e;
-  }
-
   .siteNavFrame .navbar-toggler {
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.5rem;
+    padding: $spacer * 0.5 $spacer * 0.75;
+    border-radius: $border-radius-nav;
   }
 }
