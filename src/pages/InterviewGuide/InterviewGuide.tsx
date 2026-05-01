@@ -1,15 +1,15 @@
 import "./InterviewGuide.scss";
 
 import React from "react";
-import ListPoint from "../components/ListPoint/ListPoint";
-import ListPointDivider from "../components/ListPointDivider/ListPointDivider";
-import SmallQuote from "../components/SmallQuote/SmallQuote";
-import DigitalInterviewBuilderSection from "../components/DigitalInterviewBuilderSection/DigitalInterviewBuilderSection";
-import DigitalInterviewSection from "../components/DigitalInterviewBuilderSection/sections/DigitalInterviewSection";
-import SystemIntegrations from "../components/SystemIntegrations/SystemIntegrations";
-import PageHeader from "../components/PageHeader/PageHeader";
+import ListPoint from "../../components/ListPoint/ListPoint";
+import ListPointDivider from "../../components/ListPointDivider/ListPointDivider";
+import SmallQuote from "../../components/SmallQuote/SmallQuote";
+import DigitalInterviewBuilderSection from "../../components/DigitalInterviewBuilderSection/DigitalInterviewBuilderSection";
+import DigitalInterviewSection from "../../components/DigitalInterviewBuilderSection/sections/DigitalInterviewSection";
+import SystemIntegrations from "../../components/SystemIntegrations/SystemIntegrations";
+import PageHeader from "../../components/PageHeader/PageHeader";
 
-function InterviewGuide() {
+export default function InterviewGuide() {
   return (
     <>
       <PageHeader
@@ -80,5 +80,3 @@ function InterviewGuide() {
     </>
   );
 }
-
-export default InterviewGuide;

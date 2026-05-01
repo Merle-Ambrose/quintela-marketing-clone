@@ -1,16 +1,18 @@
 import React from "react";
 
+type PageComponent = React.FunctionComponent<any>;
+
 type ComponentMap = {
-  Home: React.ComponentType<any>;
-  InterviewGuide: React.ComponentType<any>;
-  AssessmentTechnology: React.ComponentType<any>;
-  CompetencyModel: React.ComponentType<any>;
-  PsychobabbleZone: React.ComponentType<any>;
-  HRDiverse: React.ComponentType<any>;
-  ReducingDiscrimination: React.ComponentType<any>;
-  ProInterview: React.ComponentType<any>;
-  DigitalInterview: React.ComponentType<any>;
-  Contact: React.ComponentType<any>;
+  Home: PageComponent;
+  InterviewGuide: PageComponent;
+  AssessmentTechnology: PageComponent;
+  CompetencyModel: PageComponent;
+  PsychobabbleZone: PageComponent;
+  HRDiverse: PageComponent;
+  ReducingDiscrimination: PageComponent;
+  ProInterview: PageComponent;
+  DigitalInterview: PageComponent;
+  Contact: PageComponent;
 };
 
 export function buildAppRoutes({
@@ -24,7 +26,7 @@ export function buildAppRoutes({
   ProInterview,
   DigitalInterview,
   Contact,
-}: ComponentMap) {
+}: ComponentMap): Array<{ path: string; element: React.ReactNode }> {
   return [
     { path: "/", element: <Home /> },
     { path: "/digital-online-interview-builder", element: <InterviewGuide /> },

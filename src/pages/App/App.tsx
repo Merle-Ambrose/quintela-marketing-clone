@@ -15,9 +15,9 @@ import {
   useLocation,
 } from "react-router-dom";
 import ErrorPage from "../ErrorPage";
-import Loader from "../Loader";
+import Loader from "../Loader/Loader";
 import Home from "../Home/Home";
-import InterviewGuide from "../InterviewGuide";
+import InterviewGuide from "../InterviewGuide/InterviewGuide";
 import AssessmentTechnology from "../AssessmentTechnology";
 import CompetencyModel from "../CompetencyModel/CompetencyModel";
 import PsychobabbleZone from "../PsychobabbleZone/PsychobabbleZone";

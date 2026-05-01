@@ -1,5 +1,6 @@
 import React from "react";
 import Article from "../../pages/Article/Article";
+import type { ArticleMeta } from "../../types/article";
 
 export default function DigitalInterview() {
   return (
@@ -11,7 +12,7 @@ export default function DigitalInterview() {
   );
 }
 
-export const META = {
+export const META: ArticleMeta = {
   heading: "Interview like a Pro: How to Interview Candidates with Confidence",
   paragArr: [
     "In today’s standardized, digitized world, the interview is not what it used to be. Once upon a time, an interviewer had the confidence to walk into a room and spit out question after question, rating the candidate in their mind and walking away with an opinion already made. Today, the interview process can be tricky to navigate as a hiring manager, recruiter or peer interviewer, but with a structured interview guide, it’s actually quite simple. All you have to do is ask, evaluate and rate.",

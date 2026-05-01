@@ -1,4 +1,4 @@
-export const NAV_ITEMS = [
+export const NAV_ITEMS: { to: string; label: string }[] = [
   { to: "/", label: "Home" },
   {
     to: "/digital-online-interview-builder",

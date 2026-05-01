@@ -67,6 +67,7 @@
     "http-proxy-agent": "5.0.0",
     "webpack-dev-server": "5.2.3",
     "sockjs": "0.3.24",
-    "tmp": "0.2.5"
+    "tmp": "0.2.5",
+    "sass-loader": "13.2.0"
   }
 }
