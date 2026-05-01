@@ -200,12 +200,12 @@ function App() {
                 Ready to Get Started?
               </div>
               <div className="col-md-4 col-12 text-md-end text-center">
-                <a
-                  href="/contact-us"
+                <Link
+                  to="/contact-us"
                   className="btn btn-light fw-bold px-4 py-2 rounded-pill text-primary"
                 >
                   Sign Up Today
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -231,25 +231,29 @@ function App() {
                 </div>
                 <p className="mb-1">
                   © 2022 Quintela Group LLC. 7722 Oak Moss Dr, Spring, TX 77379
-                  · (844) 428-2924 ·{" "}
+                  ·{" "}
+                  <a href="tel:+18444282924" className="text-info">
+                    (844) 428-2924
+                  </a>{" "}
+                  ·{" "}
                   <a href="mailto:hello@quintela.io" className="text-info">
                     hello@quintela.io
                   </a>
                 </p>
                 <p className="mb-1">
-                  <a
-                    href="/no-privacy-policy-on-this-site"
+                  <Link
+                    to="/no-privacy-policy-on-this-site"
                     className="text-info"
                   >
                     Privacy Policy
-                  </a>{" "}
+                  </Link>{" "}
                   ·{" "}
-                  <a
-                    href="/no-cookie-policy-on-this-site"
+                  <Link
+                    to="/no-cookie-policy-on-this-site"
                     className="text-info"
                   >
                     Cookie Policy
-                  </a>
+                  </Link>
                 </p>
                 <p className="mb-1">
                   This is NOT Quintela Group's official website!

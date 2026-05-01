@@ -1,6 +1,7 @@
 import "./Contact.scss";
 
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import CustomerQuote from "../../components/CustomerQuote/CustomerQuote";
 import DigitalInterviewBuilderSection from "../../components/DigitalInterviewBuilderSection/DigitalInterviewBuilderSection";
 import ContactGeometricInterviewSection from "../../components/DigitalInterviewBuilderSection/sections/ContactGeometricInterviewSection";
@@ -11,6 +12,7 @@ function validateEmail(email: string) {
 }
 
 export default function Contact() {
+  const navigate = useNavigate();
   const [fullNameMsg, setFullNameMsg] = useState("");
   const [emailMsg, setEmailMsg] = useState("");
 
@@ -54,7 +56,7 @@ export default function Contact() {
       alert(
         `Your full name: ${formFullName.trim()} \nYour email: ${formEmail.trim()} \nThis is a demo website, so your information will not be stored/sent anywhere. \nYou will now be redirected to the homepage...`,
       );
-      window.location.assign("/");
+      navigate("/");
     }
   }
 

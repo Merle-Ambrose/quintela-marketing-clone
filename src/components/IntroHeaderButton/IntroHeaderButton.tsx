@@ -1,6 +1,8 @@
 import "./IntroHeaderButton.scss";
 
 import React from "react";
+import { Link } from "react-router-dom";
+import isExternalHref from "../../utils/isExternalHref";
 
 interface IntroHeaderButtonProps {
   href: string;
@@ -13,15 +15,31 @@ export default function IntroHeaderButton({
   label,
   className,
 }: IntroHeaderButtonProps) {
+  const externalHref = isExternalHref(href);
+
+  if (externalHref) {
+    return (
+      <a
+        href={href}
+        className={`introHeaderBtn${className ? ` ${className}` : ""}`}
+      >
+        {label}
+        <div className="introHeaderBtnArrow">
+          <i className="bi bi-chevron-right"></i>
+        </div>
+      </a>
+    );
+  }
+
   return (
-    <a
-      href={href}
+    <Link
+      to={href}
       className={`introHeaderBtn${className ? ` ${className}` : ""}`}
     >
       {label}
       <div className="introHeaderBtnArrow">
         <i className="bi bi-chevron-right"></i>
       </div>
-    </a>
+    </Link>
   );
 }

@@ -1,6 +1,8 @@
 import "./PrimaryButton.scss";
 
 import React from "react";
+import { Link } from "react-router-dom";
+import isExternalHref from "../../utils/isExternalHref";
 
 interface PrimaryButtonProps {
   href: string;
@@ -13,9 +15,19 @@ export default function PrimaryButton({
   children,
   className = "",
 }: PrimaryButtonProps) {
+  const externalHref = isExternalHref(href);
+
+  if (externalHref) {
+    return (
+      <a href={href} className={`primaryBtn ${className}`}>
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <a href={href} className={`primaryBtn ${className}`}>
+    <Link to={href} className={`primaryBtn ${className}`}>
       {children}
-    </a>
+    </Link>
   );
 }
