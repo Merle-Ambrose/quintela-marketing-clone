@@ -13,13 +13,15 @@
   font-size: 0.95rem;
 }
 
-/* focus/active reset */
+// Focus/active reset
 .primaryBtn:focus,
 .primaryBtn:active {
   outline: none;
 }
 
-/* Modifier: list (larger padding/weight from old listPointBtn) */
+// Button looks different for button lists "Know More"
+// (e.g. on the CompetencyModel page)
+// vs. standalone usage (e.g. on the AssessmentTechnology page)
 .primaryBtn--list {
   font-weight: 800;
   letter-spacing: 1px;
@@ -35,7 +37,9 @@
   text-decoration: none;
 }
 
-/* Modifier: read (default appearance kept) */
+// Button looks different for button reading "Read More"
+// (e.g. on the AssessmentTechnology page)
+// vs. "Learn More" (e.g. on the CompetencyModel page)
 .primaryBtn--read:hover,
 .primaryBtn--read:focus,
 .primaryBtn--read:active {

@@ -1,3 +1,5 @@
+import "./Article.scss";
+
 import React from "react";
 
 interface ArticleProps {

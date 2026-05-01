@@ -8,7 +8,12 @@ interface CompetencyBoxProps {
   desc: string;
 }
 
-export default function CompetencyBox({
+// React.memo skips re-rendering CompetencyBox when its props haven't changed.
+// CompetencyBox itself has no hover state, but its parent (CompetencyModel) does.
+// When that hover state updates, React would normally re-render all 9 CompetencyBox
+// instances as children of CompetencyModel, even though none of their props changed.
+// React.memo prevents that by bailing out early if the prop comparison passes.
+const CompetencyBox = React.memo(function CompetencyBox({
   icon,
   title,
   desc,
@@ -22,4 +27,6 @@ export default function CompetencyBox({
       <p>{desc}</p>
     </div>
   );
-}
+});
+
+export default CompetencyBox;

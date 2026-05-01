@@ -49,129 +49,133 @@ const APP_ROUTES = buildAppRoutes({
   Contact,
 });
 
-function App() {
-  function NavbarComp() {
-    const location = useLocation();
+// NavbarComp is defined at module scope (outside of App) intentionally.
+// If it were defined inside App's function body, React would see a brand-new
+// component type on every App re-render, unmounting and remounting the entire
+// navbar, destroying DOM nodes, flickering, and tearing down event listeners.
+// At module scope, React recognises it as the same component across renders.
+function NavbarComp() {
+  const location = useLocation();
 
-    useEffect(() => {
-      const el = document.getElementById("navbarNav");
-      if (!el) return;
+  useEffect(() => {
+    const el = document.getElementById("navbarNav");
+    if (!el) return;
 
-      const toggler = document.querySelector(".navbar-toggler");
-      const bs = (window as any).bootstrap;
+    const toggler = document.querySelector(".navbar-toggler");
+    const bs = (window as any).bootstrap;
 
-      const overlayId = "navOverlay";
-      let overlay = document.getElementById(overlayId);
-      if (!overlay) {
-        overlay = document.createElement("div");
-        overlay.id = overlayId;
-        overlay.className = "nav-overlay";
-        document.body.appendChild(overlay);
-      }
+    const overlayId = "navOverlay";
+    let overlay = document.getElementById(overlayId);
+    if (!overlay) {
+      overlay = document.createElement("div");
+      overlay.id = overlayId;
+      overlay.className = "nav-overlay";
+      document.body.appendChild(overlay);
+    }
 
-      const showOverlay = () => {
-        overlay!.classList.add("show");
-        document.body.classList.add("nav-open");
-      };
+    const showOverlay = () => {
+      overlay!.classList.add("show");
+      document.body.classList.add("nav-open");
+    };
 
-      const hideOverlay = () => {
-        overlay!.classList.remove("show");
-        document.body.classList.remove("nav-open");
-      };
+    const hideOverlay = () => {
+      overlay!.classList.remove("show");
+      document.body.classList.remove("nav-open");
+    };
 
-      const onOverlayClick = () => {
-        try {
-          if (bs && bs.Collapse) {
-            const inst =
-              bs.Collapse.getInstance(el) ||
-              new bs.Collapse(el, { toggle: false });
-            inst.hide();
-          } else {
-            el.classList.remove("show");
-            hideOverlay();
-          }
-        } catch (e) {
-          hideOverlay();
-        }
-      };
-      overlay.addEventListener("click", onOverlayClick);
-
+    const onOverlayClick = () => {
       try {
         if (bs && bs.Collapse) {
           const inst =
             bs.Collapse.getInstance(el) ||
             new bs.Collapse(el, { toggle: false });
           inst.hide();
-        }
-      } catch (e) {}
-
-      el.classList.remove("show", "collapsing");
-      (el as HTMLElement).style.display = "";
-      (el as HTMLElement).style.height = "";
-
-      if (toggler) {
-        toggler.classList.add("collapsed");
-        toggler.setAttribute("aria-expanded", "false");
-      }
-
-      try {
-        el.addEventListener("show.bs.collapse", showOverlay);
-        el.addEventListener("hide.bs.collapse", hideOverlay);
-      } catch (e) {}
-
-      return () => {
-        try {
+        } else {
+          el.classList.remove("show");
           hideOverlay();
-          el.removeEventListener("show.bs.collapse", showOverlay);
-          el.removeEventListener("hide.bs.collapse", hideOverlay);
-        } catch (e) {}
-        overlay!.removeEventListener("click", onOverlayClick);
-      };
-    }, [location]);
+        }
+      } catch (e) {
+        hideOverlay();
+      }
+    };
+    overlay.addEventListener("click", onOverlayClick);
 
-    return (
-      <nav className="navbar navbar-expand-lg fixed-top navbar-light">
-        <div className="siteFrame siteNavFrame">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+    try {
+      if (bs && bs.Collapse) {
+        const inst =
+          bs.Collapse.getInstance(el) || new bs.Collapse(el, { toggle: false });
+        inst.hide();
+      }
+    } catch (e) {}
 
-          <Link className="navbar-brand companyNavLogo" to="/">
-            <img
-              src="/img/logo.svg"
-              className="d-inline-block align-top"
-              id="logo"
-              alt="brand logo"
-              decoding="async"
-              loading="eager"
-              fetchPriority="high"
-            />
-          </Link>
+    el.classList.remove("show", "collapsing");
+    (el as HTMLElement).style.display = "";
+    (el as HTMLElement).style.height = "";
 
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav align-items-center ms-auto">
-              {NAV_ITEMS.map(({ to, label }) => (
-                <li className="nav-item" key={to}>
-                  <NavLink className="nav-link" to={to}>
-                    {label}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          </div>
+    if (toggler) {
+      toggler.classList.add("collapsed");
+      toggler.setAttribute("aria-expanded", "false");
+    }
+
+    try {
+      el.addEventListener("show.bs.collapse", showOverlay);
+      el.addEventListener("hide.bs.collapse", hideOverlay);
+    } catch (e) {}
+
+    return () => {
+      try {
+        hideOverlay();
+        el.removeEventListener("show.bs.collapse", showOverlay);
+        el.removeEventListener("hide.bs.collapse", hideOverlay);
+      } catch (e) {}
+      overlay!.removeEventListener("click", onOverlayClick);
+    };
+  }, [location]);
+
+  return (
+    <nav className="navbar navbar-expand-lg fixed-top navbar-light">
+      <div className="siteFrame siteNavFrame">
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <Link className="navbar-brand companyNavLogo" to="/">
+          <img
+            src="/img/logo.svg"
+            className="d-inline-block align-top"
+            id="logo"
+            alt="brand logo"
+            decoding="async"
+            loading="eager"
+            fetchPriority="high"
+          />
+        </Link>
+
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav align-items-center ms-auto">
+            {NAV_ITEMS.map(({ to, label }) => (
+              <li className="nav-item" key={to}>
+                <NavLink className="nav-link" to={to}>
+                  {label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
         </div>
-      </nav>
-    );
-  }
+      </div>
+    </nav>
+  );
+}
 
+function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />

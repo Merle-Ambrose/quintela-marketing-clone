@@ -24,7 +24,6 @@ export default function InterviewGuide() {
                   and ratings into the hiring process."
       />
 
-      {/* Images/text */}
       <div className="listPointsAssessmentWrapper py-5">
         <div className="listPoints container">
           <ListPointDivider>

@@ -11,11 +11,17 @@ interface ListPointProps {
   url: string;
   isImgOnLeft?: boolean;
   hoverImgSrc?: string;
-  onHoverImgEnter?: () => void;
-  onHoverImgLeave?: () => void;
+  onHoverImgEnter?: () => void; // function stabilized with useCallback in the parent to prevent unnecessary re-renders
+  onHoverImgLeave?: () => void; // function stabilized with useCallback in the parent to prevent unnecessary re-renders
 }
 
-export default function ListPoint({
+// React.memo skips re-rendering ListPoint when its props haven't changed.
+// On the CompetencyModel page, hover state changes would otherwise re-render
+// every ListPoint instance. The non-hoverable instances have stable props, so
+// they skip the re-render entirely. The hoverable instance receives stabilized
+// callbacks via useCallback (in CompetencyModel), so memo can also protect it
+// from re-renders caused by anything other than the hover image itself changing.
+const ListPoint = React.memo(function ListPoint({
   img,
   altImgText,
   heading,
@@ -62,4 +68,6 @@ export default function ListPoint({
       {isImgOnLeft ? textBlock : imageBlock}
     </div>
   );
-}
+});
+
+export default ListPoint;

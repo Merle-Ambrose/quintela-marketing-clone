@@ -19,7 +19,6 @@ export default function AssessmentTechnology() {
         descClassName="mb-1"
       />
 
-      {/* Images/text */}
       <div className="listPointsAssessmentWrapper py-5">
         <div className="listPoints container listPointsAssessment">
           <ListPointDivider>

@@ -1,6 +1,6 @@
 import "./CompetencyModel.scss";
 
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import ListPoint from "../../components/ListPoint/ListPoint";
 import ListPointDivider from "../../components/ListPointDivider/ListPointDivider";
 import SmallQuote from "../../components/SmallQuote/SmallQuote";
@@ -12,6 +12,19 @@ import CompetencyModelLibrarySection from "../../components/DigitalInterviewBuil
 
 export default function CompetencyModel() {
   const [hoverImgSrc, setHoverImgSrc] = useState(HOVER_IMAGES.default);
+
+  // useCallback stabilizes these function references across re-renders.
+  // Without it, a new function object would be created every time CompetencyModel
+  // renders, which would look like a changed prop to the memoized ListPoint and
+  // defeat the purpose of React.memo, and would cause a re-render anyway.
+  const handleHoverEnter = useCallback(
+    () => setHoverImgSrc(HOVER_IMAGES.active),
+    [],
+  );
+  const handleHoverLeave = useCallback(
+    () => setHoverImgSrc(HOVER_IMAGES.default),
+    [],
+  );
 
   return (
     <>
@@ -25,7 +38,7 @@ export default function CompetencyModel() {
         description="Use Quintela’s competency library to define role skills, map them to job profiles, and integrate them into hiring, development, and performance programs, applicable across all industries and functions."
       />
 
-      {/* List points: intro paragraph + first ListPoint */}
+      {/* List points: intro paragraph + two accompanying img/par variants */}
       <div className="listPointsAssessmentWrapper py-5">
         <div className="listPoints container listPointsAssessment">
           <ListPointDivider>
@@ -53,8 +66,8 @@ export default function CompetencyModel() {
             desc="Assign entities to each competency that will allow you to build any talent management assessment. For example, assign interview questions to competencies or psychometric items and scoring to each competency in your profile."
             isImgOnLeft={false}
             hoverImgSrc={hoverImgSrc}
-            onHoverImgEnter={() => setHoverImgSrc(HOVER_IMAGES.active)}
-            onHoverImgLeave={() => setHoverImgSrc(HOVER_IMAGES.default)}
+            onHoverImgEnter={handleHoverEnter}
+            onHoverImgLeave={handleHoverLeave}
           />
         </div>
       </div>
