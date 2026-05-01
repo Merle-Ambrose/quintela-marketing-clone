@@ -62,7 +62,7 @@ export default function DigitalInterviewSection() {
         management system.
       </p>
       <p className="fw-bold">
-        Using a digital interview builder to improve your hiring process.
+        Use a digital interview builder to improve your hiring process.
       </p>
       <p>
         At Quintela, we can build you a structured interview guide management

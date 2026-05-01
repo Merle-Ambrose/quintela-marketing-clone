@@ -1,9 +1,9 @@
 import React from "react";
 
 interface ArticleProps {
-  paragArr?: string[];
-  details?: string;
-  heading?: string;
+  paragArr: string[];
+  details: string;
+  heading: string;
 }
 
 export default function Article({

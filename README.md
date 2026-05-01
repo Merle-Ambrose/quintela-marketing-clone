@@ -34,7 +34,7 @@ https://taupe-torte-b3213b.netlify.app
 [x] Decrease image space
 [x] Decrease !important usage
 [x] Have a lot of the packages that were in the portfolio (i.e. sass, typescript)
-[ ] Convert everything to more scss modular-friendly
 [ ] Can anything be memo-ized?
+[ ] Convert everything to more scss modular-friendly
 [ ] Check on all browsers (chrome, firefox, edge, SAFARI)
 [ ] Deploy to netlify again
