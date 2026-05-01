@@ -37,5 +37,5 @@ https://taupe-torte-b3213b.netlify.app
 [x] Some things were memo-ized since most of the site is static.
     Not everything would have a high impact though, so only some things were.
 [x] Convert everything to more scss modular-friendly
-[ ] Check on all browsers (chrome, firefox, edge, SAFARI)
+[x] Check on all browsers (chrome, firefox, edge, SAFARI)
 [ ] Deploy to netlify again

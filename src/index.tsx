@@ -1,6 +1,7 @@
 import "./styles/bootstrap.scss";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import "@fontsource/nunito-sans";
 
 import React from "react";
 import ReactDOM from "react-dom/client";
