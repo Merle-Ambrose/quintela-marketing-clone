@@ -162,7 +162,7 @@ export default function CompetencyModel() {
       />
 
       <SmallQuote
-        desc='"We use Quintela for our interview guide system and assessment dashboard because they work with us to create what WE want/need rather than limiting us to off the shelf products that don’t fully meet our needs."'
+        desc='"We use Quintela for our interview guide system and assessment dashboard because they work with us to create what we... need rather than limiting us to off the shelf products that don’t fully meet our needs."'
         title="Director Talent Management, PhD,"
         company="Billion-Dollar Industrial Manufacturer"
         className="pb-0"

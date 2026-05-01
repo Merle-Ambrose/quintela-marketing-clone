@@ -1,0 +1,35 @@
+// Bootstrap Sass source entry point.
+// Import this instead of bootstrap/dist/css/bootstrap.min.css so that
+// Bootstrap's own Sass variables can be overridden before compilation.
+//
+// Variable overrides must come BEFORE the Bootstrap @import.
+// See: https://getbootstrap.com/docs/5.3/customize/sass/#variable-defaults
+
+// Primary color: overrides Bootstrap's $primary (#0d6efd) with the brand blue.
+// Bootstrap generates all semantic classes (.btn-primary, .text-primary,
+// .bg-primary, .border-primary, etc.) and their CSS custom properties
+// (--bs-primary, --bs-primary-rgb, --bs-link-color, etc.) from this value.
+$primary: #3d72e7;
+
+// Bootstrap's color-contrast() picks black text for #3d72e7 at the default
+// 4.5:1 threshold (white gives 4.43:1, just under). Lowering to 4.3 lets
+// white win for our brand blue without materially affecting other components.
+$min-contrast-ratio: 4.3;
+
+// Extend Bootstrap's $spacers map to include a level 7 ($spacer * 5 = 80px).
+// This lets Bootstrap generate .mt-7 / .mb-7 / .py-7 etc. as real utilities,
+// instead of defining .mt-7 manually in App.scss.
+$spacers: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem,
+  7: 5rem,
+);
+
+// Now import Bootstrap's full Sass source.
+// loadPaths in the webpack sass-loader config makes "bootstrap/scss/bootstrap"
+// resolve from node_modules without needing a ~ prefix or relative path.
+@import "bootstrap/scss/bootstrap";

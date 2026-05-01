@@ -88,6 +88,7 @@ export default function Contact() {
                 name="fullName"
                 autoComplete="name"
                 className={`form-control${fullNameMsg ? " is-invalid" : ""}`}
+                maxLength={100}
                 onBlur={(e) => checkName(e.target.value)}
                 onChange={() => {
                   if (fullNameMsg) {
@@ -108,6 +109,7 @@ export default function Contact() {
                 name="email"
                 autoComplete="email"
                 className={`form-control${emailMsg ? " is-invalid" : ""}`}
+                maxLength={254} // RFC 5321 official max email length
                 onBlur={(e) => checkEmail(e.target.value)}
                 onChange={() => {
                   if (emailMsg) {

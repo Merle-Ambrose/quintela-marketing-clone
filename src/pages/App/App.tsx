@@ -1,6 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.scss";
 
 import React, { Suspense, useEffect } from "react";
@@ -194,9 +191,9 @@ function App() {
           </Suspense>
         </main>
 
-        <footer className="text-center bg-dark text-light pt-4 mt-7">
+        <footer className="text-center bg-dark text-light mt-7">
           <div className="container">
-            <div className="row justify-content-between align-items-center mb-2 py-4 px-2 shadow footerCtaCard">
+            <div className="row justify-content-between align-items-center shadow footerCtaCard">
               <div className="col-md-8 col-12 mb-2 mb-md-0 fs-3 fw-bold text-md-start text-start">
                 Ready to Get Started?
               </div>

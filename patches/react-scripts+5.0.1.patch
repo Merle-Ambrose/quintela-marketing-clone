@@ -1,8 +1,8 @@
 diff --git a/node_modules/react-scripts/config/webpack.config.js b/node_modules/react-scripts/config/webpack.config.js
-index e465d8e..fbeb754 100644
+index e465d8e..da78fe3 100644
 --- a/node_modules/react-scripts/config/webpack.config.js
 +++ b/node_modules/react-scripts/config/webpack.config.js
-@@ -187,9 +187,10 @@ module.exports = function (webpackEnv) {
+@@ -187,9 +187,20 @@ module.exports = function (webpackEnv) {
          },
          {
            loader: require.resolve(preProcessor),
@@ -11,7 +11,17 @@ index e465d8e..fbeb754 100644
 -          },
 +          options:
 +            preProcessor === 'sass-loader'
-+              ? { api: 'modern', sourceMap: true }
++              ? {
++                  api: 'modern',
++                  sourceMap: true,
++                  sassOptions: {
++                    // quietDeps suppresses deprecation warnings from Bootstrap 5's own
++                    // @import rules (Bootstrap 6 will migrate to @use/@forward).
++                    quietDeps: true,
++                    // loadPaths lets @import "bootstrap/scss/..." resolve from node_modules.
++                    loadPaths: [paths.appNodeModules],
++                  },
++                }
 +              : { sourceMap: true },
          }
        );

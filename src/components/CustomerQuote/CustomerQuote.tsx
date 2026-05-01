@@ -10,9 +10,7 @@ interface CustomerQuoteProps {
 export default function CustomerQuote({ className }: CustomerQuoteProps) {
   const isMobile = useIsMobile();
   return (
-    <div
-      className={`quoteFromCustomer py-5 px-4 ${className ? `${className}` : ""}`}
-    >
+    <div className={`quoteFromCustomer ${className ? `${className}` : ""}`}>
       <div className="container">
         <div className="row align-items-start justify-content-center g-4">
           <div className="col-12 col-md-2 text-center text-md-end quoteLogo align-self-start">

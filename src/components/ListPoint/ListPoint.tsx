@@ -36,7 +36,7 @@ const ListPoint = React.memo(function ListPoint({
 
   const textBlock = (
     <div
-      className={`listPointText col-12 d-grid gap-3 ${isHoverable ? "col-lg-4" : "col-lg"}`}
+      className={`listPointText col-12 d-grid gap-3 ${isHoverable ? "col-lg-4 listPointText--hoverable" : "col-lg"}`}
     >
       <h1>{heading}</h1>
       <p>{desc}</p>
@@ -48,7 +48,7 @@ const ListPoint = React.memo(function ListPoint({
 
   const imageBlock = (
     <div
-      className={`col-12 d-flex justify-content-center ${isHoverable ? "col-lg-8" : "col-lg-auto"}`}
+      className={`col-12 d-flex justify-content-center ${isHoverable ? "col-lg-8 hoverImgCol" : "col-lg-auto"}`}
     >
       <img
         src={hoverImgSrc || img}

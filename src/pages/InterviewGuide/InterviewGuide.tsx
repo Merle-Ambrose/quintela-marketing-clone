@@ -66,7 +66,7 @@ export default function InterviewGuide() {
       </div>
 
       <SmallQuote
-        desc='"In implementing an interview system to manage our competency-based interview guides and content, Quintela has proven that they are NOT the typical vendor. Their defensiveness-free attitude and adaptive approach allows us to address our unique requirements. The teams intelligent responsiveness and desire to solve our critical problems is refreshing."'
+        desc='"In implementing an interview system to manage our competency-based interview guides and content, Quintela has proven that they are not the typical vendor. Their defensiveness-free attitude and adaptive approach allows us to address our unique requirements. The teams intelligent responsiveness and desire to solve our critical problems is refreshing."'
         title="Director of Selection & Assessment, PhD,"
         company="Fortune 500 Telecommunications Organization"
       />
