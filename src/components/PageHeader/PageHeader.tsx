@@ -4,12 +4,10 @@ import React from "react";
 import useIsMobile from "../../utils/useIsMobile";
 import IntroHeaderButton from "../IntroHeaderButton/IntroHeaderButton";
 
-interface PageHeaderProps {
+interface PageHeaderBaseProps {
   heading: string;
   mobileHeading: string;
   bkgClassName?: string;
-  imgSrc?: string;
-  imgAlt?: string;
   description?: string;
   mobileDescription?: string;
   centerContent?: boolean;
@@ -20,6 +18,18 @@ interface PageHeaderProps {
   ctaLabel?: string;
   ctaClassName?: string;
 }
+
+type PageHeaderImageProps =
+  | {
+      imgSrc: string;
+      imgAlt: string;
+    }
+  | {
+      imgSrc?: undefined;
+      imgAlt?: string;
+    };
+
+type PageHeaderProps = PageHeaderBaseProps & PageHeaderImageProps;
 
 export default function PageHeader({
   bkgClassName,

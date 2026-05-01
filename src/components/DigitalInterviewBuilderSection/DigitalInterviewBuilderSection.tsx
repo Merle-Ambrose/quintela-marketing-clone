@@ -19,10 +19,12 @@ export default function DigitalInterviewBuilderSection({
         <h1 className="text-center pb-4 fw-bold">{header}</h1>
         {Array.isArray(body) ? (
           (body as React.ReactNode[]).map((el, i) =>
-            typeof el === "string" ? (
+            typeof el === "string" || typeof el === "number" ? (
               <p key={i}>{el}</p>
-            ) : (
-              React.cloneElement(el as React.ReactElement, { key: i })
+            ) : React.isValidElement(el) ? (
+              React.cloneElement(el, { key: i })
+            ) : el == null || typeof el === "boolean" ? null : (
+              <React.Fragment key={i}>{el}</React.Fragment>
             ),
           )
         ) : typeof body === "string" ? (

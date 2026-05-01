@@ -45,7 +45,7 @@ export default function Home() {
           img="./img/listpoint/statistics.png"
           altImgText="People analyzing statistics."
           heading="Competency Platform"
-          desc="We use the term “competency”, but they are called many different names, are called many different names e.g., capabilities, knowledge/skills/aptitudes, values, etc.  However, what is constant is that they play a critical role in talent management.  They help you define roles, make better hires, understand employee engagement, and develop your leaders, to name a few. What is also constant is that they are almost impossible to keep track of and manage."
+          desc="We use the term “competency”, but they are called many different names e.g., capabilities, knowledge/skills/aptitudes, values, etc.  However, what is constant is that they play a critical role in talent management.  They help you define roles, make better hires, understand employee engagement, and develop your leaders, to name a few. What is also constant is that they are almost impossible to keep track of and manage."
         />
       </div>
 

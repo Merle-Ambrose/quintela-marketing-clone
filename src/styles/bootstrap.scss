@@ -11,11 +11,6 @@
 // (--bs-primary, --bs-primary-rgb, --bs-link-color, etc.) from this value.
 $primary: #3d72e7;
 
-// Bootstrap's color-contrast() picks black text for #3d72e7 at the default
-// 4.5:1 threshold (white gives 4.43:1, just under). Lowering to 4.3 lets
-// white win for our brand blue without materially affecting other components.
-$min-contrast-ratio: 4.3;
-
 // Extend Bootstrap's $spacers map to include a level 7 ($spacer * 5 = 80px).
 // This lets Bootstrap generate .mt-7 / .mb-7 / .py-7 etc. as real utilities,
 // instead of defining .mt-7 manually in App.scss.

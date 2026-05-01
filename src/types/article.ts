@@ -7,7 +7,7 @@ export interface ArticleMeta {
   author?: string;
   date?: string;
   category?: string;
-  url?: string;
+  url: string;
 }
 
 export default ArticleMeta;

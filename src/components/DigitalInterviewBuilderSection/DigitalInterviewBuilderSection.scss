@@ -16,8 +16,7 @@
 
 .exerptGeometric {
   background-image:
-    url("../../../public/img/bkgs/geometric.png"),
-    $gradient-geometric;
+    url("../../../public/img/bkgs/geometric.png"), $gradient-geometric;
   background-blend-mode: overlay;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;

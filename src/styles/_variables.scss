@@ -20,9 +20,17 @@ $color-at-red: #e01c11;
 $color-at-purple: #210444;
 
 // Gradients
-$gradient-primary: linear-gradient(243deg, $color-primary 0%, $color-primary-light 100%);
+$gradient-primary: linear-gradient(
+  243deg,
+  $color-primary 0%,
+  $color-primary-light 100%
+);
 // Used in DigitalInterviewBuilderSection geometric background
-$gradient-geometric: linear-gradient(135deg, #53a0fd 0%, $color-primary-dark 100%);
+$gradient-geometric: linear-gradient(
+  135deg,
+  #53a0fd 0%,
+  $color-primary-dark 100%
+);
 
 // Typography
 $font-family-base: "Nunito Sans", Helvetica, Arial, Lucida, sans-serif;
