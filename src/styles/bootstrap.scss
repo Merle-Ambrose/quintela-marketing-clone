@@ -32,4 +32,15 @@ $spacers: (
 // Now import Bootstrap's full Sass source.
 // loadPaths in the webpack sass-loader config makes "bootstrap/scss/bootstrap"
 // resolve from node_modules without needing a ~ prefix or relative path.
+//
+// @import is used here because Bootstrap 5's own Sass source is entirely built
+// around @import and cannot be loaded via @use/@forward without its own
+// migration (expected in future Bootstrap). Using @import from this file is the
+// only way to pass variable overrides (defined above) into Bootstrap's
+// compilation context.
+//
+// The Dart Sass deprecation warnings this produces are silenced via
+// silenceDeprecations: ['import', 'global-builtin', 'color-functions',
+// 'if-function'] in the sass-loader sassOptions inside the react-scripts
+// webpack config patch (patches/react-scripts+5.0.1.patch).
 @import "bootstrap/scss/bootstrap";
