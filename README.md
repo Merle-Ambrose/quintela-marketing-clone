@@ -1,4 +1,4 @@
-# Quintela Marketing Website Re-Imagined
+# Quintela Marketing Demo Website Re-Imagined
 
 ### Technologies used:
 ReactJS, Bootstrap v5.0, Typescript, SASS
@@ -8,5 +8,7 @@ ReactJS, Bootstrap v5.0, Typescript, SASS
 
 (Updated May 1, 2026) The original structure and core functionality have been preserved. This refresh includes migrating the codebase to TypeScript and Sass, updating dependencies, some performance improvements, and refining the overall styling and structure of the app.
 
-### View finished product here:
+Important: This is a demonstration project and should not be treated as an official or production-ready property.
+
+### View live demo:
 https://taupe-torte-b3213b.netlify.app

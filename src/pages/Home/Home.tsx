@@ -13,7 +13,7 @@ export default function Home() {
       <PageHeader
         heading="Digital Interview Guides"
         mobileHeading="Digital Interview Guides"
-        bkgClassName="bkg-blue"
+        bkgClassName="bkgBlue"
         isHero
         imgSrc="./img/peopleWorking.png"
         imgAlt="People surrounding a whiteboard choosing a potential hire."

@@ -36,11 +36,11 @@ const ListPoint = React.memo(function ListPoint({
 
   const textBlock = (
     <div
-      className={`listPointText col-12 d-grid gap-3 ${isHoverable ? "col-lg-4 listPointText--hoverable" : "col-lg"}`}
+      className={`listPointText col-12 d-grid gap-3 ${isHoverable ? "col-lg-4 listPointTextHoverable" : "col-lg"}`}
     >
       <h1>{heading}</h1>
       <p>{desc}</p>
-      <PrimaryButton href={url} className="primaryBtn--list">
+      <PrimaryButton href={url} className="primaryBtnList">
         Know More
       </PrimaryButton>
     </div>

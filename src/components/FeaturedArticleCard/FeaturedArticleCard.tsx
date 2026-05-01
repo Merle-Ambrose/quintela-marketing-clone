@@ -45,7 +45,7 @@ export default function FeaturedArticleCard({
           </p>
           <p className="card-text mb-4">{desc}</p>
           <div className="mt-auto">
-            <PrimaryButton href={url} className="primaryBtn--read">
+            <PrimaryButton href={url} className="primaryBtnRead">
               Read More <span className="ms-2">→</span>
             </PrimaryButton>
           </div>

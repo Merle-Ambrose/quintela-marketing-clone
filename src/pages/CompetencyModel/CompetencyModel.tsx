@@ -29,7 +29,7 @@ export default function CompetencyModel() {
   return (
     <>
       <PageHeader
-        bkgClassName="bkg-blue"
+        bkgClassName="bkgBlue"
         heading="Competency Management System"
         mobileHeading="Competency Library"
         mobileDescription="Leverage Quintela's library to define role skills and improve hiring."
@@ -94,7 +94,7 @@ export default function CompetencyModel() {
           </div>
         </div>
 
-        <div className="competency-grid">
+        <div className="competencyGrid">
           <CompetencyBox
             icon="bi bi-pen"
             title="Job Analyses"

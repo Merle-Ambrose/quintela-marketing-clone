@@ -12,7 +12,7 @@ export default function DigitalInterviewBuilderSection({
   body,
   bkg = "blue",
 }: Props) {
-  const bkgClass = bkg === "geometric" ? "exerpt-geometric" : "exerpt-blue";
+  const bkgClass = bkg === "geometric" ? "exerptGeometric" : "exerptBlue";
   return (
     <div className={`exerpt ${bkgClass} py-5`}>
       <div className="container px-4">

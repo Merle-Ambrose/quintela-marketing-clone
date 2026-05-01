@@ -1,12 +1,12 @@
 @use "../../styles" as *;
 
-.pt-three {
+.ptThree {
   padding-top: $spacer * 3;
   padding-bottom: $spacer * 2;
 }
 
 @include mobile {
-  .pt-three {
+  .ptThree {
     padding-top: $spacer * 1.5;
     padding-bottom: $spacer;
   }
@@ -18,7 +18,7 @@
   // - max-width + justify-self: center caps and centers single-column cards —
   //   justify-self only works in grid context, not in Bootstrap's flex .row.
   // - gap: $spacer reduces the gutter below Bootstrap's g-4 on mobile.
-  .container.pt-three .row.row-cols-1.row-cols-md-2.row-cols-xl-2 {
+  .container.ptThree .row.row-cols-1.row-cols-md-2.row-cols-xl-2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: $spacer;

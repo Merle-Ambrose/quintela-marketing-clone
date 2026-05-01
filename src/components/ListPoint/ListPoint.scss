@@ -94,7 +94,7 @@
   // Bootstrap's col-lg-4 (33%) still applies above 992px even inside the
   // mobile mixin range (992-1080px). Expand the text column to full width
   // now that its sibling is hidden.
-  .listPointText--hoverable {
+  .listPointTextHoverable {
     width: 100% !important;
   }
 }

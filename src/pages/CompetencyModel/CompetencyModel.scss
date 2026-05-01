@@ -23,11 +23,11 @@
   align-items: flex-start;
 }
 
-// .competency-grid uses CSS auto-fit grid because Bootstrap's row-cols-* requires
+// .competencyGrid uses CSS auto-fit grid because Bootstrap's row-cols-* requires
 // a fixed column count per breakpoint and can't do fluid minmax column sizing.
 // repeat(auto-fit, minmax(250px, 1fr)) lets the browser determine the column count
 // based on available space, which is the right tool here.
-.competency-grid {
+.competencyGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: $spacer * 1.5;

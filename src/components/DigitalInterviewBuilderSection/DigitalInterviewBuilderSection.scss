@@ -7,14 +7,14 @@
   width: 100%;
 }
 
-.exerpt-blue {
+.exerptBlue {
   background-image: url("../../../public/img/bkgs/blue.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.exerpt-geometric {
+.exerptGeometric {
   background-image:
     url("../../../public/img/bkgs/geometric.png"),
     $gradient-geometric;

@@ -67,7 +67,7 @@ function NavbarComp() {
     if (!overlay) {
       overlay = document.createElement("div");
       overlay.id = overlayId;
-      overlay.className = "nav-overlay";
+      overlay.className = "navOverlay";
       document.body.appendChild(overlay);
     }
 
@@ -177,7 +177,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="App app-flex-wrapper">
+      <div className="App appFlexWrapper">
         <NavbarComp />
 
         <main>
@@ -207,7 +207,7 @@ function App() {
               </div>
             </div>
 
-            <div className="row justify-content-center pb-2 contact-info">
+            <div className="row justify-content-center pb-2 contactInfo">
               <div>
                 <div className="d-flex justify-content-center gap-3">
                   <a

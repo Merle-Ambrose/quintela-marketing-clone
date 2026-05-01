@@ -13,7 +13,7 @@ export default function InterviewGuide() {
   return (
     <>
       <PageHeader
-        bkgClassName="bkg-blue"
+        bkgClassName="bkgBlue"
         heading="Digital Interview Guides"
         mobileHeading="Interview Guides"
         mobileDescription="Build digital guides to capture interview notes and ratings consistently."

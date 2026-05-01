@@ -69,7 +69,7 @@ export default function Contact() {
         description={
           "Our mission is to make managing all of your interview guides and administering talent management assessments as simple as possible."
         }
-        bkgClassName="bkg-blue"
+        bkgClassName="bkgBlue"
         centerContent
         hideIntroButton
       />
@@ -80,7 +80,7 @@ export default function Contact() {
           <form onSubmit={submitForm} noValidate className="text-start">
             <div className="mb-3 form-group">
               <label htmlFor="fullName" className="form-label text-start w-100">
-                Full Name <span className="required-marker">*</span>
+                Full Name <span className="requiredMarker">*</span>
               </label>
               <input
                 type="text"
@@ -101,7 +101,7 @@ export default function Contact() {
             </div>
             <div className="mb-3 form-group">
               <label htmlFor="email" className="form-label text-start w-100">
-                Company Email <span className="required-marker">*</span>
+                Company Email <span className="requiredMarker">*</span>
               </label>
               <input
                 type="email"

@@ -22,7 +22,7 @@
 }
 
 // Button variant for lists (e.g. CompetencyModel "Know More")
-.primaryBtn--list {
+.primaryBtnList {
   font-weight: 800;
   letter-spacing: 1px;
   padding: 13px 25px;
@@ -38,7 +38,7 @@
 }
 
 // Button variant for reading (e.g. AssessmentTechnology "Read More")
-.primaryBtn--read {
+.primaryBtnRead {
   &:hover,
   &:focus,
   &:active {
@@ -57,8 +57,8 @@
 
 @include mobile {
   .primaryBtn,
-  .primaryBtn--list,
-  .primaryBtn--read {
+  .primaryBtnList,
+  .primaryBtnRead {
     padding: 10px 14px;
     font-size: 0.95rem;
     margin-top: 10px;
