@@ -1,4 +1,4 @@
-import "./Contact.css";
+import "./Contact.scss";
 
 import React, { useState } from "react";
 import CustomerQuote from "../../components/CustomerQuote/CustomerQuote";

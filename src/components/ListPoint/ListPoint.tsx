@@ -1,0 +1,65 @@
+import "./ListPoint.scss";
+
+import React from "react";
+import PrimaryButton from "../PrimaryButton/PrimaryButton";
+
+interface ListPointProps {
+  img?: string;
+  altImgText?: string;
+  heading?: React.ReactNode;
+  desc?: React.ReactNode;
+  url?: string;
+  isImgOnLeft?: boolean;
+  hoverImgSrc?: string;
+  onHoverImgEnter?: () => void;
+  onHoverImgLeave?: () => void;
+}
+
+export default function ListPoint({
+  img,
+  altImgText,
+  heading,
+  desc,
+  url,
+  isImgOnLeft,
+  hoverImgSrc,
+  onHoverImgEnter,
+  onHoverImgLeave,
+}: ListPointProps) {
+  const isHoverable = !!hoverImgSrc && !!onHoverImgEnter && !!onHoverImgLeave;
+
+  const textBlock = (
+    <div
+      className={`listPointText col-12 d-grid gap-3 ${isHoverable ? "col-lg-4" : "col-lg"}`}
+    >
+      <h1>{heading}</h1>
+      <p>{desc}</p>
+      <PrimaryButton href={url} className="primaryBtn--list">
+        Know More
+      </PrimaryButton>
+    </div>
+  );
+
+  const imageBlock = (
+    <div
+      className={`col-12 d-flex justify-content-center ${isHoverable ? "col-lg-8" : "col-lg-auto"}`}
+    >
+      <img
+        src={hoverImgSrc || img}
+        alt={altImgText}
+        className={`img-fluid ${isHoverable ? "hoverImg" : "listPointImg"}`}
+        onMouseEnter={onHoverImgEnter}
+        onMouseLeave={onHoverImgLeave}
+      />
+    </div>
+  );
+
+  return (
+    <div
+      className={`listPoint row align-items-center justify-content-center g-5`}
+    >
+      {isImgOnLeft ? imageBlock : textBlock}
+      {isImgOnLeft ? textBlock : imageBlock}
+    </div>
+  );
+}

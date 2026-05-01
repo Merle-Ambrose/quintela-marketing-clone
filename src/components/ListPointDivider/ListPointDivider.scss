@@ -1,0 +1,9 @@
+.listPointDividerParagraph {
+  line-height: 1.875rem;
+}
+
+@media screen and (max-width: 1080px) {
+  .listPointDivider {
+    display: none !important;
+  }
+}

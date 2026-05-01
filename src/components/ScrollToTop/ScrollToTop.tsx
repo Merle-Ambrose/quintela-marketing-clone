@@ -1,0 +1,41 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+// Always jump to the top on any navigation. Also set history.scrollRestoration
+// to 'manual' while mounted so the browser doesn't try to restore positions.
+export default function ScrollToTop(): null {
+  const { key } = useLocation();
+
+  useEffect(() => {
+    let previous: any;
+    try {
+      previous = (window as any).history.scrollRestoration;
+      (window as any).history.scrollRestoration = "manual";
+    } catch (e) {
+      // ignore
+    }
+
+    return () => {
+      try {
+        if (previous) (window as any).history.scrollRestoration = previous;
+      } catch (e) {
+        // ignore
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    const root = document.documentElement || document.body;
+    const prev = (root as HTMLElement).style.scrollBehavior;
+    try {
+      (root as HTMLElement).style.scrollBehavior = "auto";
+      window.scrollTo(0, 0);
+    } finally {
+      setTimeout(() => {
+        (root as HTMLElement).style.scrollBehavior = prev || "";
+      }, 0);
+    }
+  }, [key]);
+
+  return null;
+}

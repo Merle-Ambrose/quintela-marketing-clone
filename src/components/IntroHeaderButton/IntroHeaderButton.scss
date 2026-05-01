@@ -1,0 +1,52 @@
+.introHeaderBtn {
+  border-radius: 61px;
+  font-size: 1.125rem;
+  background-color: transparent;
+  color: white;
+  display: inline-block;
+  border: 2px solid white;
+  padding: 0.3em 1em;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: all 300ms ease 0ms;
+}
+
+.introHeaderBtn:hover {
+  border-color: transparent;
+  margin-right: 20px;
+}
+
+.introHeaderBtnArrow i {
+  text-shadow: 0 0 0.2px currentColor;
+  filter: drop-shadow(0 0 0.2px currentColor);
+}
+
+.introHeaderBtn:hover,
+.introHeaderBtn:focus,
+.introHeaderBtn:active,
+.introHeaderBtn:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.introHeaderBtn:hover .introHeaderBtnArrow {
+  visibility: visible;
+  left: 20px;
+  transition: all 300ms ease 0ms;
+}
+
+.introHeaderBtnArrow {
+  display: inline;
+  position: relative;
+  margin-left: -15px;
+  left: -25px;
+  top: 1px;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 1080px) {
+  .introHeaderBtn {
+    margin-bottom: 0;
+    font-size: 1.125rem;
+  }
+}

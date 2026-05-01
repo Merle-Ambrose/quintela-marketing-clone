@@ -1,4 +1,4 @@
-import "./CompetencyModel.css";
+import "./CompetencyModel.scss";
 
 import React, { useState } from "react";
 import ListPoint from "../../components/ListPoint/ListPoint";

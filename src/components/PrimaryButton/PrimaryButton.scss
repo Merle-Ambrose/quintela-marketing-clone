@@ -1,0 +1,62 @@
+.primaryBtn {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 26px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: white;
+  background-image: linear-gradient(243deg, #3d72e7 0%, #53a0fe 100%);
+  border: none;
+  padding: 10px 22px;
+  font-size: 0.95rem;
+}
+
+/* focus/active reset */
+.primaryBtn:focus,
+.primaryBtn:active {
+  outline: none;
+}
+
+/* Modifier: list (larger padding/weight from old listPointBtn) */
+.primaryBtn--list {
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 13px 25px;
+  font-size: 0.9375rem;
+  width: fit-content;
+}
+
+.primaryBtn--list:hover,
+.primaryBtn--list:focus,
+.primaryBtn--list:active {
+  color: white;
+  text-decoration: none;
+}
+
+/* Modifier: read (default appearance kept) */
+.primaryBtn--read:hover,
+.primaryBtn--read:focus,
+.primaryBtn--read:active {
+  color: white;
+  text-decoration: none;
+}
+
+.primaryBtn--read span {
+  transition: transform 150ms ease;
+}
+
+.primaryBtn--read:hover span {
+  transform: translateX(6px);
+}
+
+@media screen and (max-width: 1080px) {
+  .primaryBtn,
+  .primaryBtn--list,
+  .primaryBtn--read {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    margin-top: 10px;
+  }
+}

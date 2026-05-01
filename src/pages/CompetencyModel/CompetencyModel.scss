@@ -1,0 +1,40 @@
+.assessmentBuilderDiv {
+  color: #959baf;
+  line-height: 1.563rem;
+  text-align: left;
+  font-size: 1.125rem;
+}
+
+.assessmentBuilderDiv h1 {
+  font-weight: bold;
+  font-size: 1.875rem;
+  color: #535b7c;
+}
+
+.informationMayBeCollectedFromBullets {
+  margin-left: 0;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Competency boxes responsive grid: each box has a 250px minimum width.
+   Grid will auto-fit 1..n columns depending on available space, keeping
+   boxes at least 250px wide (so mobile shows 1, small screens 2, etc.). */
+.competency-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem; /* roughly Bootstrap g-4 */
+  align-items: start;
+  justify-items: center; /* center each grid item horizontally */
+  justify-content: center; /* center the whole grid when columns don't fill the row */
+}
+
+@media screen and (max-width: 1080px) {
+  .assessmentBuilderDiv h1 {
+    margin-bottom: 1rem;
+  }
+}

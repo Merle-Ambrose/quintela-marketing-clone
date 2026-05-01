@@ -19,7 +19,8 @@
     "postinstall": "patch-package",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "type-check": "tsc --noEmit"
   },
   "eslintConfig": {
     "extends": [

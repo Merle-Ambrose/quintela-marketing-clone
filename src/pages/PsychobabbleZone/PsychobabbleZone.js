@@ -1,4 +1,4 @@
-import "./PsychobabbleZone.css";
+import "./PsychobabbleZone.scss";
 
 import React from "react";
 import FeaturedArticleCard from "../../components/FeaturedArticleCard/FeaturedArticleCard";
