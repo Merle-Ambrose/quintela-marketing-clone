@@ -5,13 +5,13 @@ import useIsMobile from "../../utils/useIsMobile";
 import IntroHeaderButton from "../IntroHeaderButton/IntroHeaderButton";
 
 interface PageHeaderProps {
+  heading: string;
+  mobileHeading: string;
   bkgClassName?: string;
-  heading?: React.ReactNode;
-  mobileHeading?: React.ReactNode;
   imgSrc?: string;
   imgAlt?: string;
-  description?: React.ReactNode;
-  mobileDescription?: React.ReactNode;
+  description?: string;
+  mobileDescription?: string;
   centerContent?: boolean;
   hideIntroButton?: boolean;
   descClassName?: string;

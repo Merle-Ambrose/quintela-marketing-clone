@@ -3,9 +3,9 @@ import "./CompetencyBox.scss";
 import React from "react";
 
 interface CompetencyBoxProps {
-  icon?: string;
-  title?: React.ReactNode;
-  desc?: React.ReactNode;
+  icon: string;
+  title: string;
+  desc: string;
 }
 
 export default function CompetencyBox({

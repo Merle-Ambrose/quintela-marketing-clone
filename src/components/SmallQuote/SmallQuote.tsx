@@ -3,9 +3,9 @@ import "./SmallQuote.scss";
 import React from "react";
 
 interface SmallQuoteProps {
-  desc?: React.ReactNode;
-  title?: string;
-  company?: string;
+  desc: string;
+  title: string;
+  company: string;
   className?: string;
 }
 

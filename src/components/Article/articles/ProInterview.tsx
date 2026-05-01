@@ -1,6 +1,6 @@
 import React from "react";
-import Article from "../../pages/Article/Article";
-import type { ArticleMeta } from "../../types/article";
+import Article from "../Article";
+import type { ArticleMeta } from "../../../types/article";
 
 export default function ProInterview() {
   return (

@@ -1,9 +1,9 @@
 import React from "react";
-import ListPoint from "../components/ListPoint/ListPoint";
-import ListPointDivider from "../components/ListPointDivider/ListPointDivider";
-import SmallQuote from "../components/SmallQuote/SmallQuote";
-import SystemIntegrations from "../components/SystemIntegrations/SystemIntegrations";
-import PageHeader from "../components/PageHeader/PageHeader";
+import ListPoint from "../../components/ListPoint/ListPoint";
+import ListPointDivider from "../../components/ListPointDivider/ListPointDivider";
+import SmallQuote from "../../components/SmallQuote/SmallQuote";
+import SystemIntegrations from "../../components/SystemIntegrations/SystemIntegrations";
+import PageHeader from "../../components/PageHeader/PageHeader";
 
 export default function AssessmentTechnology() {
   return (

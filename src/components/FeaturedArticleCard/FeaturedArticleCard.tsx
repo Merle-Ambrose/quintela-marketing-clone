@@ -2,17 +2,7 @@ import "./FeaturedArticleCard.scss";
 
 import React from "react";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
-
-interface FeaturedArticleCardProps {
-  heading?: string;
-  desc?: string;
-  img?: string;
-  alt?: string;
-  author?: string;
-  date?: string;
-  category?: string;
-  url?: string;
-}
+import ArticleMeta from "../../types/article";
 
 export default function FeaturedArticleCard({
   heading,
@@ -23,7 +13,7 @@ export default function FeaturedArticleCard({
   date,
   category,
   url,
-}: FeaturedArticleCardProps) {
+}: ArticleMeta) {
   return (
     <div className="col">
       <div className="card h-100">

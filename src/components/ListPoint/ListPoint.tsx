@@ -4,11 +4,11 @@ import React from "react";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 
 interface ListPointProps {
-  img?: string;
-  altImgText?: string;
-  heading?: React.ReactNode;
-  desc?: React.ReactNode;
-  url?: string;
+  img: string;
+  altImgText: string;
+  heading: string;
+  desc: string;
+  url: string;
   isImgOnLeft?: boolean;
   hoverImgSrc?: string;
   onHoverImgEnter?: () => void;

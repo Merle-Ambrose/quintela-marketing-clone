@@ -1,7 +1,7 @@
-import { META as HRD_META } from "./articles/HRDiverse";
-import { META as RED_META } from "./articles/ReducingDiscrimination";
-import { META as PRO_META } from "./articles/ProInterview";
-import { META as DIG_META } from "./articles/DigitalInterview";
+import { META as HRD_META } from "../components/Article/articles/HRDiverse";
+import { META as RED_META } from "../components/Article/articles/ReducingDiscrimination";
+import { META as PRO_META } from "../components/Article/articles/ProInterview";
+import { META as DIG_META } from "../components/Article/articles/DigitalInterview";
 import ArticleMeta from "../types/article";
 
 export const FEATURED_ARTICLES: Array<ArticleMeta> = [

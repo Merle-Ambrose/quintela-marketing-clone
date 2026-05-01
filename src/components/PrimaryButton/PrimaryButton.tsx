@@ -3,8 +3,8 @@ import "./PrimaryButton.scss";
 import React from "react";
 
 interface PrimaryButtonProps {
-  href?: string;
-  children?: React.ReactNode;
+  href: string;
+  children: React.ReactNode;
   className?: string;
 }
 

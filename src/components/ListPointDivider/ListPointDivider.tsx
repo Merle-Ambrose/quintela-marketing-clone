@@ -3,7 +3,7 @@ import "./ListPointDivider.scss";
 import React from "react";
 
 interface ListPointDividerProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export default function ListPointDivider({ children }: ListPointDividerProps) {

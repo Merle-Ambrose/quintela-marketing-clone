@@ -3,7 +3,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.scss";
 import { NAV_ITEMS } from "../../constants/appNavigation";
-import { buildAppRoutes } from "../../constants/appRoutes";
+import { buildAppRoutes } from "../../routes/appRoutes";
 
 import React, { Suspense, useEffect } from "react";
 import {
@@ -14,26 +14,26 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
-import ErrorPage from "../ErrorPage";
+import ErrorPage from "../ErrorPage/ErrorPage";
 import Loader from "../Loader/Loader";
 import Home from "../Home/Home";
 import InterviewGuide from "../InterviewGuide/InterviewGuide";
-import AssessmentTechnology from "../AssessmentTechnology";
+import AssessmentTechnology from "../AssessmentTechnology/AssessmentTechnology";
 import CompetencyModel from "../CompetencyModel/CompetencyModel";
 import PsychobabbleZone from "../PsychobabbleZone/PsychobabbleZone";
 import Contact from "../Contact/Contact";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
 const HRDiverse = React.lazy(
-  () => import("../../constants/articles/HRDiverse"),
+  () => import("../../components/Article/articles/HRDiverse"),
 );
 const ReducingDiscrimination = React.lazy(
-  () => import("../../constants/articles/ReducingDiscrimination"),
+  () => import("../../components/Article/articles/ReducingDiscrimination"),
 );
 const DigitalInterview = React.lazy(
-  () => import("../../constants/articles/DigitalInterview"),
+  () => import("../../components/Article/articles/DigitalInterview"),
 );
 const ProInterview = React.lazy(
-  () => import("../../constants/articles/ProInterview"),
+  () => import("../../components/Article/articles/ProInterview"),
 );
 
 const APP_ROUTES = buildAppRoutes({

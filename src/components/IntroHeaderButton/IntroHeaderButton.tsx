@@ -3,8 +3,8 @@ import "./IntroHeaderButton.scss";
 import React from "react";
 
 interface IntroHeaderButtonProps {
-  href?: string;
-  label?: React.ReactNode;
+  href: string;
+  label: string;
   className?: string;
 }
 

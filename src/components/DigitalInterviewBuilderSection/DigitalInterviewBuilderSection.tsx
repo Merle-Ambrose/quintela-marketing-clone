@@ -2,9 +2,9 @@ import React from "react";
 import "./DigitalInterviewBuilderSection.scss";
 
 interface Props {
-  header?: React.ReactNode;
-  body?: React.ReactNode | React.ReactNode[] | string;
-  bkg?: "blue" | "geometric";
+  header: string;
+  body: React.ReactNode | React.ReactNode[] | string;
+  bkg: "blue" | "geometric";
 }
 
 export default function DigitalInterviewBuilderSection({
