@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // Safe default for missing CSS variable
 const FALLBACK_MOBILE_BREAKPOINT = 1080;
@@ -23,8 +23,13 @@ function getCssMobileBreakpoint(): number {
 }
 
 export default function useIsMobile(breakpoint?: number): boolean {
-  // Prefer explicit argument, otherwise derive from CSS
-  const resolvedBreakpoint = breakpoint ?? getCssMobileBreakpoint();
+  // Cache the CSS-derived breakpoint in a ref so getComputedStyle runs at most
+  // once per hook instance rather than on every render
+  const cssBreakpointRef = useRef<number | null>(null);
+  if (breakpoint === undefined && cssBreakpointRef.current === null) {
+    cssBreakpointRef.current = getCssMobileBreakpoint();
+  }
+  const resolvedBreakpoint = breakpoint ?? cssBreakpointRef.current!;
 
   // Guard for where window may not exist
   const getIsMobile = (bp: number) =>

@@ -31,8 +31,17 @@ export default function ScrollToTop(): null {
     let timeoutId: ReturnType<typeof setTimeout>;
     try {
       // Disable smooth scrolling so scrollTo is instant
+      // Both the inline style and behavior:'instant' are set because:
+      // - behavior:'instant' overrides CSS scroll-behavior at the call site
+      //   (most reliable, supported in all modern browsers)
+      // - The inline style guards against any residual smooth-scroll CSS
+      //   that may still animate before the next paint
       (root as HTMLElement).style.scrollBehavior = "auto";
-      window.scrollTo(0, 0);
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant" as ScrollBehavior,
+      });
     } finally {
       // Restore scrollBehavior on the next tick after the scroll has been applied
       timeoutId = setTimeout(() => {

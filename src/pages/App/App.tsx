@@ -217,7 +217,7 @@ function App() {
                     className="text-light fs-4"
                     aria-label="Visit Quintela Group on Facebook"
                   >
-                    <i className="bi-facebook" aria-hidden="true"></i>
+                    <i className="bi bi-facebook" aria-hidden="true"></i>
                   </a>
                   <a
                     target="_blank"
@@ -226,7 +226,7 @@ function App() {
                     className="text-light fs-4"
                     aria-label="Visit Quintela Group on Twitter"
                   >
-                    <i className="bi-twitter" aria-hidden="true"></i>
+                    <i className="bi bi-twitter" aria-hidden="true"></i>
                   </a>
                 </div>
                 <p className="mb-1">
