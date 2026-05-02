@@ -1,0 +1,136 @@
+diff --git a/node_modules/react-scripts/config/webpack.config.js b/node_modules/react-scripts/config/webpack.config.js
+index e465d8e..f118dd5 100644
+--- a/node_modules/react-scripts/config/webpack.config.js
++++ b/node_modules/react-scripts/config/webpack.config.js
+@@ -187,9 +187,25 @@ module.exports = function (webpackEnv) {
+         },
+         {
+           loader: require.resolve(preProcessor),
+-          options: {
+-            sourceMap: true,
+-          },
++          options:
++            preProcessor === 'sass-loader'
++              ? {
++                  api: 'modern',
++                  sourceMap: true,
++                  sassOptions: {
++                    // quietDeps suppresses deprecation warnings from Bootstrap 5's own
++                    // @import rules (Bootstrap 6 will migrate to @use/@forward).
++                    quietDeps: true,
++                    // silenceDeprecations suppresses the specific Dart Sass deprecation
++                    // categories emitted by Bootstrap 5 and our own @import entry point.
++                    // These are all from Bootstrap's legacy @import-based source; remove
++                    // once Bootstrap migrates to @use/@forward (expected in Bootstrap 6).
++                    silenceDeprecations: ['import', 'global-builtin', 'color-functions', 'if-function'],
++                    // loadPaths lets @import "bootstrap/scss/..." resolve from node_modules.
++                    loadPaths: [paths.appNodeModules],
++                  },
++                }
++              : { sourceMap: true },
+         }
+       );
+     }
+diff --git a/node_modules/react-scripts/config/webpackDevServer.config.js b/node_modules/react-scripts/config/webpackDevServer.config.js
+index 522a81b..1d50719 100644
+--- a/node_modules/react-scripts/config/webpackDevServer.config.js
++++ b/node_modules/react-scripts/config/webpackDevServer.config.js
+@@ -99,7 +99,15 @@ module.exports = function (proxy, allowedHost) {
+       publicPath: paths.publicUrlOrPath.slice(0, -1),
+     },
+ 
+-    https: getHttpsConfig(),
++    // webpack-dev-server v5 expects TLS settings under `server` rather than
++    // the old top-level `https` option. Map the existing helper to the new
++    // `server` shape so react-scripts works with wds v5.
++    server: (function () {
++      const cfg = getHttpsConfig();
++      if (cfg === true) return { type: 'https' };
++      if (!cfg) return undefined;
++      return { type: 'https', options: cfg };
++    })(),
+     host,
+     historyApiFallback: {
+       // Paths with dots should still use the history fallback.
+@@ -109,27 +117,29 @@ module.exports = function (proxy, allowedHost) {
+     },
+     // `proxy` is run between `before` and `after` `webpack-dev-server` hooks
+     proxy,
+-    onBeforeSetupMiddleware(devServer) {
+-      // Keep `evalSourceMapMiddleware`
+-      // middlewares before `redirectServedPath` otherwise will not have any effect
+-      // This lets us fetch source contents from webpack for the error overlay
+-      devServer.app.use(evalSourceMapMiddleware(devServer));
++    // webpack-dev-server v5 uses `setupMiddlewares` instead of the old
++    // `onBeforeSetupMiddleware` / `onAfterSetupMiddleware` hooks. Provide a
++    // compatible implementation that registers the same middlewares in the
++    // expected order.
++    setupMiddlewares(middlewares, devServer) {
++      if (devServer && devServer.app) {
++        // Keep `evalSourceMapMiddleware` before redirectServedPath so the
++        // error overlay can fetch source contents from webpack.
++        devServer.app.use(evalSourceMapMiddleware(devServer));
+ 
+-      if (fs.existsSync(paths.proxySetup)) {
+-        // This registers user provided middleware for proxy reasons
+-        require(paths.proxySetup)(devServer.app);
++        if (fs.existsSync(paths.proxySetup)) {
++          // This registers user provided middleware for proxy reasons
++          require(paths.proxySetup)(devServer.app);
++        }
++
++        // Redirect to `PUBLIC_URL` or `homepage` from `package.json` if url not match
++        devServer.app.use(redirectServedPath(paths.publicUrlOrPath));
++
++        // noop service worker middleware must run after redirect
++        devServer.app.use(noopServiceWorkerMiddleware(paths.publicUrlOrPath));
+       }
+-    },
+-    onAfterSetupMiddleware(devServer) {
+-      // Redirect to `PUBLIC_URL` or `homepage` from `package.json` if url not match
+-      devServer.app.use(redirectServedPath(paths.publicUrlOrPath));
+ 
+-      // This service worker file is effectively a 'no-op' that will reset any
+-      // previous service worker registered for the same host:port combination.
+-      // We do this in development to avoid hitting the production cache if
+-      // it used the same host and port.
+-      // https://github.com/facebook/create-react-app/issues/2272#issuecomment-302832432
+-      devServer.app.use(noopServiceWorkerMiddleware(paths.publicUrlOrPath));
++      return middlewares;
+     },
+   };
+ };
+diff --git a/node_modules/react-scripts/scripts/start.js b/node_modules/react-scripts/scripts/start.js
+index 8b9a2c2..6adc219 100644
+--- a/node_modules/react-scripts/scripts/start.js
++++ b/node_modules/react-scripts/scripts/start.js
+@@ -141,7 +141,13 @@ checkBrowsers(paths.appPath, isInteractive)
+ 
+     ['SIGINT', 'SIGTERM'].forEach(function (sig) {
+       process.on(sig, function () {
+-        devServer.close();
++        if (devServer) {
++          if (typeof devServer.close === 'function') {
++            devServer.close();
++          } else if (typeof devServer.stop === 'function') {
++            devServer.stop();
++          }
++        }
+         process.exit();
+       });
+     });
+@@ -149,7 +155,13 @@ checkBrowsers(paths.appPath, isInteractive)
+     if (process.env.CI !== 'true') {
+       // Gracefully exit when stdin ends
+       process.stdin.on('end', function () {
+-        devServer.close();
++        if (devServer) {
++          if (typeof devServer.close === 'function') {
++            devServer.close();
++          } else if (typeof devServer.stop === 'function') {
++            devServer.stop();
++          }
++        }
+         process.exit();
+       });
+     }

@@ -1,0 +1,41 @@
+// Bootstrap Sass source entry point.
+// Import this instead of bootstrap/dist/css/bootstrap.min.css so that
+// Bootstrap's own Sass variables can be overridden before compilation.
+//
+// Variable overrides must come BEFORE the Bootstrap @import.
+// See: https://getbootstrap.com/docs/5.3/customize/sass/#variable-defaults
+
+// Primary color: overrides Bootstrap's $primary (#0d6efd) with the brand blue.
+// Bootstrap generates all semantic classes (.btn-primary, .text-primary,
+// .bg-primary, .border-primary, etc.) and their CSS custom properties
+// (--bs-primary, --bs-primary-rgb, --bs-link-color, etc.) from this value.
+$primary: #3d72e7;
+
+// Extend Bootstrap's $spacers map to include a level 7 ($spacer * 5 = 80px).
+// This lets Bootstrap generate .mt-7 / .mb-7 / .py-7 etc. as real utilities,
+// instead of defining .mt-7 manually in App.scss.
+$spacers: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem,
+  7: 5rem,
+);
+
+// Now import Bootstrap's full Sass source.
+// loadPaths in the webpack sass-loader config makes "bootstrap/scss/bootstrap"
+// resolve from node_modules without needing a ~ prefix or relative path.
+//
+// @import is used here because Bootstrap 5's own Sass source is entirely built
+// around @import and cannot be loaded via @use/@forward without its own
+// migration (expected in future Bootstrap). Using @import from this file is the
+// only way to pass variable overrides (defined above) into Bootstrap's
+// compilation context.
+//
+// The Dart Sass deprecation warnings this produces are silenced via
+// silenceDeprecations: ['import', 'global-builtin', 'color-functions',
+// 'if-function'] in the sass-loader sassOptions inside the react-scripts
+// webpack config patch (patches/react-scripts+5.0.1.patch).
+@import "bootstrap/scss/bootstrap";

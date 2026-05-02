@@ -1,0 +1,39 @@
+@use "../../styles" as *;
+
+.ptThree {
+  padding-top: $spacer * 3;
+  padding-bottom: $spacer * 2;
+}
+
+@include mobile {
+  .ptThree {
+    padding-top: $spacer * 1.5;
+    padding-bottom: $spacer;
+  }
+
+  // Bootstrap's .row uses flexbox, which can't do auto-fit column collapsing or
+  // justify-self centering on children. This override switches to CSS grid so that:
+  // - auto-fit collapses to 1 col at ~600px (vs Bootstrap's fixed 768px md breakpoint),
+  //   preventing cards from being too narrow at mid-small viewports.
+  // - max-width + justify-self: center caps and centers single-column cards —
+  //   justify-self only works in grid context, not in Bootstrap's flex .row.
+  // - gap: $spacer reduces the gutter below Bootstrap's g-4 on mobile.
+  .container.ptThree .row.row-cols-1.row-cols-md-2.row-cols-xl-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacer;
+    align-items: start;
+    justify-content: center;
+
+    > .col {
+      width: 100%;
+      max-width: 720px;
+      justify-self: center;
+      display: block;
+    }
+
+    .card {
+      margin: 0 auto;
+    }
+  }
+}

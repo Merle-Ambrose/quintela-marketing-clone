@@ -1,0 +1,411 @@
+@use "../../styles" as *;
+
+:root {
+  --bp-mobile: #{$bp-mobile};
+}
+
+* {
+  font-family: $font-family-base;
+}
+
+body.nav-open {
+  overflow: hidden;
+  touch-action: none;
+}
+
+img {
+  animation: fadeInImage 0.6s ease-in-out;
+}
+
+.fadeInImg {
+  animation: fadeInImage 0.6s ease-in-out;
+}
+
+.contentDetails {
+  font-size: $font-size-base;
+}
+
+.contentParagraph {
+  font-size: $font-size-md;
+  color: $color-text-muted;
+}
+
+.companyNavLogo {
+  display: flex;
+  align-items: center;
+  min-height: 35px;
+  width: 140px;
+  flex: 0 0 140px;
+  justify-content: flex-start;
+}
+
+#logo {
+  display: block;
+  max-height: 35px;
+  height: 35px;
+  width: auto;
+  max-width: 100%;
+  animation: none;
+}
+
+.navbar a {
+  color: black;
+  font-weight: 600;
+  text-align: center;
+  font-size: $font-size-sm;
+}
+
+.navbar {
+  --bs-navbar-toggler-border-color: transparent;
+  background-color: white;
+}
+
+.siteFrame {
+  width: min(100%, $site-max-width);
+  margin: 0 auto;
+  color: $color-footer-link;
+  font-size: $font-size-sm;
+}
+
+.siteNavFrame {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-collapse {
+  flex-grow: 1;
+}
+
+.siteNavFrame .companyNavLogo {
+  order: 0;
+  margin-right: $spacer * 0.75;
+}
+
+.siteNavFrame .navbar-collapse {
+  order: 1;
+}
+
+.siteNavFrame .navbar-toggler {
+  order: 2;
+}
+
+footer a {
+  color: $color-footer-link;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer p {
+  margin-bottom: $spacer * 0.3125;
+}
+
+footer {
+  padding-top: $spacer * 1.5;
+  flex-shrink: 0;
+}
+
+.footerCtaCard {
+  background: $gradient-primary;
+  border-radius: 4px;
+  margin-top: -$spacer * 5;
+  margin-bottom: $spacer * 0.5;
+  padding: $spacer * 1.5 $spacer * 0.5;
+  position: relative;
+  z-index: 2;
+}
+
+.appFlexWrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  padding-top: $navbar-height;
+}
+
+.navbar.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1040;
+  width: 100%;
+}
+
+.navOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 200ms ease,
+    visibility 200ms ease;
+  z-index: 3;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.appFlexWrapper > main {
+  flex: 1 1 auto;
+}
+
+.bkgBlue {
+  background-image: var(--bkg-blue-image);
+}
+
+.bkgCmp {
+  background-image: var(--bkg-cmp-image);
+}
+
+.listPoints {
+  display: flex;
+  flex-direction: column;
+  gap: $spacer * 3;
+  color: $color-body;
+  font-size: $font-size-md;
+  overflow-x: hidden;
+  overflow-y: visible;
+  box-sizing: border-box;
+
+  .listPointImg {
+    width: min(100%, 450px);
+    height: auto;
+    max-height: 450px;
+    max-width: 450px;
+    animation: fadeInImage 0.6s ease-in-out;
+  }
+}
+
+.listPointsAssessmentWrapper {
+  background-color: $color-bg-light;
+}
+
+.listPointsAssessment {
+  color: $color-body;
+  font-size: $font-size-md;
+}
+
+@keyframes fadeInImage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include above-navbar {
+  .navbar-collapse {
+    max-width: $site-max-width;
+    margin: 0 auto;
+  }
+
+  .navbar-nav.ms-auto {
+    margin-left: 0;
+    display: flex;
+    gap: $spacer;
+  }
+
+  #logo {
+    padding-left: var(--bs-navbar-nav-link-padding-x);
+  }
+}
+
+// $bp-mobile (1080px) is intentionally not a Bootstrap breakpoint (lg=992, xl=1200).
+// It was chosen to match the site's content-width design and is a project-level
+// decision, not a gap. Bootstrap's own breakpoints are used separately where
+// Bootstrap component behavior changes (e.g. navbar collapse at 992px).
+@include above-mobile {
+  .container {
+    max-width: $site-max-width;
+  }
+}
+
+@include mobile {
+  .siteFrame,
+  .container {
+    width: 100%;
+    padding: 0 $spacer * 1.5;
+    box-sizing: border-box;
+  }
+
+  .contentParagraph {
+    font-size: $font-size-base;
+  }
+
+  img,
+  .fadeInImg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .listPoints {
+    gap: $spacer;
+    padding-top: $spacer * 1.5;
+
+    .listPoint:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .listPointsAssessmentWrapper {
+    .listPoints {
+      padding-bottom: 0;
+    }
+  }
+
+  .footerCtaCard {
+    gap: $spacer * 0.5;
+    margin-left: $spacer;
+    margin-right: $spacer;
+    margin-bottom: $spacer * 1.5;
+    padding: $spacer * 1.5;
+    display: flex;
+    justify-content: space-between;
+
+    > .col-12:first-child {
+      font-size: $spacer * 2 !important;
+      width: fit-content;
+    }
+
+    > .col-12:last-child {
+      width: fit-content;
+    }
+  }
+
+  .contactInfo {
+    margin-bottom: $spacer * 1.5;
+
+    i {
+      font-size: $spacer * 2;
+    }
+  }
+
+  .siteNavFrame {
+    display: flex;
+    justify-content: space-between;
+
+    #navbarNav {
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@include below-navbar {
+  #logo {
+    height: 28px;
+    max-height: 28px;
+    padding-left: $spacer * 0.5;
+  }
+
+  .siteNavFrame {
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: $spacer * 0.5;
+    padding-right: $spacer * 0.5;
+    position: relative;
+
+    .companyNavLogo {
+      order: 0;
+      margin-left: 0;
+      margin-right: auto;
+      max-width: fit-content;
+      min-height: 28px;
+      width: 120px;
+      flex: 0 0 120px;
+      width: fit-content;
+      z-index: 3;
+    }
+
+    .navbar-toggler {
+      order: 2;
+      margin-right: 0;
+      padding: $spacer * 0.5 $spacer * 0.75;
+      border-radius: $border-radius-nav;
+      position: absolute;
+      right: $spacer * 0.75;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 6;
+    }
+
+    .navbar-collapse {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background: white;
+      z-index: 5;
+    }
+  }
+
+  .navbar-collapse {
+    z-index: 2;
+    box-shadow: none;
+    box-sizing: border-box;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    display: block;
+
+    .nav-item {
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid $color-primary-border;
+
+      a {
+        padding-left: $spacer * 1.25 !important;
+        padding-right: $spacer * 1.25 !important;
+      }
+    }
+
+    .nav-link {
+      display: block;
+      width: 100%;
+      padding: $spacer * 0.85 $spacer * 0.75;
+      font-size: $font-size-base * 1.0625;
+      text-align: left;
+      border-radius: $border-radius-nav;
+      margin: $spacer * 0.125 0;
+      color: $color-nav-text;
+
+      &:focus,
+      &:hover {
+        text-decoration: none;
+        background: $color-primary-alpha;
+      }
+    }
+
+    margin-top: 0;
+
+    .nav-item:last-child {
+      border-bottom: 3px solid $color-primary;
+    }
+
+    .nav-item:first-child {
+      margin-top: $spacer * 0.5;
+      border-top: 1px solid $color-primary-border;
+    }
+  }
+
+  .siteNavFrame .navbar-toggler {
+    padding: $spacer * 0.5 $spacer * 0.75;
+    border-radius: $border-radius-nav;
+  }
+}

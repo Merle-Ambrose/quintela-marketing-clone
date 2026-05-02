@@ -1,0 +1,11 @@
+@use "../../styles" as *;
+
+.listPointDividerParagraph {
+  line-height: 1.875rem;
+}
+
+@include mobile {
+  .listPointDivider {
+    display: none !important;
+  }
+}

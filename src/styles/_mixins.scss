@@ -1,0 +1,40 @@
+@use "variables" as *;
+
+/// Styles for screens at or below the project mobile breakpoint (≤1080px).
+@mixin mobile {
+  @media screen and (max-width: #{$bp-mobile}) {
+    @content;
+  }
+}
+
+/// Styles for screens strictly above the mobile breakpoint (≥1081px).
+/// Used to cap .container max-width on wider viewports.
+@mixin above-mobile {
+  @media screen and (min-width: #{$bp-above-mobile}) {
+    @content;
+  }
+}
+
+/// Styles for screens at or below the Bootstrap sm breakpoint (≤768px).
+/// Used for PageHeader row/column stacking.
+@mixin below-sm {
+  @media screen and (max-width: #{$bp-sm}) {
+    @content;
+  }
+}
+
+/// Styles for screens at or above the Bootstrap lg breakpoint (≥992px).
+/// Used for desktop navbar layout.
+@mixin above-navbar {
+  @media screen and (min-width: #{$bp-navbar-lg}) {
+    @content;
+  }
+}
+
+/// Styles for screens at or below the navbar collapse threshold (≤991px).
+/// Used for mobile navbar drawer layout.
+@mixin below-navbar {
+  @media screen and (max-width: #{$bp-nav-collapse}) {
+    @content;
+  }
+}

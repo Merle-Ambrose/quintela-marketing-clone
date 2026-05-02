@@ -1,0 +1,54 @@
+@use "../../styles" as *;
+
+.exerpt {
+  color: white;
+  font-size: $font-size-md;
+  line-height: 2.188rem;
+  width: 100%;
+}
+
+.exerptBlue {
+  background-image: var(--excerpt-bg-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.exerptGeometric {
+  background-image: var(--excerpt-bg-image), $gradient-geometric;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: center, center;
+}
+
+.exerpt .container {
+  width: min(100%, $container-max-width);
+  margin: 0 auto;
+}
+
+.introHeaderHeading {
+  margin-bottom: $spacer * 2.5;
+  font-size: $font-size-hero;
+  font-weight: bold;
+}
+
+@include mobile {
+  .exerpt {
+    padding-left: 0;
+    padding-right: 0;
+
+    h1 {
+      text-align: left !important;
+    }
+
+    h3 {
+      padding-top: $spacer * 1.5 !important;
+      padding-bottom: 0 !important;
+    }
+
+    p {
+      margin-bottom: 0.275rem;
+    }
+  }
+}

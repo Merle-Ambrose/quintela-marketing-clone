@@ -1,0 +1,43 @@
+@use "../../styles" as *;
+
+.assessmentBuilderDiv {
+  color: $color-body;
+  line-height: 1.563rem;
+  text-align: left;
+  font-size: $font-size-md;
+
+  h1 {
+    font-weight: bold;
+    font-size: $font-size-xl;
+    color: $color-slate;
+  }
+}
+
+.informationMayBeCollectedFromBullets {
+  margin-left: 0;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+// .competencyGrid uses CSS auto-fit grid because Bootstrap's row-cols-* requires
+// a fixed column count per breakpoint and can't do fluid minmax column sizing.
+// repeat(auto-fit, minmax(250px, 1fr)) lets the browser determine the column count
+// based on available space, which is the right tool here.
+.competencyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $spacer * 1.5;
+  align-items: start;
+  justify-items: center;
+  justify-content: center;
+}
+
+@include mobile {
+  .assessmentBuilderDiv h1 {
+    margin-bottom: $spacer;
+  }
+}

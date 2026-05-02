@@ -1,0 +1,48 @@
+@use "../../styles" as *;
+
+.quoteLogo {
+  display: flex;
+  justify-content: center;
+}
+
+.quoteFromCustomer {
+  background-color: $color-bg-light;
+  line-height: 1.875rem;
+  // Equivalent of Bootstrap's py-5 px-4, owned in SCSS so that
+  // modifier classes like .quoteFromCustomerHangingImage can override
+  // padding-top cleanly without needing !important.
+  padding: $spacer * 3 $spacer * 1.5;
+}
+
+.quoteFromCustomerHangingImage {
+  padding-top: 150px;
+  overflow-x: hidden;
+}
+
+.quoteText {
+  word-spacing: 1px;
+  color: $color-text-muted;
+  font-size: $font-size-md;
+  overflow-x: hidden;
+}
+
+.quoteName {
+  font-weight: bold;
+  margin-bottom: 0;
+  font-size: $font-size-lg;
+}
+
+.quoteCredential {
+  font-size: $font-size-lg;
+}
+
+@include mobile {
+  .quoteLogo {
+    display: none;
+  }
+
+  .quoteFromCustomer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

@@ -1,0 +1,17 @@
+@use "../../styles" as *;
+
+.digitalInterviewQuote {
+  width: 100%;
+  background-image: var(--quote-bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120px;
+}
+
+@include mobile {
+  .digitalInterviewQuote {
+    p:first-child {
+      font-size: $font-size-md !important;
+    }
+  }
+}

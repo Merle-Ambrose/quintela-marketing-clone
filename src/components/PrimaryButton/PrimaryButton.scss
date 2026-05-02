@@ -1,0 +1,66 @@
+@use "../../styles" as *;
+
+.primaryBtn {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: $border-radius-pill;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: white;
+  background-image: $gradient-primary;
+  border: none;
+  padding: 10px 22px;
+  font-size: 0.95rem;
+
+  // Focus/active reset
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+// Button variant for lists (e.g. CompetencyModel "Know More")
+.primaryBtnList {
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 13px 25px;
+  font-size: $font-size-sm;
+  width: fit-content;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+// Button variant for reading (e.g. AssessmentTechnology "Read More")
+.primaryBtnRead {
+  &:hover,
+  &:focus,
+  &:active {
+    color: white;
+    text-decoration: none;
+  }
+
+  span {
+    transition: transform 150ms ease;
+  }
+
+  &:hover span {
+    transform: translateX(6px);
+  }
+}
+
+@include mobile {
+  .primaryBtn,
+  .primaryBtnList,
+  .primaryBtnRead {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    margin-top: 10px;
+  }
+}

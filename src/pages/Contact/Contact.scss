@@ -1,0 +1,52 @@
+@use "../../styles" as *;
+
+.contactUsBox {
+  max-width: 500px;
+  background: #fff;
+  border-radius: $spacer;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  padding: $spacer * 2 $spacer * 2.5;
+  position: relative;
+  z-index: 2;
+  margin: -90px auto $spacer * 2.5 auto;
+
+  label {
+    margin-bottom: $spacer * 0.25;
+    font-weight: 500;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: $spacer * 0.5;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+  }
+
+  button {
+    margin-top: $spacer * 0.5;
+  }
+
+  .btn-primary {
+    color: white;
+  }
+}
+
+.requiredMarker {
+  color: $color-required;
+  font-weight: normal;
+}
+
+@include mobile {
+  .contactUsBox {
+    margin: -80px auto $spacer * 1.5 auto;
+    padding: $spacer $spacer;
+    width: calc(100% - 32px);
+
+    input {
+      font-size: $font-size-base;
+    }
+  }
+}

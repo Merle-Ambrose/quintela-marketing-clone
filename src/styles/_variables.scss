@@ -1,0 +1,74 @@
+// Brand Colors
+$color-primary: #3d72e7;
+$color-primary-light: #53a0fe;
+$color-primary-dark: #4161d4;
+// Derived alpha values used for navbar mobile hover/border states
+$color-primary-alpha: rgba(61, 114, 231, 0.06); // #3d72e70f
+$color-primary-border: rgba(61, 114, 231, 0.18); // #3d72e72e
+
+$color-slate: #535b7c; // headings inside boxes/cards
+$color-body: #959baf; // body text, list point paragraphs
+$color-text-muted: #666666; // paragraph text, quotes
+$color-nav-text: #111; // mobile navbar link color
+$color-bg-light: #f8fbfe; // light blue-tinted background sections
+$color-footer-link: #84bdff; // footer anchors, siteFrame accent color
+$color-border: #eaeaea; // hover image border
+$color-required: #990000; // required field marker
+
+// Assessment Technology page header gradient stops
+$color-at-red: #e01c11;
+$color-at-purple: #210444;
+
+// Gradients
+$gradient-primary: linear-gradient(
+  243deg,
+  $color-primary 0%,
+  $color-primary-light 100%
+);
+// Used in DigitalInterviewBuilderSection geometric background
+$gradient-geometric: linear-gradient(
+  135deg,
+  #53a0fd 0%,
+  $color-primary-dark 100%
+);
+
+// Typography
+$font-family-base: "Nunito Sans", Helvetica, Arial, Lucida, sans-serif;
+
+$font-size-sm: 0.9375rem; //  15px, nav links, small copy
+$font-size-base: 1rem; //  16px, base body
+$font-size-md: 1.125rem; //  18px, body paragraphs, list text
+$font-size-lg: 1.25rem; //  20px, quote names / credentials
+$font-size-xl: 1.875rem; //  30px, box/section headings
+$font-size-hero: 2.1875rem; //  35px, page / hero headings
+
+// Spacing
+// $spacer mirrors Bootstrap's default (1rem) so custom spacing stays in sync.
+// Use $spacer * N in custom rules to remain proportional to Bootstrap utilities.
+$spacer: 1rem; // 16px
+
+// Layout
+$site-max-width: 1000px; // max-width of .siteFrame and .container at lg+
+$container-max-width: 1080px; // max-width used inside PageHeader / section containers
+$navbar-height: 56px; // Bootstrap's default fixed navbar height
+
+// Breakpoints
+$bp-mobile: 1080px; // project-wide "mobile" max-width threshold
+$bp-above-mobile: 1081px; // min-width counterpart for container override
+$bp-navbar-lg: 992px; // Bootstrap lg, navbar goes horizontal
+$bp-nav-collapse: 991px; // navbar collapse max-width threshold
+$bp-sm: 768px; // Bootstrap sm, PageHeader row stacking
+
+// Shadows
+$shadow-model: rgba(99, 108, 117, 0.2) 0px 8px 24px;
+$shadow-card: rgba(99, 108, 117, 0.08) 0px 6px 18px;
+$shadow-hover-img:
+  5px 5px 5px rgba(99, 108, 117, 0.18),
+  0 4px 10px rgba(99, 108, 117, 0.08);
+
+// Border Radii
+$border-radius-pill: 26px; // primary CTA button
+$border-radius-card: 0.75rem; // article cards
+$border-radius-box: 5px; // competency model box
+$border-radius-hover: 20px; // org-chart hover image
+$border-radius-nav: 0.5rem; // navbar toggler / mobile nav links

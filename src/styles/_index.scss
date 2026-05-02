@@ -1,0 +1,5 @@
+// Barrel file! Import this from component/page SCSS files:
+//   @use "../../styles" as *;
+// This gives access to all variables and mixins without a namespace prefix.
+@forward "variables";
+@forward "mixins";

@@ -1,0 +1,43 @@
+@use "../../styles" as *;
+
+.modelBox {
+  border-top: 6px $color-primary solid;
+  min-height: 350px;
+  min-width: max(250px, 90%);
+  border-radius: $border-radius-box;
+  box-shadow: $shadow-model;
+  text-align: center;
+  color: $color-body;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modelboxIcon {
+  font-size: $font-size-xl;
+  color: $color-slate;
+}
+
+.modelBox h5 {
+  font-weight: bold;
+  font-size: 1.1875rem;
+  color: $color-slate;
+}
+
+.modelBox p {
+  font-size: $font-size-base;
+}
+
+@include mobile {
+  .modelBox {
+    padding: 20px;
+    margin: 0 auto $spacer auto;
+    min-width: auto;
+    max-width: max(300px, 100%);
+  }
+
+  .modelboxIcon {
+    font-size: $font-size-lg * 1.2;
+  }
+}
