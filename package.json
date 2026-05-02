@@ -9,8 +9,9 @@
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-router-dom": "^7.14.2",
-    "react-scripts": "^5.0.1",
-    "web-vitals": "^5.2.0"
+    "react-scripts": "5.0.1",
+    "web-vitals": "^5.2.0",
+    "patch-package": "^6.5.1"
   },
   "scripts": {
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss,sass}\"",
@@ -46,7 +47,6 @@
   "devDependencies": {
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "patch-package": "^6.5.1",
     "prettier": "^3.8.3",
     "sass": "^1.99.0",
     "sharp": "^0.34.5",
@@ -55,7 +55,7 @@
     "vnu-jar": "^26.4.16"
   },
   "engines": {
-    "node": ">=24.15.0"
+    "node": ">=20.0.0"
   },
   "overrides": {
     "nth-check": "3.0.1",

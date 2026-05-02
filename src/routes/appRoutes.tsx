@@ -1,6 +1,6 @@
 import React from "react";
 
-type PageComponent = React.FunctionComponent<any>;
+type PageComponent = React.ComponentType<any>;
 
 type ComponentMap = {
   Home: PageComponent;
