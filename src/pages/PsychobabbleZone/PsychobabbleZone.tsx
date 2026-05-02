@@ -11,12 +11,12 @@ const isFeaturedArticleMeta = (
 ): article is FeaturedArticleMeta =>
   Boolean(
     article.url &&
-      article.desc &&
-      article.img &&
-      article.alt &&
-      article.author &&
-      article.date &&
-      article.category,
+    article.desc &&
+    article.img &&
+    article.alt &&
+    article.author &&
+    article.date &&
+    article.category,
   );
 
 export default function PsychobabbleZone() {

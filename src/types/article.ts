@@ -12,5 +12,8 @@ export interface ArticleMeta {
 
 export type FeaturedArticleMeta = ArticleMeta &
   Required<
-    Pick<ArticleMeta, "desc" | "img" | "alt" | "author" | "date" | "category" | "url">
+    Pick<
+      ArticleMeta,
+      "desc" | "img" | "alt" | "author" | "date" | "category" | "url"
+    >
   >;
