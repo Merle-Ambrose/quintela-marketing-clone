@@ -25,7 +25,7 @@ export const META: ArticleMeta = {
     "I am obsessed now. When I see an HR tech talking about AI in hiring, I look at their Executive Team. The question now is Part 2 – Why Aren’t HR Vendor Executive Teams Diverse?",
   ],
   desc: "There are 1000s of blogs/articles/white papers on diversity, equity, and inclusion (DEI), and the takeaway is always the same.  DEI is the right thing to do and even impacts the bottom line.  As a person of color (POC), I suppose I should be grateful that DEI is at...",
-  img: "./img/articles/cookie.png",
+  img: "/img/articles/cookie.png",
   alt: "Article thumbnail about HR vendor executive team diversity",
   author: "Joel Quintela",
   date: "Jun 21, 2022",

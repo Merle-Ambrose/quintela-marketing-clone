@@ -25,7 +25,7 @@ export const META: ArticleMeta = {
     "Learn more about how digital interview guides can help increase quality of hire all while keeping headaches to a minimum, and contact Quintela to request a demo.",
   ],
   desc: "Studies show that about 30 percent of interviewers know whether or not they want to hire you within the first 90 seconds of an interview. Despite the ease of making such quick judgments of candidates, it’s not necessarily legal to “go with your gut.” While your...",
-  img: "./img/articles/videoInterview.jpg",
+  img: "/img/articles/videoInterview.jpg",
   alt: "Article thumbnail about interview legal compliance",
   author: "Joel Quintela",
   date: "Mar 20, 2022",

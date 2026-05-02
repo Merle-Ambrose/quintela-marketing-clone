@@ -17,7 +17,7 @@ export default function InterviewGuide() {
         heading="Digital Interview Guides"
         mobileHeading="Interview Guides"
         mobileDescription="Build digital guides to capture interview notes and ratings consistently."
-        imgSrc="./img/header/digitalInterview.png"
+        imgSrc="/img/header/digitalInterview.png"
         imgAlt="Review of potential candidates."
         description="By building digital interview guide systems, hiring managers
                   and recruiters can seamlessly integrate the interview notes
@@ -33,7 +33,7 @@ export default function InterviewGuide() {
           </ListPointDivider>
           <ListPoint
             url="/contact-us"
-            img="./img/listpoint/guide1.png"
+            img="/img/listpoint/guide1.png"
             altImgText="Browser window showing the Quintela interview guide builder."
             heading="Interview Guide Builder"
             desc="Extensive library of competencies and questions. Customizable to fit unique competency models. Create multiple guide versions at once. Ensure consistency during interview process."
@@ -47,7 +47,7 @@ export default function InterviewGuide() {
           </ListPointDivider>
           <ListPoint
             url="/contact-us"
-            img="./img/listpoint/guide2.png"
+            img="/img/listpoint/guide2.png"
             altImgText="Browser window showing a list of potential hires in the Quintela application."
             heading="Candidate Dashboard"
             desc="Make your interview guides available to recruiters and hiring managers. Advanced search and filtering features allow users to find their guides quickly. Restrict access to guides and edit features based on role."
@@ -55,7 +55,7 @@ export default function InterviewGuide() {
           />
           <ListPoint
             url="/contact-us"
-            img="./img/listpoint/guide3.png"
+            img="/img/listpoint/guide3.png"
             altImgText="Browser window showing an interviewer an interview guide in the Quintela application."
             heading="Digital Interview Guides"
             desc="Record objective ratings and interview notes digitally. Compare ratings and scores from multiple interviewers. Create database of notes/ratings for future analysis."

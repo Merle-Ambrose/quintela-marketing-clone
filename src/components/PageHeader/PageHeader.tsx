@@ -73,10 +73,15 @@ export default function PageHeader({
   const effectiveHeading = isMobile && mobileHeading ? mobileHeading : heading;
   const effectiveDescription =
     isMobile && mobileDescription ? mobileDescription : description;
+  const pageHeaderStyle = {
+    "--bkg-blue-image": 'url("/img/bkgs/blue.png")',
+    "--bkg-cmp-image": 'url("/img/bkgs/cmp.png")',
+  } as React.CSSProperties;
 
   return (
     <div
       className={`pageHeader ${isHero ? "heroSection text-center pt-5" : "py-5"}${bgClass ? ` ${bgClass}` : ""}`}
+      style={pageHeaderStyle}
     >
       <div className={isHero ? "container px-3" : "container"}>
         {isHero ? (

@@ -3,7 +3,7 @@ import "./FeaturedArticleCard.scss";
 import React from "react";
 import { Link } from "react-router-dom";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
-import ArticleMeta from "../../types/article";
+import type { ArticleMeta } from "../../types/article";
 import isExternalHref from "../../utils/isExternalHref";
 
 export default function FeaturedArticleCard({

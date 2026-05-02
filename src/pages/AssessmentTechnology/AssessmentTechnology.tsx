@@ -13,7 +13,7 @@ export default function AssessmentTechnology() {
         heading="Assessment Technology"
         mobileHeading="Assessment Tech"
         mobileDescription="Manage multiple assessments from one dashboard."
-        imgSrc="./img/header/brain.png"
+        imgSrc="/img/header/brain.png"
         imgAlt="Review of potential candidates."
         description="Assessments are valuable across the employee lifecycle, and switching platforms burdens talent teams. Manage all assessments from one dashboard that tracks completions and provides fast access to reports."
         descClassName="mb-1"
@@ -36,14 +36,14 @@ export default function AssessmentTechnology() {
           </ListPointDivider>
           <ListPoint
             url="/contact-us"
-            img="./img/listpoint/admin.png"
+            img="/img/listpoint/admin.png"
             altImgText="Team of people analyzing candidate options."
             heading="Administering"
             desc="Create test batteries using assessments from multiple vendors. Customize with your own tests or 360s. Build custom competencies and scores. Combine competencies into job profiles. Send participants one link to access all tests."
           />
           <ListPoint
             url="/contact-us"
-            img="./img/listpoint/tracking.png"
+            img="/img/listpoint/tracking.png"
             altImgText="Two people picking between three candidates."
             heading="Tracking Completions"
             desc="Eliminate spreadsheets and mail merge processes. Check participants progress through a dashboard. Improve participant experience with consistent communication. Access both custom reports and vendor reports quickly."
@@ -51,7 +51,7 @@ export default function AssessmentTechnology() {
           />
           <ListPoint
             url="/contact-us"
-            img="./img/listpoint/reports.png"
+            img="/img/listpoint/reports.png"
             altImgText="Magnifying a person's profile."
             heading="Accessing Reports"
             desc="Streamline multiple test results into a single report. Customize output to your unique competencies. Dynamically adjust text based on thresholds. Add interview questions or development tips."

@@ -15,7 +15,7 @@ export default function CustomerQuote({ className }: CustomerQuoteProps) {
         <div className="row align-items-start justify-content-center g-4">
           <div className="col-12 col-md-2 text-center text-md-end quoteLogo align-self-start">
             <img
-              src="./img/companies/SRHM.png"
+              src="/img/companies/SRHM.png"
               alt="SHRM Logo"
               className="img-fluid pt-1"
             />

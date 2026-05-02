@@ -8,15 +8,14 @@
 }
 
 .exerptBlue {
-  background-image: url("../../../public/img/bkgs/blue.png");
+  background-image: var(--excerpt-bg-image);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .exerptGeometric {
-  background-image:
-    url("../../../public/img/bkgs/geometric.png"), $gradient-geometric;
+  background-image: var(--excerpt-bg-image), $gradient-geometric;
   background-blend-mode: overlay;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;

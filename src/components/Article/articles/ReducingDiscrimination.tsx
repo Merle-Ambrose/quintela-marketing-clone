@@ -24,7 +24,7 @@ export const META: ArticleMeta = {
     "Article originally published on Business2Community.",
   ],
   desc: "Despite changing times, hiring discrimination is still as prevalent today as it was 20 years ago. Over the years, more and more organizations have tried to mandate hiring practices that reduce bias and discrimination based on race, ethnicity, gender, sexual...",
-  img: "./img/articles/handshake.jpg",
+  img: "/img/articles/handshake.jpg",
   alt: "Article thumbnail about reducing discrimination",
   author: "Joel Quintela",
   date: "Mar 23, 2022",

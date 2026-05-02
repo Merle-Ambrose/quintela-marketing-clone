@@ -146,11 +146,11 @@ footer {
 }
 
 .bkgBlue {
-  background-image: url("../../../public/img/bkgs/blue.png");
+  background-image: var(--bkg-blue-image);
 }
 
 .bkgCmp {
-  background-image: url("../../../public/img/bkgs/cmp.png");
+  background-image: var(--bkg-cmp-image);
 }
 
 .listPoints {

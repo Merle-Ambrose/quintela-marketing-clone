@@ -33,7 +33,7 @@ export default function CompetencyModel() {
         heading="Competency Management System"
         mobileHeading="Competency Library"
         mobileDescription="Leverage Quintela's library to define role skills and improve hiring."
-        imgSrc="./img/header/cycle.png"
+        imgSrc="/img/header/cycle.png"
         imgAlt="Cycle of reviewing potential candidates."
         description="Use Quintela’s competency library to define role skills, map them to job profiles, and integrate them into hiring, development, and performance programs, applicable across all industries and functions."
       />
@@ -52,7 +52,7 @@ export default function CompetencyModel() {
           </ListPointDivider>
           <ListPoint
             url="/contact-us"
-            img="./img/listpoint/airplane.png"
+            img="/img/listpoint/airplane.png"
             altImgText="Three people looking at charts."
             heading="Your Competency Model"
             desc="Take advantage of Quintela's extensive framework and/or upload all of your competency content.  Configure the system around your specific hierarchy and structure.  Manage and segment multiple competency models for those departments and business units that have their own models."
@@ -60,7 +60,7 @@ export default function CompetencyModel() {
           />
           <ListPoint
             url="/contact-us"
-            img="./img/listpoint/assessment-blocks.png"
+            img="/img/listpoint/assessment-blocks.png"
             altImgText="Browser window with the Quintela interview application."
             heading="Assessment Building Blocks"
             desc="Assign entities to each competency that will allow you to build any talent management assessment. For example, assign interview questions to competencies or psychometric items and scoring to each competency in your profile."
@@ -147,7 +147,7 @@ export default function CompetencyModel() {
         <div className="listPoints container listPointsAssessment">
           <ListPoint
             url="/contact-us"
-            img="./img/listpoint/analytics.png"
+            img="/img/listpoint/analytics.png"
             altImgText="Analyzing potential interview candidates."
             heading="Custom Analytics Dashboards"
             desc="Download a single file with all data on-demand. Design and implement a custom analytics dashboard with the metrics and graphs that you need. Include predictive data so that you can assess your quality of hire and legal exposure.  For interviews, evaluate your quality of interview/hire, quality of interviewer, and quality of interview content."

@@ -13,8 +13,15 @@ export default function DigitalInterviewBuilderSection({
   bkg = "blue",
 }: Props) {
   const bkgClass = bkg === "geometric" ? "exerptGeometric" : "exerptBlue";
+  const excerptStyle = {
+    "--excerpt-bg-image":
+      bkg === "geometric"
+        ? 'url("/img/bkgs/geometric.png")'
+        : 'url("/img/bkgs/blue.png")',
+  } as React.CSSProperties;
+
   return (
-    <div className={`exerpt ${bkgClass} py-5`}>
+    <div className={`exerpt ${bkgClass} py-5`} style={excerptStyle}>
       <div className="container px-4">
         <h1 className="text-center pb-4 fw-bold">{header}</h1>
         {Array.isArray(body) ? (

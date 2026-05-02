@@ -9,5 +9,3 @@ export interface ArticleMeta {
   category?: string;
   url: string;
 }
-
-export default ArticleMeta;
