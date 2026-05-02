@@ -4,6 +4,11 @@
   font-family: $font-family-base;
 }
 
+body.nav-open {
+  overflow: hidden;
+  touch-action: none;
+}
+
 img {
   animation: fadeInImage 0.6s ease-in-out;
 }

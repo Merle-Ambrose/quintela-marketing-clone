@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "type-check": "tsc --noEmit",
-    "validate:html": "vnu --skip-non-html --errors-only dist",
+    "validate:html": "vnu --skip-non-html --errors-only build",
     "check:w3c": "npm run build && npm run validate:html"
   },
   "eslintConfig": {

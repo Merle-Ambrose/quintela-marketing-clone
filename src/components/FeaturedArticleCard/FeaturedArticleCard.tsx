@@ -3,7 +3,7 @@ import "./FeaturedArticleCard.scss";
 import React from "react";
 import { Link } from "react-router-dom";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
-import type { ArticleMeta } from "../../types/article";
+import type { FeaturedArticleMeta } from "../../types/article";
 import isExternalHref from "../../utils/isExternalHref";
 
 export default function FeaturedArticleCard({
@@ -15,7 +15,7 @@ export default function FeaturedArticleCard({
   date,
   category,
   url,
-}: ArticleMeta) {
+}: FeaturedArticleMeta) {
   const externalHref = isExternalHref(url);
 
   return (

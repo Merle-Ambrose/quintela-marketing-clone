@@ -9,3 +9,8 @@ export interface ArticleMeta {
   category?: string;
   url: string;
 }
+
+export type FeaturedArticleMeta = ArticleMeta &
+  Required<
+    Pick<ArticleMeta, "desc" | "img" | "alt" | "author" | "date" | "category" | "url">
+  >;
