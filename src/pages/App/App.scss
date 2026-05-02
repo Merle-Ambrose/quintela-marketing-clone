@@ -1,5 +1,9 @@
 @use "../../styles" as *;
 
+:root {
+  --bp-mobile: #{$bp-mobile};
+}
+
 * {
   font-family: $font-family-base;
 }

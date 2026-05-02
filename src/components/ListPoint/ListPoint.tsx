@@ -56,6 +56,9 @@ const ListPoint = React.memo(function ListPoint({
         className={`img-fluid ${isHoverable ? "hoverImg" : "listPointImg"}`}
         onMouseEnter={onHoverImgEnter}
         onMouseLeave={onHoverImgLeave}
+        onFocus={isHoverable ? onHoverImgEnter : undefined}
+        onBlur={isHoverable ? onHoverImgLeave : undefined}
+        tabIndex={isHoverable ? 0 : undefined}
       />
     </div>
   );

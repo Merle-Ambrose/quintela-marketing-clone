@@ -212,19 +212,21 @@ function App() {
                 <div className="d-flex justify-content-center gap-3">
                   <a
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href="https://www.facebook.com/quintelagroup"
                     className="text-light fs-4"
+                    aria-label="Visit Quintela Group on Facebook"
                   >
-                    <i className="bi-facebook"></i>
+                    <i className="bi-facebook" aria-hidden="true"></i>
                   </a>
                   <a
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href="https://twitter.com/quintela_io"
                     className="text-light fs-4"
+                    aria-label="Visit Quintela Group on Twitter"
                   >
-                    <i className="bi-twitter"></i>
+                    <i className="bi-twitter" aria-hidden="true"></i>
                   </a>
                 </div>
                 <p className="mb-1">
@@ -259,7 +261,7 @@ function App() {
                 <p className="mb-1">
                   <a
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href="https://www.polinatik.com"
                     className="text-info"
                   >
