@@ -2,10 +2,13 @@ import "./styles/bootstrap.scss";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "@fontsource/nunito-sans";
+import { preloadImages } from "./utils/preloadImages";
 
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./pages/App/App";
+
+preloadImages();
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,

@@ -15,10 +15,8 @@ body.nav-open {
 
 img {
   animation: fadeInImage 0.6s ease-in-out;
-}
-
-.fadeInImg {
-  animation: fadeInImage 0.6s ease-in-out;
+  color: transparent;
+  overflow: hidden;
 }
 
 .contentDetails {
@@ -155,10 +153,12 @@ footer {
 }
 
 .bkgBlue {
+  background-color: $color-primary;
   background-image: var(--bkg-blue-image);
 }
 
 .bkgCmp {
+  background-color: $color-primary-dark;
   background-image: var(--bkg-cmp-image);
 }
 
@@ -177,7 +177,6 @@ footer {
     height: auto;
     max-height: 450px;
     max-width: 450px;
-    animation: fadeInImage 0.6s ease-in-out;
   }
 }
 
@@ -236,12 +235,6 @@ footer {
 
   .contentParagraph {
     font-size: $font-size-base;
-  }
-
-  img,
-  .fadeInImg {
-    max-width: 100%;
-    height: auto;
   }
 
   .listPoints {

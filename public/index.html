@@ -11,6 +11,44 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/img/logo180.png" >
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" >
     <link rel="preload" as="image" href="%PUBLIC_URL%/img/logo.svg">
+
+    <!-- Preload key images and fonts to improve performance.
+     These are the most important assets for the initial render,
+     so we want to ensure they're loaded as soon as possible.
+     The browser will prioritize these resources, helping to reduce
+     load times and improve the user experience. -->
+    <link rel="preload" as="image" href="%PUBLIC_URL%/img/bkgs/blue.png">
+    <link rel="preload" as="image" href="%PUBLIC_URL%/img/bkgs/cmp.png">
+    <link rel="preload" as="image" href="%PUBLIC_URL%/img/bkgs/geometric.png">
+    <link rel="preload" as="image" href="%PUBLIC_URL%/img/bkgs/quote.png">
+
+    <!-- Preload key fonts to improve performance -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="%PUBLIC_URL%/fonts/nunito-sans-latin-400-normal.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="%PUBLIC_URL%/fonts/nunito-sans-latin-600-normal.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="%PUBLIC_URL%/fonts/nunito-sans-latin-700-normal.woff2">
+    <style>
+      @font-face {
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('%PUBLIC_URL%/fonts/nunito-sans-latin-400-normal.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url('%PUBLIC_URL%/fonts/nunito-sans-latin-600-normal.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url('%PUBLIC_URL%/fonts/nunito-sans-latin-700-normal.woff2') format('woff2');
+      }
+    </style>
     <title>Smarter Hiring, Simpler Tools</title>
 
   </head>

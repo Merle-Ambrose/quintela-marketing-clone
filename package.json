@@ -14,10 +14,11 @@
     "patch-package": "^6.5.1"
   },
   "scripts": {
+    "generate:images": "node scripts/generateImagePreloadList.js",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss,sass}\"",
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css,scss,sass}\"",
-    "prestart": "npm run format:check",
-    "prebuild": "npm run format:check",
+    "prestart": "npm run generate:images && npm run format:check",
+    "prebuild": "npm run generate:images && npm run format:check",
     "postinstall": "patch-package",
     "start": "react-scripts start",
     "build": "react-scripts build",

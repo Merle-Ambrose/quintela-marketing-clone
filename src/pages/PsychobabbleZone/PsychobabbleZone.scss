@@ -15,7 +15,7 @@
   // justify-self centering on children. This override switches to CSS grid so that:
   // - auto-fit collapses to 1 col at ~600px (vs Bootstrap's fixed 768px md breakpoint),
   //   preventing cards from being too narrow at mid-small viewports.
-  // - max-width + justify-self: center caps and centers single-column cards —
+  // - max-width + justify-self: center caps and centers single-column cards,
   //   justify-self only works in grid context, not in Bootstrap's flex .row.
   // - gap: $spacer reduces the gutter below Bootstrap's g-4 on mobile.
   .container.ptThree .row.row-cols-1.row-cols-md-2.row-cols-xl-2 {
