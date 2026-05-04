@@ -33,12 +33,17 @@
 }
 
 .introHeaderBtnArrow i {
+  display: inline-block;
+  width: 1em;
+  text-align: center;
+  line-height: 1;
   text-shadow: 0 0 0.2px currentColor;
   filter: drop-shadow(0 0 0.2px currentColor);
 }
 
 .introHeaderBtnArrow {
-  display: inline;
+  display: inline-block;
+  width: 1em;
   position: relative;
   margin-left: -15px;
   left: -25px;

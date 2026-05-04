@@ -215,7 +215,7 @@ footer {
   }
 }
 
-// $bp-mobile (1080px) is intentionally not a Bootstrap breakpoint (lg=992, xl=1200).
+// $bp-tablet (1080px) is intentionally not a Bootstrap breakpoint (lg=992, xl=1200).
 // It was chosen to match the site's content-width design and is a project-level
 // decision, not a gap. Bootstrap's own breakpoints are used separately where
 // Bootstrap component behavior changes (e.g. navbar collapse at 992px).

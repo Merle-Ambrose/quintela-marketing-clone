@@ -53,11 +53,11 @@ $container-max-width: 1080px; // max-width used inside PageHeader / section cont
 $navbar-height: 56px; // Bootstrap's default fixed navbar height
 
 // Breakpoints
-$bp-mobile: 1080px; // project-wide "mobile" max-width threshold
+$bp-tablet: 1080px; // project-wide tablet max-width threshold
 $bp-above-mobile: 1081px; // min-width counterpart for container override
 $bp-navbar-lg: 992px; // Bootstrap lg, navbar goes horizontal
 $bp-nav-collapse: 991px; // navbar collapse max-width threshold
-$bp-sm: 768px; // Bootstrap sm, PageHeader row stacking
+$bp-mobile: 768px; // mobile max-width used by useIsMobile and sm-style stacking
 
 // Shadows
 $shadow-model: rgba(99, 108, 117, 0.2) 0px 8px 24px;

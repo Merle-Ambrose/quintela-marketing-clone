@@ -1,8 +1,8 @@
 @use "variables" as *;
 
-/// Styles for screens at or below the project mobile breakpoint (≤1080px).
+/// Styles for screens at or below the project tablet breakpoint (≤1080px).
 @mixin mobile {
-  @media screen and (max-width: #{$bp-mobile}) {
+  @media screen and (max-width: #{$bp-tablet}) {
     @content;
   }
 }
@@ -15,10 +15,10 @@
   }
 }
 
-/// Styles for screens at or below the Bootstrap sm breakpoint (≤768px).
+/// Styles for screens at or below the mobile breakpoint (≤768px).
 /// Used for PageHeader row/column stacking.
 @mixin below-sm {
-  @media screen and (max-width: #{$bp-sm}) {
+  @media screen and (max-width: #{$bp-mobile}) {
     @content;
   }
 }
